@@ -1,4 +1,37 @@
-section{
-    margin-left: 172px;
-    
+section {
+  height: 100vh;
+  margin-left: 172px;
+  background-color: rgb(10, 10, 10);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > img {
+    height: 90vh;
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
+  }
+  > div {
+    margin-top: 240px;
+    position: relative;
+    z-index: 99;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.font-name {
+  font-size: 100px;
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+.font-job {
+  font-size: 48px;
+  font-weight: bold;
+  color: transparent;
+  -webkit-text-stroke: 1px #3BEE70;
+  align-self: flex-end;
 }
