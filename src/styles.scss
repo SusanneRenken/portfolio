@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  padding: 0;
   overflow: hidden;
   background-color: rgb(10, 10, 10);
   color: rgb(255, 253, 253);
@@ -38,4 +39,8 @@
     font-style: italic;
     font-weight: 700;
     src: url('./assets/font/quantico-v17-latin-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  :root{
+    --main-color: #3BEE70;
   }

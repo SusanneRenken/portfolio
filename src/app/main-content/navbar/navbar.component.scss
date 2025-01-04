@@ -1,0 +1,36 @@
+nav {
+  height: 100vh;
+  width: 172px;
+  padding-top: 16px;
+  padding-bottom: 80px;
+  background-color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  > img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+  }
+
+  > div {
+    height: 70vh;
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    > a {
+      font-size: 30px;
+      color: #4A4A4A;
+      background-color: var(--main-color);
+      text-decoration: none;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      text-align: center;
+      display: inline-block;
+    }
+  }
+}
