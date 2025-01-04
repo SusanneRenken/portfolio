@@ -10,11 +10,11 @@ app-navbar {
   display: flex;
   flex-direction: row;
   overflow-x: auto;
-  width: 100vw;
+//   width: 100vw;
   height: 100vh;
-//   > * {
-//     background-color: rgb(10, 10, 10);
-//   }
+  //   > * {
+  //     background-color: rgb(10, 10, 10);
+  //   }
   > :first-child {
     flex: 0 0 100vw;
   }
@@ -23,23 +23,27 @@ app-navbar {
   }
 }
 
-app-landing-page{    
-    background-color: rgb(10, 10, 10);
+app-landing-page {
+  background-color: rgb(10, 10, 10);
 }
 
-app-why-me{    
-    background-color: yellow;
+app-why-me {
+  background: linear-gradient(
+    70deg,
+    rgb(10, 10, 10),
+    rgb(38, 38, 38),
+    rgb(10, 10, 10)
+  );
 }
 
-app-my-skill-set{    
-    background-color: green;
+app-my-skill-set {
+  background-color: green;
 }
 
-app-my-work{    
-    background-color: red;
+app-my-work {
+  background-color: red;
 }
 
-app-contact-me{    
-    background-color: blue;
+app-contact-me {
+  background-color: blue;
 }
-

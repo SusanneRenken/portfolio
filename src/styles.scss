@@ -1,44 +1,73 @@
 * {
   margin: 0;
   padding: 0;
-  color: rgb(255, 253, 253);
   font-family: "Quantico";
+  font-size: 18px;
+  color: rgb(255, 253, 253);
   box-sizing: border-box;
 }
 
 /* quantico-regular - latin */
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Quantico';
-    font-style: normal;
-    font-weight: 400;
-    src: url('./assets/font/quantico-v17-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Quantico";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/font/quantico-v17-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* quantico-italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Quantico";
+  font-style: italic;
+  font-weight: 400;
+  src: url("./assets/font/quantico-v17-latin-italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* quantico-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Quantico";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./assets/font/quantico-v17-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* quantico-700italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Quantico";
+  font-style: italic;
+  font-weight: 700;
+  src: url("./assets/font/quantico-v17-latin-700italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+h1 {
+  font-size: 54px;
+  color: transparent;
+  -webkit-text-stroke: 3px var(--main-color);
+  align-self: flex-end;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+:root {
+  --main-color: #3bee70;
+}
+
+.sections {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE und Edge */
   }
-  /* quantico-italic - latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Quantico';
-    font-style: italic;
-    font-weight: 400;
-    src: url('./assets/font/quantico-v17-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* quantico-700 - latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Quantico';
-    font-style: normal;
-    font-weight: 700;
-    src: url('./assets/font/quantico-v17-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* quantico-700italic - latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Quantico';
-    font-style: italic;
-    font-weight: 700;
-    src: url('./assets/font/quantico-v17-latin-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  
+  .sections::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
   }
 
-  :root{
-    --main-color: #3BEE70;
-  }
+button {
+  height: 43px;
+  padding-inline: 30px;
+  background-color: var(--main-color);
+  font-size: 14px;
+  color: rgb(37, 37, 37);
+  border: none;
+  border-radius: 30px;
+}
