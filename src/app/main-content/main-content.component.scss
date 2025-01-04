@@ -1,9 +1,45 @@
-app-navbar{
-    width: 172px;
-    position: absolute;
-    top: 0;
-    left: 0;
+app-navbar {
+  width: 172px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
 }
-app-landing-page{
+
+.sections {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  width: 100vw;
+  height: 100vh;
+//   > * {
+//     background-color: rgb(10, 10, 10);
+//   }
+  > :first-child {
+    flex: 0 0 100vw;
+  }
+  > :not(:first-child) {
+    flex: 0 0 calc(100vw - 172px);
+  }
+}
+
+app-landing-page{    
+    background-color: rgb(10, 10, 10);
+}
+
+app-why-me{    
+    background-color: yellow;
+}
+
+app-my-skill-set{    
+    background-color: green;
+}
+
+app-my-work{    
     background-color: red;
 }
+
+app-contact-me{    
+    background-color: blue;
+}
+

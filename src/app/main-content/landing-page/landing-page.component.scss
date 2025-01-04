@@ -1,10 +1,10 @@
 section {
-  height: 100vh;
+  height: 100%;
   margin-left: 172px;
-  background-color: rgb(10, 10, 10);
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 
   > img {
     height: 90vh;
@@ -32,6 +32,6 @@ section {
   font-size: 48px;
   font-weight: bold;
   color: transparent;
-  -webkit-text-stroke: 1px #3BEE70;
+  -webkit-text-stroke: 1px var(--main-color);
   align-self: flex-end;
 }
