@@ -44,7 +44,6 @@ h1 {
   font-size: 54px;
   color: transparent;
   -webkit-text-stroke: 3px var(--main-color);
-  align-self: flex-end;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
 }
@@ -54,13 +53,13 @@ h1 {
 }
 
 .sections {
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE und Edge */
-  }
-  
-  .sections::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Edge */
-  }
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.sections::-webkit-scrollbar {
+  display: none;
+}
 
 button {
   height: 43px;

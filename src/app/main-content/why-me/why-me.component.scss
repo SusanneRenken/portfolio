@@ -1,0 +1,17 @@
+section {
+  margin: 160px 160px 0px 80px;
+  display: flex;
+  align-items: start;
+  gap: 40px;
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+
+.headline-i-am {
+  font-size: 48px;
+  font-weight: bold;
+  color: var(--main-color);
+}
