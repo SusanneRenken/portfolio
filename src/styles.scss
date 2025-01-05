@@ -49,7 +49,7 @@ h1 {
 }
 
 :root {
-  --main-color: #3bee70;
+  --main-color: rgb(59, 238, 112);
 }
 
 .sections {
@@ -70,4 +70,11 @@ button {
   color: rgb(37, 37, 37);
   border: none;
   border-radius: 30px;
+  &:hover {
+    background: linear-gradient(
+      rgb(59, 238, 112),
+      rgb(59, 238, 112),
+      rgb(36, 112, 59)
+    );
+  }
 }

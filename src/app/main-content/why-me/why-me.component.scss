@@ -15,6 +15,7 @@ section {
 }
 
 .content-i-am {
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: end;
@@ -25,13 +26,27 @@ section {
     align-self: flex-start;
   }
   > div {
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 8px;
-    > img {
-      width: 32px;
+    >p{
+      text-align: center;
+    }
+
+    &:hover {
+      > p {
+        color: var(--main-color);
+      }
+
+      .img-located {
+        content: url(../../../assets/img/located-hover.svg);
+      }
+
+      .img-remote {
+        content: url(../../../assets/img/remote-hover.svg);
+      }
     }
   }
 }
