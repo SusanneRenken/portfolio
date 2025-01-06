@@ -10,7 +10,6 @@ app-navbar {
   display: flex;
   flex-direction: row;
   overflow-x: auto;
-//   width: 100vw;
   height: 100vh;
   //   > * {
   //     background-color: rgb(10, 10, 10);
@@ -37,7 +36,7 @@ app-why-me {
 }
 
 app-my-skill-set {
-  background-color: green;
+  background-color: rgb(10, 10, 10);
 }
 
 app-my-work {
