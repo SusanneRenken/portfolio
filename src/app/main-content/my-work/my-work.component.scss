@@ -1,0 +1,13 @@
+section {
+  margin-inline: 80px;
+  display: flex;
+  align-items: start;
+  gap: 40px;
+  > div {
+    display: flex;
+    gap: 56px;
+    >p{
+        width: 400px;
+    }
+  }
+}

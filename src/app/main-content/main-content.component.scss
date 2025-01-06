@@ -14,16 +14,17 @@ app-navbar {
   //   > * {
   //     background-color: rgb(10, 10, 10);
   //   }
-  > :first-child {
-    flex: 0 0 100vw;
-  }
-  > :not(:first-child) {
-    flex: 0 0 calc(100vw - 172px);
-  }
+  // > :first-child {
+  //   flex: 0 0 100vw;
+  // }
+  // > :not(:first-child) {
+  //   flex: 0 0 calc(100vw - 172px);
+  // }
 }
 
 app-landing-page {
   background-color: rgb(10, 10, 10);
+  flex: 0 0 100vw;
 }
 
 app-why-me {
@@ -33,6 +34,7 @@ app-why-me {
     rgb(38, 38, 38),
     rgb(10, 10, 10)
   );
+  flex: 0 0 calc(100vw - 172px);
 }
 
 app-my-skill-set {
@@ -40,10 +42,18 @@ app-my-skill-set {
   display: flex;
   justify-content: end;
   align-items: end;
+  flex: 0 0 calc(100vw - 172px);
 }
 
 app-my-work {
-  background-color: red;
+  background: linear-gradient(
+    70deg,
+    rgb(235, 11, 11),
+    rgb(38, 38, 38),
+    rgb(10, 10, 10)
+  );
+  display: flex;
+  align-items: center;
 }
 
 app-contact-me {
