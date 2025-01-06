@@ -37,6 +37,9 @@ app-why-me {
 
 app-my-skill-set {
   background-color: rgb(10, 10, 10);
+  display: flex;
+  justify-content: end;
+  align-items: end;
 }
 
 app-my-work {

@@ -9,16 +9,17 @@
     </p>
 
     <div>
+      @for (element of skillIconsList; track element.name) {
       <div class="content">
         <div>
-          <img src="assets/img/located-default.svg" alt="" />
+          <img [src]="element.url" alt="" />
         </div>
-        <p>Angular</p>
+        <p>{{ element.name }}</p>
       </div>
+      }
+      <span>
+        I am always happy to learn new technologies, just tell me what you need.
+      </span>
     </div>
-
-    <span>
-      I am always happy to learn new technologies, just tell me what you need.
-    </span>
   </div>
 </section>

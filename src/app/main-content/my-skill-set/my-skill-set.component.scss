@@ -1,6 +1,7 @@
 section {
-  margin: 440px 160px 0px 80px;
-  max-width: 980px;
+  margin-bottom: 80px;
+  margin-right: 160px;
+  max-width: 1020px;
   display: flex;
   align-items: start;
   gap: 40px;
@@ -10,17 +11,16 @@ section {
     gap: 56px;
     position: relative;
     > div {
-      width: 720px;
+      width: 100%;
       display: flex;
+      align-items: flex-start;
       flex-wrap: wrap;
-      gap: 40px;
-    }
-    > span {
-      width: 215px;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      text-align: justify;
+      gap: 48px;
+      > span {
+        width: 215px;
+        margin-left: auto;
+        text-align: justify;
+      }
     }
   }
 }
@@ -61,17 +61,13 @@ section {
     text-align: center;
   }
 
-  &:hover > div::before {
-    background-color: var(--main-color);
-    filter: blur(40px);
-  }
   &:hover {
     > div {
       &::before {
         background-color: var(--main-color);
         filter: blur(40px);
       }
-      >img{
+      > img {
         filter: drop-shadow(0px 4px 4px rgb(37, 37, 37));
       }
     }
