@@ -1,3 +1,61 @@
-section{
-    background-color: rgba(36, 112, 59, 0.9);
+section {
+  width: 920px;
+  height: 560px;
+  padding: 32px;
+  background-color: rgba(59, 238, 112, 0.22);
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title-content {
+  display: flex;
+  gap: 24px;
+  > :first-child {
+    font-size: 120px;
+    font-weight: 700;
+    line-height: 0.85;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--main-color);
+  }
+  > :nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    > :first-child {
+      font-size: 54px;
+      line-height: 1.2;
+      color: var(--main-color);
+    }
+    > :nth-child(2) {
+      font-size: 24px;
+      color: rgb(10, 10, 10);
+    }
+  }
+}
+
+.project-content {
+  width: 100%;
+  padding-left: 8px;
+  display: flex;
+  gap: 40px;
+  > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    > div {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+  > img {
+    width: 480px; //das muss später weg !!!!!!!!!!!
+    height: 360px;
+    flex-shrink: 0;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 24px;
+  }
 }
