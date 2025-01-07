@@ -1,19 +1,15 @@
 <section>
   <div class="title-content">
-    <div>1</div>
+    <div>{{ project.id }}</div>
     <div>
-      <div>Project Join</div>
-      <div>JavaScript | Firebase | HTML | CSS</div>
+      <div>Project {{ project.name }}</div>
+      <div>{{ project.techStack }}</div>
     </div>
   </div>
 
   <div class="project-content">
     <div>
-      <p>
-        A simple Jump-and-Run game based on an object-oriented approach. Help
-        sharkie to find coins and poison bottles to fight against the killer
-        whale.
-      </p>
+      <p>{{ project.about }}</p>
 
       <div>
         <button class="btn-secondary">GitHub</button>

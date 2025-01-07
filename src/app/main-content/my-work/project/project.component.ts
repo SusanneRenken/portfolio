@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { ProjectDataService } from './project.service';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-project',
@@ -9,17 +8,9 @@ import { ProjectDataService } from './project.service';
   styleUrl: './project.component.scss'
 })
 export class ProjectComponent {
- projects: {
-    id: number;
-    name: string;
-    about: string;
-    technologies: string;
-    image: string;
-  }[] = [];
+  @Input() project: any;
 
-  constructor(private ProjectDataService: ProjectDataService) {}
+  constructor() {}
 
-  ngOnInit() {
-    this.projects = this.ProjectDataService.getProject();
-  }
+ 
 }

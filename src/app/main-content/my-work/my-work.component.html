@@ -1,8 +1,20 @@
 <section>
   <h1>My Work</h1>
   <div>
-    <app-project></app-project>
-    <app-project></app-project>
-    
+    @for (singleproject of projects; track singleproject.id) {
+    <app-project [project]="singleproject"></app-project>
+    }
+    <div class="ongoing-project">
+      <div>
+        <div>4</div>
+        <span>Ongoing project</span>
+      </div>
+      <p>
+        I am currently working on developing an online shop for pet foods. This
+        is for me both exciting and challenging. In my work the key to success
+        lies in a good planning and execution.
+      </p>
+      <button>Let's talk</button>
+    </div>
   </div>
 </section>

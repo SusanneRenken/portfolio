@@ -5,9 +5,33 @@ section {
   gap: 40px;
   > div {
     display: flex;
+    align-items: start;
     gap: 56px;
-    >p{
-        width: 400px;
+  }
+}
+
+.ongoing-project {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  > div {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    > div {
+      font-size: 48px;
+      line-height: 0.85;
+      font-weight: 700;
+      color: transparent;
+      -webkit-text-stroke: 1px var(--main-color);
     }
+    > span {
+      font-size: 30px;
+      color: var(--main-color);
+    }
+  }
+  > button {
+    align-self: center;
   }
 }
