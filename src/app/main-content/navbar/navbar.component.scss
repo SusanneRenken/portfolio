@@ -29,7 +29,7 @@ nav {
     align-items: center;
     > a {
       font-size: 30px;
-      color: rgb(74, 74, 74);
+      color: rgb(48, 48, 48);
       background-color: var(--main-color);
       text-decoration: none;
       writing-mode: vertical-rl;
@@ -38,7 +38,7 @@ nav {
       display: inline-block;
       &:hover {
         color: transparent;
-        -webkit-text-stroke: 1.2px rgb(74, 74, 74);
+        -webkit-text-stroke: 1.2px rgb(48, 48, 48);
         writing-mode: vertical-rl;
       }
     }

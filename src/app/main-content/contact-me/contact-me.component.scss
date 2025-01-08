@@ -1,0 +1,50 @@
+section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  > span {
+    width: 100px;
+    background-color: var(--main-color);
+  }
+}
+
+.contact-formular {
+  margin: 160px 80px;
+  display: flex;
+  align-items: start;
+  gap: 40px;
+  >form{
+    width: 440px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    >button{
+        align-self: end;
+    }
+  }
+}
+
+.work-toghether {
+  width: 30vw; //später flex...
+  margin: 160px 40px 80px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 16px;
+  }
+  > :first-child {
+    > :first-child {
+      color: rgb(147, 165, 214);
+    }
+  }
+  > :nth-child(2) {
+    > p {
+      font-size: 14px;
+    }
+  }
+}

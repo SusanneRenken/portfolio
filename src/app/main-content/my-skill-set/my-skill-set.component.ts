@@ -50,9 +50,9 @@ export class MySkillSetComponent {
       url: 'assets/img/materialdesign.svg',
       name: 'Material design',
     },
-    {
-      url: 'assets/img/challengeme.svg',
-      name: 'Challenge me',
-    },
+    // {
+    //   url: 'assets/img/challengeme.svg',
+    //   name: 'Challenge me',
+    // },
   ];
 }
