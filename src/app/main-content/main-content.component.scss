@@ -1,12 +1,15 @@
+:host {
+  display: flex;
+  height: 100vh;
+}
+
 app-navbar {
   width: 172px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 999;
+  height: 100vh;
 }
 
 main {
+  flex: 1;
   display: flex;
   flex-direction: row;
   overflow-x: auto;
@@ -14,11 +17,12 @@ main {
 }
 
 app-landing-page {
+  flex: 0 0 calc(100vw - 172px);
   background-color: rgb(10, 10, 10);
-  flex: 0 0 100vw;
 }
 
 app-why-me {
+  flex: 0 0 calc(100vw - 172px);
   background: linear-gradient(
     70deg,
     rgb(10, 10, 10),
@@ -28,8 +32,10 @@ app-why-me {
 }
 
 app-my-skill-set {
+  flex: 0 0 calc(100vw - 172px);
   background-color: rgb(10, 10, 10);
   display: flex;
+  justify-content: end;
   align-items: end;
 }
 
@@ -45,5 +51,6 @@ app-my-work {
 }
 
 app-contact-me {
+  flex: 0 0 calc(100vw - 172px);
   background-color: blue;
 }
