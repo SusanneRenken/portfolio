@@ -6,20 +6,11 @@ app-navbar {
   z-index: 999;
 }
 
-.sections {
+main {
   display: flex;
   flex-direction: row;
   overflow-x: auto;
   height: 100vh;
-  //   > * {
-  //     background-color: rgb(10, 10, 10);
-  //   }
-  // > :first-child {
-  //   flex: 0 0 100vw;
-  // }
-  // > :not(:first-child) {
-  //   flex: 0 0 calc(100vw - 172px);
-  // }
 }
 
 app-landing-page {
@@ -34,15 +25,12 @@ app-why-me {
     rgb(38, 38, 38),
     rgb(10, 10, 10)
   );
-  flex: 0 0 calc(100vw - 172px);
 }
 
 app-my-skill-set {
   background-color: rgb(10, 10, 10);
   display: flex;
-  justify-content: end;
   align-items: end;
-  flex: 0 0 calc(100vw - 172px);
 }
 
 app-my-work {

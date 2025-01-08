@@ -56,12 +56,12 @@ p {
   --main-color: rgb(59, 238, 112);
 }
 
-.sections {
+main {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
 
-.sections::-webkit-scrollbar {
+main::-webkit-scrollbar {
   display: none;
 }
 
