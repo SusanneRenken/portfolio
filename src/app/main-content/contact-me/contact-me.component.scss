@@ -14,13 +14,29 @@ section {
   display: flex;
   align-items: start;
   gap: 40px;
-  >form{
+  > form {
     width: 440px;
     display: flex;
     flex-direction: column;
     gap: 16px;
-    >button{
-        align-self: end;
+    > div {
+      display: flex;
+      align-items: start;
+      gap: 8px;
+      > p {
+        font-size: 14px;
+        color: var(--main-color);
+        > a {
+          font-size: 14px;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    > button {
+      align-self: end;
     }
   }
 }
@@ -45,6 +61,19 @@ section {
   > :nth-child(2) {
     > p {
       font-size: 14px;
+    }
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 16px;
+  > p {
+    > img {
+      height: 18px;
+      margin-right: 8px;
     }
   }
 }

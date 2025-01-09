@@ -94,3 +94,30 @@ button {
     border: 1px solid rgb(147, 165, 214);
   }
 }
+
+input {
+  height: 60px;
+  padding-inline: 32px;
+  background-color: transparent;
+  border: 1px solid var(--main-color);
+  border-radius: 30px;
+  font-size: 14px;
+  color: rgb(255, 253, 253);
+  &::placeholder {
+    color: var(--main-color);
+  }
+}
+
+textarea {
+  height: 240px;
+  padding: 24px 32px;
+  resize: none;
+  background-color: transparent;
+  border: 1px solid var(--main-color);
+  border-radius: 30px;
+  font-size: 14px;
+  color: rgb(255, 253, 253);
+  &::placeholder {
+    color: var(--main-color);
+  }
+}

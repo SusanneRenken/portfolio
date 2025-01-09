@@ -29,13 +29,15 @@ app-why-me {
     rgb(38, 38, 38),
     rgb(10, 10, 10)
   );
+  display: flex;
+  justify-content: center;
 }
 
 app-my-skill-set {
   flex: 0 0 calc(100vw - 172px);
   background-color: rgb(10, 10, 10);
   display: flex;
-  justify-content: end;
+  justify-content: center;
   align-items: end;
 }
 
