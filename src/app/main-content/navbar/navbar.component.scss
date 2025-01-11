@@ -44,3 +44,19 @@ nav {
     }
   }
 }
+
+@media (max-width: 1200px) {
+  nav {
+    width: 132px;
+    padding-bottom: 40px;
+    > a {
+      height: 64px;
+      width: 64px;
+    }
+    > div {
+      > a {
+        font-size: 24px;
+      }
+    }
+  }
+}

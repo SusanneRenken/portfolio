@@ -35,3 +35,10 @@ section {
     align-self: center;
   }
 }
+
+@media (max-width: 1200px) {
+  section {
+    margin-inline: 16px;
+  }
+  
+}

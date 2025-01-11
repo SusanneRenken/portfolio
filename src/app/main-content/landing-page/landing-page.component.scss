@@ -51,3 +51,14 @@ section {
   -webkit-text-stroke: 1px var(--main-color);
   align-self: flex-end;
 }
+
+@media (max-width: 1200px) {
+  .font-name {
+    font-size: 80px;
+  }
+  
+  .font-job {
+    font-size: 40px;
+  }
+  
+}

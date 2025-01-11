@@ -56,3 +56,16 @@ app-contact-me {
   flex: 0 0 calc(100vw - 172px);
   background-color: rgb(10, 10, 10);
 }
+
+@media (max-width: 1200px) {
+  app-navbar {
+    width: 132px;
+  }
+
+  app-landing-page,
+  app-why-me,
+  app-my-skill-set,
+  app-contact-me {
+    flex: 0 0 calc(100vw - 132px);
+  }
+}

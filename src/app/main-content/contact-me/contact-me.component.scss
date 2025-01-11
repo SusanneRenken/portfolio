@@ -3,19 +3,31 @@ section {
   height: 100%;
   display: flex;
   justify-content: end;
+  > div {
+    margin-inline: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    gap: 40px;
+    > :first-child {
+      width: 100%;
+      display: flex;
+      align-items: start;
+      gap: 40px;
+    }
+  }
   > span {
     width: 100px;
     background-color: var(--main-color);
   }
 }
 
-.contact-formular {
-  margin: 160px 80px;
+.content {
   display: flex;
-  align-items: start;
   gap: 40px;
   > form {
-    width: 440px;
+    width: 456px;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -39,41 +51,69 @@ section {
       align-self: end;
     }
   }
-}
 
-.work-toghether {
-  width: 30vw; //später flex...
-  margin: 160px 40px 80px 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   > div {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: end;
     gap: 16px;
-  }
-  > :first-child {
     > :first-child {
       color: rgb(147, 165, 214);
     }
-  }
-  > :nth-child(2) {
-    > p {
-      font-size: 14px;
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      gap: 16px;
+      > p {
+        > img {
+          height: 18px;
+          margin-right: 8px;
+        }
+      }
     }
   }
 }
 
-.contact {
+.legal {
   display: flex;
   flex-direction: column;
   align-items: end;
-  gap: 16px;
-  > p {
-    > img {
-      height: 18px;
-      margin-right: 8px;
+  gap: 8px;
+  > * {
+    font-size: 14px;
+  }
+}
+
+a{
+  text-decoration: none;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 1300px) {
+  .content {
+    > form {
+      width: 400px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  section {
+    width: auto;
+    > div {
+      gap: 24px;
+    }
+    > span {
+      width: 80px;
+    }
+  }
+  .content {
+    > div {
+      width: 356px;
     }
   }
 }
