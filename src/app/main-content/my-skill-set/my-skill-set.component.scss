@@ -16,12 +16,6 @@ section {
       align-items: flex-start;
       flex-wrap: wrap;
       gap: 48px;
-      > span {
-        width: 215px;
-        margin-left: auto;
-        margin-top: 36px;
-        text-align: justify;
-      }
     }
   }
 }
@@ -76,29 +70,42 @@ section {
 }
 
 .challenge-container {
+  width: 340px;
+  display: flex;
+  justify-content: space-between;
   > div {
-    background-color: rgb(255, 253, 253);
-    border-radius: 8px;
-
-    > img {
-      padding: 8px;
-      position: relative;
-      z-index: 1;
-      height: 60px;
-    }
-  }
-
-  > p {
-    text-align: center;
-  }
-
-  &:hover {
     > div {
-      &::before {
-        background-color: rgb(255, 253, 253);
-        filter: blur(60px);
+      background-color: rgb(255, 253, 253);
+      border-radius: 8px;
+
+      > img {
+        padding: 8px;
+        position: relative;
+        z-index: 1;
+        height: 60px;
       }
     }
+
+    > p {
+      text-align: center;
+    }
+
+    &:hover {
+      > div {
+        &::before {
+          background-color: rgb(255, 253, 253);
+          filter: blur(60px);
+        }
+      }
+      + span {
+        display: block;
+      }
+    }
+  }
+  > span {
+    display: none;
+    width: 215px;
+    text-align: justify;
   }
 }
 
@@ -145,9 +152,16 @@ section {
   }
 
   .challenge-container {
-    > p {
-      display: block;
-      text-align: center;
+    > div {
+      > div {
+        > img {
+          height: 48px;
+        }
+      }
+      > p {
+        display: block;
+        text-align: center;
+      }
     }
   }
 }
