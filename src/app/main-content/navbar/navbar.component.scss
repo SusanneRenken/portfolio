@@ -45,7 +45,7 @@ nav {
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199.98px) {
   nav {
     width: 132px;
     padding-bottom: 40px;
@@ -59,4 +59,21 @@ nav {
       }
     }
   }
+}
+
+@media (max-width: 991.98px) {
+  nav {
+    width: 100px;
+    padding-bottom: 24px;
+    > a {
+      height: 56px;
+      width: 56px;
+    }
+    > div {
+      > a {
+        font-size: 20px;
+      }
+    }
+  }
+  
 }

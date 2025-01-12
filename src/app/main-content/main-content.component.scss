@@ -30,14 +30,14 @@ app-why-me {
     rgb(10, 10, 10)
   );
   display: flex;
-  justify-content: center;
+  justify-content: start;
 }
 
 app-my-skill-set {
   flex: 0 0 calc(100vw - 172px);
   background-color: rgb(10, 10, 10);
   display: flex;
-  justify-content: center;
+  justify-content: end;
   align-items: end;
 }
 
@@ -57,7 +57,7 @@ app-contact-me {
   background-color: rgb(10, 10, 10);
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199.98px) {
   app-navbar {
     width: 132px;
   }
@@ -67,5 +67,18 @@ app-contact-me {
   app-my-skill-set,
   app-contact-me {
     flex: 0 0 calc(100vw - 132px);
+  }
+}
+
+@media (max-width: 991.98px) {
+  app-navbar {
+    width: 100px;
+  }
+
+  app-landing-page,
+  app-why-me,
+  app-my-skill-set,
+  app-contact-me {
+    flex: 0 0 calc(100vw - 100px);
   }
 }

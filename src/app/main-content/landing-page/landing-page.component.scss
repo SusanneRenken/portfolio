@@ -13,7 +13,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../../../assets/img/code-background.jpg');
+    background-image: url("../../../assets/img/code-background.jpg");
     background-size: cover;
     background-position: center;
     opacity: 0.1;
@@ -37,7 +37,6 @@ section {
   }
 }
 
-
 .font-name {
   font-size: 100px;
   font-weight: bold;
@@ -52,13 +51,17 @@ section {
   align-self: flex-end;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199.98px) {
   .font-name {
     font-size: 80px;
   }
-  
   .font-job {
     font-size: 40px;
   }
-  
+}
+
+@media (max-width: 991.98px) {
+  .font-name {
+    font-size: 72px;
+  }
 }
