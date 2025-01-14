@@ -6,6 +6,9 @@
 app-navbar {
   width: 172px;
   height: 100vh;
+  // box-shadow: 40px 80px 40px rgb(10, 10, 10), 40px -80px 40px rgb(10, 10, 10);
+  box-shadow: 60px 0 80px rgba(10, 10, 10, 1);
+  z-index: 999;
 }
 
 main {
