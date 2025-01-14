@@ -6,7 +6,7 @@
 app-navbar {
   width: 172px;
   height: 100vh;
-  box-shadow: 60px 0 80px rgba(10, 10, 10, 1);
+  box-shadow: 60px 0 80px rgb(10, 10, 10);
   z-index: 999;
 }
 
@@ -75,6 +75,7 @@ app-contact-me {
 @media (max-width: 991.98px) {
   app-navbar {
     width: 100px;
+    box-shadow: 40px 0 56px rgb(10, 10, 10);
   }
 
   app-landing-page,
