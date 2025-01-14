@@ -3,92 +3,88 @@ section {
   height: 100%;
   display: flex;
   justify-content: end;
+  align-items: center;
+  gap: 40px;
   > div {
-    margin-inline: 40px;
+    width: 100%;
+    margin-left: 40px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: end;
+    align-items: start;
     gap: 40px;
-    > :first-child {
-      width: 100%;
+    > div {
       display: flex;
-      align-items: start;
       gap: 40px;
     }
   }
   > span {
+    height: 100vh;
     width: 100px;
     background-color: var(--main-color);
   }
 }
 
-.content {
+form {
+  width: 456px;
   display: flex;
-  gap: 40px;
-  > form {
-    width: 456px;
+  flex-direction: column;
+  gap: 16px;
+  > div {
     display: flex;
-    flex-direction: column;
-    gap: 16px;
-    > div {
-      display: flex;
-      align-items: start;
-      gap: 8px;
-      > p {
+    align-items: start;
+    gap: 8px;
+    > p {
+      font-size: 14px;
+      color: var(--main-color);
+      > a {
         font-size: 14px;
-        color: var(--main-color);
-        > a {
-          font-size: 14px;
-          text-decoration: none;
-          &:hover {
-            text-decoration: underline;
-          }
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
         }
       }
     }
-    > button {
-      align-self: end;
-    }
   }
+  > button {
+    align-self: end;
+  }
+}
 
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 16px;
+  > :first-child {
+    color: rgb(147, 165, 214);
+  }
+  > :nth-child(2) {
+    text-align: justify;
+  }
   > div {
-    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: end;
     gap: 16px;
-    > :first-child {
-      color: rgb(147, 165, 214);
-    }
-    > div {
-      display: flex;
-      flex-direction: column;
-      align-items: end;
-      gap: 16px;
-      > p {
-        > img {
-          height: 18px;
-          margin-right: 8px;
-        }
+    > p {
+      > img {
+        height: 18px;
+        margin-right: 8px;
       }
     }
   }
-}
-
-.legal {
-  display: flex;
-  flex-direction: column;
-  align-items: end;
-  gap: 8px;
-  > * {
-    font-size: 14px;
+  > :nth-last-child(1) {
+    margin-top: auto;
+    gap: 8px;
+    > * {
+      font-size: 14px;
+    }
   }
 }
 
-a{
+a {
   text-decoration: none;
-  &:hover{
+  &:hover {
     text-decoration: underline;
   }
 }
