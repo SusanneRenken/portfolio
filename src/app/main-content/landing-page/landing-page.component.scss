@@ -2,7 +2,7 @@ section {
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: end;
   position: relative;
   overflow: hidden;
 
@@ -33,7 +33,7 @@ section {
   }
 
   > div {
-    margin-top: 240px;
+    margin-bottom: 25vh;
     position: relative;
     z-index: 99;
     background-color: transparent;
@@ -43,9 +43,24 @@ section {
 }
 
 .font-name {
-  font-size: 100px;
-  font-weight: bold;
-  color: var(--main-color);
+  display: inline-flex;
+  gap: 24px;
+
+  > span {
+    font-size: 100px;
+    font-weight: bold;
+    color: var(--main-color);
+    opacity: 0;
+    transform: translateY(120px);
+    animation: flyIn 0.6s ease-out forwards;
+  }
+  > span:nth-child(1) {
+    animation-delay: 0.4s;
+  }
+
+  > span:nth-child(2) {
+    animation-delay: 0.8s;
+  }
 }
 
 .font-job {
@@ -54,11 +69,25 @@ section {
   color: transparent;
   -webkit-text-stroke: 1px var(--main-color);
   align-self: flex-end;
+  opacity: 0;
+  transform: translateY(120px);
+  animation: flyIn 0.6s ease-out forwards;
+  animation-delay: 1.2s;
+}
+
+@keyframes flyIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 1199.98px) {
   .font-name {
-    font-size: 80px;
+    gap: 20px;
+    > span {
+      font-size: 80px;
+    }
   }
   .font-job {
     font-size: 40px;
@@ -67,6 +96,48 @@ section {
 
 @media (max-width: 991.98px) {
   .font-name {
-    font-size: 72px;
+    gap: 18px;
+    > span {
+      font-size: 72px;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  section {
+    > img {
+      height: auto;
+      max-height: 90%;
+      max-width: 90vw;
+    }
+
+    > div {
+      margin-bottom: 15vh;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  .font-name {
+    gap: 16px;
+    > span {
+      font-size: 64px;
+      align-self: center;
+    }
+    > span:nth-child(1) {
+      animation-delay: 0.8s;
+    }
+  
+    > span:nth-child(2) {
+      animation-delay: 1.2s;
+    }
+  }
+
+  .font-job {
+    font-weight: normal;
+    color: var(--main-color);
+    -webkit-text-stroke: none;
+    align-self: center;
+    animation-delay: 0.4s;
   }
 }
