@@ -120,7 +120,11 @@ a {
 }
 
 @media (max-width: 991.98px) {
+  form {
+    width: 360px;
+  }
   .content {
+    width: 320px;
     > :nth-last-child(1) {
       > * {
         font-size: 12px;
