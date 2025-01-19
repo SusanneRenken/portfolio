@@ -139,5 +139,10 @@ textarea {
 }
 
 @media (max-width: 767.98px) {
-
+  h1 {
+    // font-size: 54px;
+    -webkit-text-stroke: none;
+    writing-mode: horizontal-tb;
+    transform: none;
+  }
 }

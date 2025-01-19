@@ -130,9 +130,18 @@ app-contact-me {
     z-index: 999;
   }
 
-  
-  app-landing-page {
+    app-landing-page {
     flex: initial;
     height: calc(100vh - 64px);
+  }
+
+  app-why-me {
+    flex: initial;
+    background: linear-gradient(
+      15deg,
+      rgb(10, 10, 10),
+      rgb(38, 38, 38),
+      rgb(10, 10, 10)
+    );
   }
 }
