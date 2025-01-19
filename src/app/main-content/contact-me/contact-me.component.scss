@@ -16,11 +16,6 @@ section {
       gap: 40px;
     }
   }
-  > span {
-    height: 100vh;
-    width: 100px;
-    background-color: var(--main-color);
-  }
 }
 
 form {
@@ -77,6 +72,13 @@ form {
         align-self: start;
       }
     }
+
+    > a {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
   > :nth-last-child(1) {
     margin-top: auto;
@@ -94,7 +96,7 @@ form {
   display: flex;
   align-items: center;
   gap: 48px;
-    z-index: 999;
+  z-index: 999;
   > :first-child {
     display: flex;
     gap: 16px;
@@ -126,10 +128,17 @@ form {
   }
 }
 
-a {
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
+footer {
+  height: 100vh;
+  width: 100px;
+  background: linear-gradient(
+    135deg,
+    rgb(59, 107, 238),
+    rgb(59, 107, 238),
+    rgb(33, 58, 126)
+  );
+  > div {
+    display: none;
   }
 }
 
@@ -154,14 +163,14 @@ a {
     > :first-child {
       gap: 24px;
     }
-    > span {
-      width: 80px;
-    }
   }
   .content {
     > div {
       width: 356px;
     }
+  }
+  footer {
+    width: 80px;
   }
 }
 
@@ -186,7 +195,7 @@ a {
 @media (max-width: 767.98px) {
   section {
     height: auto;
-    margin: 40px 32px;
+    margin: 40px 32px 0px 32px;
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -202,9 +211,6 @@ a {
         align-items: center;
         gap: 40px;
       }
-    }
-    > span {
-      display: none;
     }
   }
 
@@ -229,12 +235,55 @@ a {
   .social-media {
     position: relative;
     right: auto;
-    top: auto;    
+    top: auto;
     > :first-child {
-    flex-direction: row;
+      flex-direction: row;
     }
     > :nth-child(2) {
-      display: none;      
+      display: none;
+    }
+  }
+
+  footer {
+    width: 100vw;
+    height: auto;
+    padding-block: 24px;
+    background: linear-gradient(
+      150deg,
+      rgb(59, 107, 238),
+      rgb(59, 107, 238),
+      rgb(33, 58, 126)
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+    > img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+    }
+    > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      > p {
+        color: rgb(56, 56, 56);
+      }
+      > div {
+        display: flex;
+        gap: 24px;
+        > a {
+          text-decoration: none;
+          font-size: 14px;
+          color: rgb(56, 56, 56);
+          &:hover {
+            color: rgb(37, 37, 37);
+          }
+        }
+      }
     }
   }
 }

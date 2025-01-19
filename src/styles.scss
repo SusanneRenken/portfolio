@@ -7,41 +7,36 @@
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
+@font-face {
+  font-display: swap;
+  font-family: "Quantico";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/font/quantico-v17-latin-regular.woff2") format("woff2");
 }
 
-/* quantico-regular - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Quantico";
-  font-style: normal;
-  font-weight: 400;
-  src: url("./assets/font/quantico-v17-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* quantico-italic - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: "Quantico";
   font-style: italic;
   font-weight: 400;
-  src: url("./assets/font/quantico-v17-latin-italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./assets/font/quantico-v17-latin-italic.woff2") format("woff2");
 }
-/* quantico-700 - latin */
+
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: "Quantico";
   font-style: normal;
   font-weight: 700;
-  src: url("./assets/font/quantico-v17-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./assets/font/quantico-v17-latin-700.woff2") format("woff2");
 }
-/* quantico-700italic - latin */
+
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: "Quantico";
   font-style: italic;
   font-weight: 700;
-  src: url("./assets/font/quantico-v17-latin-700italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./assets/font/quantico-v17-latin-700italic.woff2") format("woff2");
 }
 
 h1 {
@@ -136,7 +131,7 @@ textarea {
     padding-inline: 22px;
     border-radius: 24px;
   }
-  
+
   textarea {
     height: 200px;
     padding: 16px 24px;
@@ -154,13 +149,13 @@ textarea {
 
   input {
     height: 60px;
-  padding-inline: 32px;
+    padding-inline: 32px;
     border-radius: 30px;
   }
-  
+
   textarea {
     height: 240px;
-  padding: 24px 32px;
+    padding: 24px 32px;
     border-radius: 30px;
   }
 }

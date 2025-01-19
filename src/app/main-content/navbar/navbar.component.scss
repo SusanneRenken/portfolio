@@ -3,7 +3,12 @@ nav {
   width: 172px;
   padding-top: 16px;
   padding-bottom: 80px;
-  background-color: var(--main-color);
+  background: linear-gradient(
+      135deg,
+      rgb(59, 107, 238),
+      rgb(59, 107, 238),
+      rgb(33, 58, 126)
+    );
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -21,7 +26,7 @@ nav {
 
   > div {
     height: 70vh;
-    background-color: var(--main-color);
+    background-color: transparent;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -29,7 +34,7 @@ nav {
     > a {
       font-size: 30px;
       color: rgb(48, 48, 48);
-      background-color: var(--main-color);
+      background-color: transparent;
       text-decoration: none;
       writing-mode: vertical-rl;
       transform: rotate(180deg);
@@ -81,6 +86,12 @@ nav {
     height: 64px;
     width: 100%;
     padding: 16px 32px;
+    background: linear-gradient(
+      150deg,
+      rgb(59, 107, 238),
+      rgb(59, 107, 238),
+      rgb(33, 58, 126)
+    );
     display: flex;
     flex-direction: row;
     gap: 32px;
