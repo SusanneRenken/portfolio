@@ -168,8 +168,9 @@ section {
 
 @media (max-width: 767.98px) {
   section {
-    margin: 40px 32px;
     width: 100%;
+    max-width: 510px;
+    margin: 40px 32px;
     display: flex;
     flex-direction: column;
     gap: 24px;

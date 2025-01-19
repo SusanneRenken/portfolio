@@ -110,14 +110,15 @@ app-contact-me {
   }
 
   app-landing-page {
-    flex: initial;
     height: 100%;
     flex: 0 0 auto;
   }
 
-  app-why-me {
+  app-why-me,
+  app-my-work {
     height: auto;
     flex: initial;
+    justify-content: center;
     background: linear-gradient(
       15deg,
       rgb(10, 10, 10),
@@ -126,9 +127,12 @@ app-contact-me {
     );
   }
 
-  app-my-skill-set {
-    flex: initial;
+  app-my-skill-set,
+  app-contact-me {
+    width: 100%;
     height: auto;
+    flex: initial;
+    justify-content: center;
   }
 
 }

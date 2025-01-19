@@ -54,7 +54,7 @@ form {
   display: flex;
   flex-direction: column;
   align-items: end;
-  gap: 16px;
+  gap: 32px;
   > :first-child {
     color: rgb(147, 165, 214);
   }
@@ -67,9 +67,14 @@ form {
     align-items: end;
     gap: 16px;
     > p {
+      display: flex;
+      align-items: center;
+      gap: 8px;
       > img {
+        width: 32px;
         height: 18px;
-        margin-right: 8px;
+        object-fit: contain;
+        align-self: start;
       }
     }
   }
@@ -93,9 +98,11 @@ a {
   section {
     > div {
       margin-left: 30px;
-    
+      gap: 24px;
+      > div {
+        gap: 24px;
+      }
     }
-   
   }
   form {
     width: 400px;
@@ -133,3 +140,47 @@ a {
   }
 }
 
+@media (max-width: 767.98px) {
+  section {
+    height: auto;
+    margin: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    > div {
+      
+    width: 100%;
+    max-width: 510px;
+      margin-left: 0;
+      flex-direction: column;
+      gap: 24px;
+      > div {
+        width: 100%;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 40px;
+      }
+    }
+    > span {
+      display: none;
+    }
+  }
+
+  form {
+    width: 100%;
+    max-width: 510px;
+  }
+
+  .content {
+    width: 100%;
+    align-items: start;
+    > div {
+      width: 100%;
+      align-items: start;
+      gap: 12px;
+    }
+    > :nth-last-child(1) {
+      display: none;
+    }
+  }
+}
