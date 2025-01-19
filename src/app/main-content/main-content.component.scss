@@ -86,56 +86,37 @@ app-contact-me {
   }
 }
 
-@media (max-width: 991.98px) {
-  * {
-    font-size: 16px;
-  }
-  h1 {
-    font-size: 48px;
-    -webkit-text-stroke: 2px var(--main-color);
-  }
-  input {
-    height: 44px;
-    padding-inline: 22px;
-    border-radius: 24px;
-  }
-
-  textarea {
-    height: 200px;
-    padding: 16px 24px;
-    border-radius: 24px;
-  }
-}
-
 @media (max-width: 767.98px) {
   :host {
     display: flex;
     flex-direction: column;
     height: auto;
-    width: 100vw;
-  }
-
-  main {
-    height: calc(100vh - 64px);
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
+    width: 100%;
   }
 
   app-navbar {
-    width: 100vw;
+    width: 100%;
     height: 64px;
     box-shadow: 0px 40px 40px rgb(10, 10, 10);
     z-index: 999;
   }
 
-    app-landing-page {
-    flex: initial;
+  main {
     height: calc(100vh - 64px);
+    flex: initial;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+  }
+
+  app-landing-page {
+    flex: initial;
+    height: 100%;
+    flex: 0 0 auto;
   }
 
   app-why-me {
+    height: auto;
     flex: initial;
     background: linear-gradient(
       15deg,
@@ -144,4 +125,10 @@ app-contact-me {
       rgb(10, 10, 10)
     );
   }
+
+  app-my-skill-set {
+    flex: initial;
+    height: auto;
+  }
+
 }

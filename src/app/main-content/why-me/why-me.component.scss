@@ -91,14 +91,6 @@ section {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    > div {
-      display: flex;
-      flex-direction: column;
-      gap: 56px;
-      > button {
-        align-self: flex-end;
-      }
-    }
   }
 }
 
