@@ -15,7 +15,7 @@ import { ContactMeComponent } from './contact-me/contact-me.component';
     WhyMeComponent,
     MySkillSetComponent,
     MyWorkComponent,
-    ContactMeComponent,
+    ContactMeComponent
   ],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss',

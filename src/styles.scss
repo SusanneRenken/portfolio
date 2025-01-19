@@ -125,10 +125,12 @@ textarea {
   * {
     font-size: 16px;
   }
+
   h1 {
     font-size: 48px;
     -webkit-text-stroke: 2px var(--main-color);
   }
+
   input {
     height: 44px;
     padding-inline: 22px;
@@ -148,5 +150,17 @@ textarea {
     -webkit-text-stroke: none;
     writing-mode: horizontal-tb;
     transform: none;
+  }
+
+  input {
+    height: 60px;
+  padding-inline: 32px;
+    border-radius: 30px;
+  }
+  
+  textarea {
+    height: 240px;
+  padding: 24px 32px;
+    border-radius: 30px;
   }
 }

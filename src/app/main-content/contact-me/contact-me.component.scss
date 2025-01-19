@@ -5,7 +5,7 @@ section {
   justify-content: end;
   align-items: center;
   gap: 40px;
-  > div {
+  > :first-child {
     width: 100%;
     margin-left: 40px;
     display: flex;
@@ -87,6 +87,45 @@ form {
   }
 }
 
+.social-media {
+  position: absolute;
+  right: 120px;
+  top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+    z-index: 999;
+  > :first-child {
+    display: flex;
+    gap: 16px;
+    > img {
+      cursor: pointer;
+    }
+    .img-github:hover {
+      content: url(../../../assets/img/github-btn-hover.svg);
+    }
+    .img-mail:hover {
+      content: url(../../../assets/img/mail-btn-hover.svg);
+    }
+    .img-linkedin:hover {
+      content: url(../../../assets/img/linkedin-btn-hover.svg);
+    }
+  }
+  > :nth-child(2) {
+    display: flex;
+    align-items: end;
+    gap: 8px;
+    > span {
+      cursor: pointer;
+      font-weight: 700;
+      line-height: 1.15;
+      &:hover {
+        color: var(--main-color);
+      }
+    }
+  }
+}
+
 a {
   text-decoration: none;
   &:hover {
@@ -112,7 +151,7 @@ a {
 @media (max-width: 1199.98px) {
   section {
     width: auto;
-    > div {
+    > :first-child {
       gap: 24px;
     }
     > span {
@@ -138,6 +177,10 @@ a {
       }
     }
   }
+  .social-media {
+    top: 24px;
+    right: 90px;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -147,10 +190,9 @@ a {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    > div {
-      
-    width: 100%;
-    max-width: 510px;
+    > :first-child {
+      width: 100%;
+      max-width: 510px;
       margin-left: 0;
       flex-direction: column;
       gap: 24px;
@@ -181,6 +223,18 @@ a {
     }
     > :nth-last-child(1) {
       display: none;
+    }
+  }
+
+  .social-media {
+    position: relative;
+    right: auto;
+    top: auto;    
+    > :first-child {
+    flex-direction: row;
+    }
+    > :nth-child(2) {
+      display: none;      
     }
   }
 }
