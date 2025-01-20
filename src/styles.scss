@@ -141,7 +141,6 @@ textarea {
 
 @media (max-width: 767.98px) {
   h1 {
-    // font-size: 54px;
     -webkit-text-stroke: none;
     writing-mode: horizontal-tb;
     transform: none;
@@ -160,6 +159,8 @@ textarea {
   }
 }
 
-@media (max-width: 566.98px) {
-  
+@media (max-width: 575.98px) {
+  h1 {
+    font-size: clamp(32px, 10vw, 48px);
+  }
 }

@@ -52,6 +52,10 @@ section {
   }
 }
 
+.img-remote {
+  margin-right: 14px;
+}
+
 @media (max-width: 1199.98px) {
   section {
     margin: 160px 40px 0px 40px;
@@ -95,3 +99,30 @@ section {
   }
 }
 
+@media (max-width: 575.98px) {
+  section {
+    margin: 40px clamp(16px, 5vw, 32px);
+    gap: clamp(12px, 3vw, 24px);
+    > div {
+      > button {
+        align-self: center;
+      }
+    }
+  }
+
+  .content {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    > span {
+      padding-bottom: 16px;
+      align-self: auto;
+    }
+    > div {
+      width: auto;
+      height: 72px;
+    }
+  }
+  
+}
