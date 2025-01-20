@@ -73,12 +73,6 @@ form {
       }
     }
 
-    > a {
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
   }
   > :nth-last-child(1) {
     margin-top: auto;
@@ -88,6 +82,13 @@ form {
     }
   }
 }
+
+a {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
 
 .social-media {
   position: absolute;
@@ -144,7 +145,7 @@ footer {
 
 @media (max-width: 1299.98px) {
   section {
-    > div {
+    > :first-child {
       margin-left: 30px;
       gap: 24px;
       > div {
@@ -288,3 +289,28 @@ footer {
     }
   }
 }
+
+@media (max-width: 575.98px) {
+  section {
+    margin-inline: clamp(16px, 5vw, 32px);
+    >:first-child{
+      gap: clamp(12px, 3vw, 24px);
+    }
+    
+  }  
+
+  .content {
+    gap: 16px;
+  }
+
+  .social-media {
+    margin-top: 24px;
+  }
+
+  footer {
+    > img {
+      display:none;
+    }    
+  }
+}
+
