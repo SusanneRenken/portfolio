@@ -141,3 +141,16 @@ section {
     animation-delay: 0.4s;
   }
 }
+
+@media (max-width: 566.98px) {
+  .font-name {
+    gap: clamp(8px, 2vw, 24px);  
+    > span {
+      font-size: clamp(36px, 11vw, 64px);
+    }
+  }
+  
+  .font-job {    
+    font-size: clamp(24px, 7vw, 40px);
+  }
+}
