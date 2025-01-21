@@ -1,6 +1,6 @@
 <nav>
   <a href="#landing_page">
-    <img src="../../../assets/img/Logo-Platzhalter.png" alt="Profile Image" />
+    <img src="assets/img/Logo-Platzhalter.png" alt="Profile Image" />
   </a>
 
   <div>
@@ -9,4 +9,14 @@
     <a href="#my_work">My Work</a>
     <a href="#contact_me">Contact</a>
   </div>
+
+  <img src="assets/img/burger.svg" alt="Burger Menu" (click)="toggleMenu()" />
 </nav>
+
+<div class="mobile-menu" [class.show]="isMenuOpen">
+  <img src="assets/img/close.svg" alt="Close Menu" (click)="toggleMenu()">
+  <a href="#why_me" (click)="toggleMenu()">Why me</a>
+  <a href="#my_skill_set" (click)="toggleMenu()">Skills</a>
+  <a href="#my_work" (click)="toggleMenu()">My Work</a>
+  <a href="#contact_me" (click)="toggleMenu()">Contact</a>
+</div>

@@ -8,7 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './my-skill-set.component.scss',
 })
 export class MySkillSetComponent {
-
   skillIconsList = [
     {
       url: 'assets/img/angular.svg',
@@ -50,9 +49,5 @@ export class MySkillSetComponent {
       url: 'assets/img/materialdesign.svg',
       name: 'Material design',
     },
-    // {
-    //   url: 'assets/img/challengeme.svg',
-    //   name: 'Challenge me',
-    // },
   ];
 }
