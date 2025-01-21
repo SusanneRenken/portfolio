@@ -11,4 +11,14 @@ import { PROJECTS } from './project-data';
 })
 export class MyWorkComponent {
   projects = PROJECTS;
+  expandedProjectId: number | null = null;
+
+  toggleProjectExpansion(projectId: number) {
+    if (this.expandedProjectId === projectId) {
+      this.expandedProjectId = null;
+    } else {
+      this.expandedProjectId = projectId;
+    }
+  }
+
 }

@@ -2,7 +2,11 @@
   <h1>My Work</h1>
   <div>
     @for (singleproject of projects; track singleproject.id) {
-    <app-project [project]="singleproject"></app-project>
+    <app-project
+      [project]="singleproject"
+      [isExpanded]="expandedProjectId === singleproject.id"
+      (toggleRequest)="toggleProjectExpansion(singleproject.id)"
+    ></app-project>
     }
     <div class="ongoing-project">
       <div>

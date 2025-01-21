@@ -7,8 +7,9 @@
     </div>
   </div>
 
+  @if (isExpanded) {
   <div>{{ project.techStack }}</div>
-
+  } @if (isExpanded) {
   <div class="project-content">
     <div>
       <p>{{ project.about }}</p>
@@ -18,12 +19,23 @@
         <button>Live Test</button>
       </div>
     </div>
-
     <img src="assets/img/{{ project.image }}" alt="Project image" />
   </div>
+  } @else {
+  <div class="project-content">
+    <div>
+      <p>{{ project.about }}</p>
+    </div>
+  </div>
+  }
 
-  <div class="show-me">
-    <span>Show me less</span>
-    <img src="assets/img/triangle-up.svg" alt="Arrow up" />
+  <div class="show-me" (click)="onToggle()">
+    <span>
+      {{ isExpanded ? "Show me less" : "Show me more" }}
+    </span>
+    <img
+      src="assets/img/triangle-{{ isExpanded ? 'up' : 'down' }}.svg"
+      alt="Arrow"
+    />
   </div>
 </section>
