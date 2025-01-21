@@ -7,6 +7,9 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  > :nth-child(2) {
+    display: none;
+  }
 }
 
 .title-content {
@@ -45,6 +48,9 @@ section {
     display: flex;
     flex-direction: column;
     gap: 24px;
+    > img {
+      display: none;
+    }
     > div {
       display: flex;
       justify-content: space-around;
@@ -59,6 +65,10 @@ section {
     object-position: center;
     border-radius: 24px;
   }
+}
+
+.show-me{
+  display: none;
 }
 
 @media (max-width: 1199.98px) {
@@ -99,11 +109,80 @@ section {
     }
   }
 
-  .project-content {    
+  .project-content {
     gap: 24px;
     > img {
       width: 200px;
       height: 220px;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  section {
+    width: 100%;
+    height: auto;
+    padding: 16px;
+    gap: 16px;
+    > :nth-child(2) {   
+      display: block;   
+      font-size: 16px;
+      color: rgb(10, 10, 10);
+    }
+  }
+
+  .title-content {
+    gap: 8px;
+    > :first-child {
+      font-size: 40px;
+      line-height: 0.85;
+    }
+    > :nth-child(2) {
+      > :first-child {
+        font-size: 24px;
+        line-height: 1.2;
+      }
+      > :nth-child(2) {
+        display: none;
+      }
+    }
+  }
+
+  .project-content {
+    width: 100%;
+    padding-left: 0px;
+    flex-direction: column;
+    gap: 24px;
+    > div {
+      > img {
+        width: 100%;
+        height: auto;
+        box-shadow: 0px 0px 12px rgb(10, 10, 10);
+        flex-shrink: 0;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 24px;
+        display: block;
+      }
+    }
+    > img {
+      display: none;
+    }
+  }
+  .show-me{
+    padding-block: 8px 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    >span{    
+      font-size: 14px;  
+    color: var(--main-color);
+    text-decoration: underline;
+    }
+    >img{
+      width: 16px;
+      height: 16px;
     }
   }
 }
