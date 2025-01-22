@@ -7,9 +7,9 @@
     </div>
   </div>
 
-  @if (isExpanded) {
+  @if (isExpanded || isDesktop) {
   <div>{{ project.techStack }}</div>
-  } @if (isExpanded) {
+
   <div class="project-content">
     <div>
       <p>{{ project.about }}</p>
@@ -23,9 +23,7 @@
   </div>
   } @else {
   <div class="project-content">
-    <div>
-      <p>{{ project.about }}</p>
-    </div>
+    <p>{{ project.about }}</p>
   </div>
   }
 

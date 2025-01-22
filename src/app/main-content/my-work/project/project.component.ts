@@ -9,14 +9,24 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ProjectComponent {
   @Input() project: any;
-  @Input() isExpanded: boolean = false;    // Erhält Info vom Parent
-  @Output() toggleRequest = new EventEmitter<void>(); // Um den Parent zu informieren
+  @Input() isExpanded: boolean = false;
+  @Output() toggleRequest = new EventEmitter<void>();
+
+  isDesktop = false;
+
+  ngOnInit() {
+    // Einmalige Abfrage beim Laden:
+    this.isDesktop = window.innerWidth >= 576;  // oder 1200, je nach Wunsch
+
+    // Willst du auch bei Fenster-Resize reagieren? Dann so:
+    window.addEventListener('resize', () => {
+      this.isDesktop = window.innerWidth >= 576;
+    });
+  }
 
   onToggle() {
     this.toggleRequest.emit();
   }
 
-  constructor() {}
-
- 
+  constructor() {} 
 }
