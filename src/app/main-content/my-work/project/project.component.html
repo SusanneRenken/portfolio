@@ -8,23 +8,28 @@
   </div>
 
   @if (isExpanded || isDesktop) {
-  <div>{{ project.techStack }}</div>
+
+  <div class="project-details" [class.expanded]="isExpanded">
+    {{ project.techStack }}
+  </div>
 
   <div class="project-content">
     <div>
       <p>{{ project.about }}</p>
+
       <img src="assets/img/{{ project.image }}" alt="Project image" />
+
       <div>
         <button class="btn-secondary">GitHub</button>
         <button>Live Test</button>
       </div>
     </div>
+
     <img src="assets/img/{{ project.image }}" alt="Project image" />
   </div>
   } @else {
-  <div class="project-content">
-    <p>{{ project.about }}</p>
-  </div>
+  <img src="assets/img/{{ project.image }}" alt="Project image" />
+
   }
 
   <div class="show-me" (click)="onToggle()">
