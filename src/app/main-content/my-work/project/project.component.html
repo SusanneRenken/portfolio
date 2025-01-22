@@ -7,19 +7,19 @@
     </div>
   </div>
 
-  @if (isExpanded || isDesktop) {
-
-  <div>
+  <div class="expand-container" [class.expanded]="isDesktop || isExpanded">
     {{ project.techStack }}
   </div>
 
   <div class="project-content">
     <div>
-      <p>{{ project.about }}</p>
+      <p class="expand-container" [class.expanded]="isDesktop || isExpanded">
+        {{ project.about }}
+      </p>
 
       <img src="assets/img/{{ project.image }}" alt="Project image" />
 
-      <div>
+      <div class="expand-container" [class.expanded]="isDesktop || isExpanded">
         <button class="btn-secondary">GitHub</button>
         <button>Live Test</button>
       </div>
@@ -27,10 +27,6 @@
 
     <img src="assets/img/{{ project.image }}" alt="Project image" />
   </div>
-  } @else {
-  <img src="assets/img/{{ project.image }}" alt="Project image" />
-
-  }
 
   <div class="show-me" (click)="onToggle()">
     <span>

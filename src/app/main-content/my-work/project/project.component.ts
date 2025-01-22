@@ -15,10 +15,8 @@ export class ProjectComponent {
   isDesktop = false;
 
   ngOnInit() {
-    // Einmalige Abfrage beim Laden:
-    this.isDesktop = window.innerWidth >= 576;  // oder 1200, je nach Wunsch
+    this.isDesktop = window.innerWidth >= 576;
 
-    // Willst du auch bei Fenster-Resize reagieren? Dann so:
     window.addEventListener('resize', () => {
       this.isDesktop = window.innerWidth >= 576;
     });
