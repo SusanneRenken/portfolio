@@ -1,21 +1,22 @@
 :host {
+  width: calc(100vw - 172px);
   display: flex;
   height: 100vh;
+  overflow-x: auto;
 }
 
-app-navbar {
-  width: 172px;
-  height: 100vh;
-  box-shadow: 60px 0 80px rgb(10, 10, 10);
-  z-index: 999;
-}
+// app-navbar {
+//   width: 172px;
+//   height: 100vh;
+//   box-shadow: 60px 0 80px rgb(10, 10, 10);
+//   z-index: 999;
+// }
 
 main {
-  flex: 1;
+  height: 100vh;
   display: flex;
   flex-direction: row;
   overflow-x: auto;
-  height: 100vh;
 }
 
 app-landing-page {

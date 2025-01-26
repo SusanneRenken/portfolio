@@ -1,4 +1,36 @@
-// :host {
-//     display: flex;
-//     height: 100vh;
-//   }
+:host {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+
+app-navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 172px;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgb(59, 107, 238),
+    rgb(59, 107, 238),
+    rgb(33, 58, 126)
+  );
+  box-shadow: 60px 0 80px rgb(10, 10, 10);
+}
+
+.main-content {
+  height: 100%;
+  margin-left: 172px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+}
+
+.router-outlet-content {
+  display: inline-block;
+  height: 100%;
+  width: calc(100vw - 172px);
+  vertical-align: top;
+}
