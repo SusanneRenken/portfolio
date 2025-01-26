@@ -82,14 +82,7 @@ section {
 
       > img {
         padding: 8px;
-        position: relative;
-        z-index: 1;
-        height: 60px;
       }
-    }
-
-    > p {
-      text-align: center;
     }
 
     &:hover {
@@ -112,7 +105,7 @@ section {
 
 .arrow-img {
   position: absolute;
-  bottom: 720px;
+  bottom: 640px;
   right: 40px;
 }
 
@@ -141,10 +134,6 @@ section {
     }
   }
 
-  .arrow-img {
-    bottom: 560px;
-  }
-
   .content {
     height: 102px;
 
@@ -169,22 +158,21 @@ section {
 
   .challenge-container {
     > div {
-      > div {
-        > img {
-          height: 48px;
-        }
-      }
       > p {
         display: block;
         text-align: center;
       }
     }
   }
+
+  .arrow-img {
+    bottom: 560px;
+  }
 }
 
 @media (max-width: 767.98px) {
   section {
-    padding: 40px calc((100% - 510px)/2);
+    padding: 40px calc((100% - 510px) / 2);
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -233,10 +221,9 @@ section {
     margin-top: 16px;
     display: flex;
     flex-direction: column;
-    >span{
+    > span {
       width: 100%;
       display: block;
     }
   }
-
 }

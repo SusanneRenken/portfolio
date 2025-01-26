@@ -4,7 +4,6 @@ section {
   justify-content: center;
   align-items: end;
   position: relative;
-  overflow: hidden;
 
   &::before {
     content: "";
@@ -21,21 +20,21 @@ section {
   }
 
   > img {
-    height: 90vh;
+    max-height: 90%;
+    max-width: calc(100vw - 172px);
     position: absolute;
     bottom: 0;
     z-index: 2;
     //MUSS SPÄTER GELÖSCH WERDEN
     // &:hover {
-    //   height: 85vh;
     //   content: url(../../../assets/img/profile1.png);
     // }
   }
 
   > div {
-    margin-bottom: 25vh;
     position: relative;
     z-index: 99;
+    margin-bottom: 25vh;
     background-color: transparent;
     display: flex;
     flex-direction: column;
@@ -89,6 +88,11 @@ section {
 }
 
 @media (max-width: 1199.98px) {
+  section{
+    > img {
+      max-width: calc(100vw - 132px);
+    }
+  }
   .font-name {
     gap: 20px;
     > span {
@@ -101,6 +105,11 @@ section {
 }
 
 @media (max-width: 991.98px) {
+  section{
+    > img {
+      max-width: calc(100vw - 100px);
+    }
+  }
   .font-name {
     gap: 18px;
     > span {
@@ -114,7 +123,7 @@ section {
     > img {
       height: auto;
       max-height: 90%;
-      max-width: 90vw;
+      max-width: 100vw;
     }
 
     > div {

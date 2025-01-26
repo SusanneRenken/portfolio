@@ -1,17 +1,15 @@
 nav {
-  // position: fixed;
-  // left: 0;
-  // top: 0;
-  // height: 100vh;
-  // width: 172px;
+  width: 172px;
+  height: 100%;
   padding-top: 16px;
   padding-bottom: 80px;
-  // background: linear-gradient(
-  //   135deg,
-  //   rgb(59, 107, 238),
-  //   rgb(59, 107, 238),
-  //   rgb(33, 58, 126)
-  // );
+  background: linear-gradient(
+    135deg,
+    rgb(59, 107, 238),
+    rgb(59, 107, 238),
+    rgb(33, 58, 126)
+  );
+  box-shadow: 60px 0 80px rgb(10, 10, 10);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -159,7 +157,6 @@ nav {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      align-items: space-between;
       > a {
         font-size: 20px;
         writing-mode: horizontal-tb;
