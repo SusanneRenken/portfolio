@@ -1,7 +1,9 @@
 section {
-  margin-bottom: 80px;
-  margin-right: 80px;
-  width: 1020px;
+  position: relative;
+  width: 100%;
+  padding-bottom: 80px;
+  padding-left: 80px;
+  padding-right: calc(100% - 80px - 995px);
   display: flex;
   align-items: start;
   gap: 40px;
@@ -108,17 +110,28 @@ section {
   }
 }
 
+.arrow-img {
+  position: absolute;
+  bottom: 720px;
+  right: 40px;
+}
+
 @media (max-width: 1299.98px) {
   section {
-    width: 740px;
+    padding-bottom: 60px;
+    padding-left: 60px;
+    padding-right: calc(100% - 60px - 740px);
+  }
+  .arrow-img {
+    bottom: 680px;
   }
 }
 
 @media (max-width: 991.98px) {
   section {
-    margin-bottom: 40px;
-    margin-right: 40px;
-    width: 590px;
+    padding-bottom: 60px;
+    padding-left: 40px;
+    padding-right: calc(100% - 40px - 590px);
     gap: 32px;
     > div {
       gap: 32px;
@@ -126,6 +139,10 @@ section {
         gap: 14px;
       }
     }
+  }
+
+  .arrow-img {
+    bottom: 560px;
   }
 
   .content {
@@ -167,9 +184,7 @@ section {
 
 @media (max-width: 767.98px) {
   section {
-    width: 100%;
-    max-width: 510px;
-    margin: 40px 32px;
+    padding: 40px calc((100% - 510px)/2);
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -178,7 +193,7 @@ section {
 
 @media (max-width: 575.98px) {
   section {
-    margin: 40px clamp(16px, 5vw, 32px);
+    padding: 40px clamp(16px, 5vw, 32px);
     gap: clamp(12px, 3vw, 24px);
     > div {
       > div {

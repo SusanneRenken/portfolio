@@ -72,7 +72,6 @@ form {
         align-self: start;
       }
     }
-
   }
   > :nth-last-child(1) {
     margin-top: auto;
@@ -84,11 +83,11 @@ form {
 }
 
 a {
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
 
 .social-media {
   position: absolute;
@@ -260,7 +259,7 @@ footer {
     align-items: center;
     gap: 64px;
     > img {
-      display:block;
+      display: block;
       width: 48px;
       height: 48px;
       border-radius: 50%;
@@ -293,11 +292,10 @@ footer {
 @media (max-width: 575.98px) {
   section {
     margin-inline: clamp(16px, 5vw, 32px);
-    >:first-child{
+    > :first-child {
       gap: clamp(12px, 3vw, 24px);
     }
-    
-  }  
+  }
 
   .content {
     gap: 16px;
@@ -309,8 +307,7 @@ footer {
 
   footer {
     > img {
-      display:none;
-    }    
+      display: none;
+    }
   }
 }
-

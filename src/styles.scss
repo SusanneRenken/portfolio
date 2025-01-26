@@ -116,6 +116,30 @@ textarea {
   }
 }
 
+.arrow-img {
+  z-index: 3;
+  width: 160px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 34px;
+    left: 16px;
+    width: 126px;
+    height: 11px;
+    z-index: 2;
+  }
+  &:hover {
+    &::before {
+      background-color: var(--main-color);
+      filter: blur(7px);
+    }
+  }
+}
+
 @media (max-width: 991.98px) {
   * {
     font-size: 16px;
@@ -156,6 +180,10 @@ textarea {
     height: 240px;
     padding: 24px 32px;
     border-radius: 30px;
+  }
+
+  .arrow-img {
+    display: none;
   }
 }
 
