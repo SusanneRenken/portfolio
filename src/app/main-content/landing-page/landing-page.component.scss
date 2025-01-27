@@ -20,7 +20,7 @@ section {
   }
 
   > img {
-    max-height: 90%;
+    max-height: 100%;
     max-width: calc(100vw - 172px);
     position: absolute;
     bottom: 0;
@@ -67,6 +67,7 @@ section {
   font-weight: bold;
   color: transparent;
   -webkit-text-stroke: 1px var(--main-color);
+  // -webkit-text-stroke: 0.5px white;
   align-self: flex-end;
   opacity: 0;
   transform: translateY(120px);
