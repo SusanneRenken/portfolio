@@ -96,9 +96,9 @@ input {
 }
 
 textarea {
+  resize: none;
   height: 240px;
   padding: 24px 32px;
-  resize: none;
   background-color: transparent;
   border: 1px solid var(--main-color);
   border-radius: 30px;
@@ -119,11 +119,11 @@ textarea {
   &::before {
     content: "";
     position: absolute;
+    z-index: 2;
     top: 34px;
     left: 16px;
     width: 126px;
     height: 11px;
-    z-index: 2;
   }
   &:hover {
     &::before {
