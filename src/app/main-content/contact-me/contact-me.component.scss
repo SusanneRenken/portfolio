@@ -13,33 +13,6 @@ section {
     }
   }
 }
-
-form {
-  width: 456px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  > div {
-    display: flex;
-    align-items: start;
-    gap: 8px;
-    > p {
-      font-size: 14px;
-      color: var(--main-color);
-      > a {
-        font-size: 14px;
-        text-decoration: none;
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-  }
-  > button {
-    align-self: end;
-  }
-}
-
 .content {
   width: 400px;
   display: flex;
@@ -134,18 +107,13 @@ form {
       gap: 24px;
     }
   }
-  form {
-    width: clamp(360px, 38vw, 456px);
-  }
 }
 
 @media (max-width: 991.98px) {
   section {
     padding: 100px 32px 100px 32px;
   }
-  form {
-    width: 360px;
-  }
+
   .content {
     > :nth-last-child(1) {
       > * {
@@ -172,10 +140,6 @@ form {
         gap: 40px;
       }
     }
-  }
-
-  form {
-    width: 100%;
   }
 
   .content {
