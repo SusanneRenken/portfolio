@@ -20,8 +20,12 @@
       <img src="assets/img/{{ project.image }}" alt="Project image" />
 
       <div class="expand-container" [class.expanded]="isDesktop || isExpanded">
-        <button class="btn-secondary">GitHub</button>
-        <button>Live Test</button>
+        <a class="project-btn secondary" href="{{ project.repositoryUrl }}" target="_blank" rel="noopener">
+          GitHub
+        </a>
+        <a class="project-btn primary" href="{{ project.liveDemoUrl }}" target="_blank" rel="noopener">
+          Live Test
+        </a>
       </div>
     </div>
 

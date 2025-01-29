@@ -16,7 +16,7 @@ export const PROJECTS: Projects[] = [
       'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
     techStack: 'JavaScript | HTML | CSS | Firebase',
     image: 'join.jpg',
-    repositoryUrl: 'https://github.com/SusanneRenken/join',
+    repositoryUrl: 'https://github.com/SusanneRenken/join/',
     liveDemoUrl:
       'https://susanne-renken.developerakademie.net/FERTIG/m10_join/',
   },
@@ -27,8 +27,8 @@ export const PROJECTS: Projects[] = [
       'A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale.',
     techStack: 'JavaScript | HTML | CSS | Firebase',
     image: 'sharkie.jpg',
-    repositoryUrl: 'https://github.com/SusanneRenken/join',
+    repositoryUrl: 'https://github.com/SusanneRenken/sharkie/',
     liveDemoUrl:
-      'https://susanne-renken.developerakademie.net/FERTIG/m10_join/',
+      'https://susanne-renken.developerakademie.net/FERTIG/m12_sharkie/index.html',
   },
 ];

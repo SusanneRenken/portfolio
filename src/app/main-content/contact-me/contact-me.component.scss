@@ -161,7 +161,8 @@ form {
 @media (max-width: 767.98px) {
   section {
     height: auto;
-    padding: 40px calc((100% - 510px) / 2);
+    padding-block: 40px 20px;
+    padding-inline: calc((100% - 510px) / 2);
     > :first-child {
       flex-direction: column;
       gap: 24px;
@@ -216,7 +217,8 @@ form {
 
 @media (max-width: 575.98px) {
   section {
-    padding: 40px clamp(16px, 5vw, 32px);
+    padding-block: 40px 20px;
+    padding-inline: clamp(16px, 5vw, 32px);
     > :first-child {
       gap: clamp(12px, 3vw, 24px);
     }
@@ -227,6 +229,6 @@ form {
   }  
 
   .social-media {
-    margin-top: 24px;
+    margin-top: 40px;
   }
 }

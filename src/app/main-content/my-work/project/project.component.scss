@@ -95,6 +95,41 @@ section {
   display: none;
 }
 
+.project-btn{
+  display: flex;
+  align-items: center;
+  width: auto;
+  height: 43px;
+  padding-inline: 30px;
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 30px;
+}
+
+.primary {
+  background-color: var(--main-color);
+  color: rgb(37, 37, 37);
+  border: none;
+  &:hover {
+    background: linear-gradient(
+      rgb(59, 107, 238),
+      rgb(59, 107, 238),
+      rgb(26, 46, 100)
+    );
+  }
+}
+
+.secondary {
+  background-color: transparent;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  &:hover {
+    background: rgba(59, 107, 238, 0.2);
+    color: rgb(255, 253, 253);
+    border: 1px solid rgb(147, 165, 214);
+  }
+}
+
 @media (max-width: 1199.98px) {
   section {
     width: 720px;
