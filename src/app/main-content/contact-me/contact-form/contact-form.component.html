@@ -1,15 +1,61 @@
-<form>
-    <input type="text" placeholder="Your name" required />
-    <input type="email" placeholder="Your e-mail" required />
-    <textarea name="" id="" placeholder="Your message"></textarea>
-    <div>
-      <img src="assets/img/checkbox.svg" alt="" />
-      <p>
-        I've read the
-        <!-- Hier muss noch der Link eingefügt werden -->
-        <a href="">privacy policy</a>
-        and agree to the processing of my data as outlined.
-      </p>
-    </div>
-    <button>Send</button>
-  </form>
+<form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+  <label for="name" class="sr-only">Name</label>
+  <input
+    #name="ngModel"
+    [(ngModel)]="contactData.name"
+    type="text"
+    id="name"
+    name="name"
+    [attr.placeholder]="
+      name.invalid && name.touched ? 'Your name is required' : 'Your name'
+    "
+    required
+  />
+
+  <label for="email" class="sr-only">Email</label>
+  <input
+    #email="ngModel"
+    [(ngModel)]="contactData.email"
+    type="email"
+    id="email"
+    name="email"
+    [attr.placeholder]="
+      email.invalid && email.touched ? 'Your email is required' : 'Your email'
+    "
+    required
+    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+  />
+
+  <label for="message" class="sr-only">Subject</label>
+  <textarea
+    #message="ngModel"
+    [(ngModel)]="contactData.message"
+    id="message"
+    name="message"
+    [attr.placeholder]="
+      message.invalid && message.touched
+        ? 'Your message is required'
+        : 'Your message'
+    "
+    required
+    minlength="4"
+  ></textarea>
+
+  <div class="accept-privacy-policy">
+    <img
+      [src]=" 'assets/img/checkbox-' + (isAccepted ? 'checked' : 'default') + '.svg' "
+      alt="Checkbox"
+      [class.accepted]="isAccepted"
+      (click)="onAccept()"
+    />
+    <p>
+      I've read the
+      <!-- Hier muss noch der Link eingefügt werden -->
+      <a href="">privacy policy</a>
+      and agree to the processing of my data as outlined.
+    </p>
+  </div>
+
+  <input type="submit" value="Send" [disabled]="!isAccepted || !contactForm.valid"/>
+
+</form>

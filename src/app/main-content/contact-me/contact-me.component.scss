@@ -37,6 +37,17 @@ section {
   }
 }
 
+a {
+  text-decoration: none;
+  &:hover {
+    color: rgb(147, 165, 214);
+  }
+  &:active {
+    color: var(--main-color);
+    text-decoration: underline;
+  }
+}
+
 .contact-info {
   display: flex;
   flex-direction: column;
@@ -97,7 +108,7 @@ section {
   }
 }
 
-.arrow-img{
+.arrow-img {
   margin-block: 16px;
 }
 
@@ -190,7 +201,7 @@ section {
 
   .content {
     gap: 16px;
-  }  
+  }
 
   .social-media {
     margin-top: 40px;
