@@ -13,6 +13,7 @@ section {
     }
   }
 }
+
 .content {
   width: 400px;
   display: flex;
@@ -38,6 +39,7 @@ section {
 }
 
 a {
+  cursor: pointer;
   text-decoration: none;
   &:hover {
     color: rgb(147, 165, 214);
@@ -55,11 +57,6 @@ a {
   gap: 8px;
   > a {
     cursor: pointer;
-    text-align: end;
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline;
-    }
     > img {
       width: 32px;
       height: 18px;
