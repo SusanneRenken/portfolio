@@ -22,14 +22,12 @@ html{
 }
 
 ::-webkit-scrollbar-thumb {
-  // background: rgb(26, 46, 100);
-  background: rgb(222, 231, 255);
-  // background: rgb(218, 5, 41);
+  background: rgb(218, 228, 255);
   border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(31, 55, 119);
+  background: rgb(161, 185, 253);
 }
 
 @font-face {
