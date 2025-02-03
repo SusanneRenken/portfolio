@@ -69,7 +69,8 @@ app-contact-me {
 
 @media (max-width: 767.98px) {
   :host {
-    height: calc(100vh - 64px);
+    height: calc(100vh - 64px); 
+    // height: 100vh;
     width: 100%;
     margin-top: 64px;
     margin-left: 0;
@@ -80,6 +81,7 @@ app-contact-me {
 
   app-landing-page {
     height: 100%;
+    // height: calc(100% - 64px); 
     flex: 0 0 auto;
   }
 
