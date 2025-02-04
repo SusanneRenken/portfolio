@@ -1,14 +1,21 @@
 <nav>
   <a href="#landing_page">
-    <img src="assets/img/SR_Logo-07.png" alt="Profile Image" />
+    <img src="assets/img/Logo_Susanne-03.png" alt="Profile Image" />
   </a>
 
   <div>
+    <a href="#why_me">{{ 'WHY_ME' | translate }}</a>
+    <a href="#my_skill_set">{{ 'MY_SKILL_SET' | translate }}</a>
+    <a href="#my_work">{{ 'MY_WORK' | translate }}</a>
+    <a href="#contact_me">{{ 'CONTACT_ME' | translate }}</a>
+  </div>
+
+  <!-- <div>
     <a href="#why_me">Why Me</a>
     <a href="#my_skill_set">Skills</a>
     <a href="#my_work">My Work</a>
     <a href="#contact_me">Contact</a>
-  </div>
+  </div> -->
 
   <img src="assets/img/burger.svg" alt="Burger Menu" (click)="toggleMenu()" />
 </nav>
