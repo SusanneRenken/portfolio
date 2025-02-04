@@ -59,7 +59,7 @@ app-contact-me {
   :host {
     margin-left: 100px;
   }
-  
+
   app-landing-page,
   app-why-me,
   app-my-skill-set {
@@ -69,11 +69,11 @@ app-contact-me {
 
 @media (max-width: 767.98px) {
   :host {
-    height: calc(100vh - 64px); 
-    // height: auto;
-    // height: 100vh;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    height: calc(100vh - 64px);
     width: 100%;
-    margin-top: 64px;
     margin-left: 0;
     overflow-y: auto;
     flex-direction: column;
@@ -81,8 +81,6 @@ app-contact-me {
 
   app-landing-page {
     height: 100%;
-    // height: calc(100vh - 64px); 
-    // height: calc(100% - 64px); 
     flex: 0 0 auto;
   }
 
@@ -104,5 +102,4 @@ app-contact-me {
     flex: initial;
     justify-content: center;
   }
-
 }
