@@ -3,25 +3,32 @@
   "WHY_ME_TEXT": "I am motivated to continuously learn new technologies and develop myself. My ability to solve complex problems and my passion for programming make me a valuable member of your team.",
   "WHY_ME_LOCATED": "located in Schneverdingen",
   "WHY_ME_REMOTE": "open for remote work",
+  
   "MY_SKILL_SET": "Skills",
   "MY_SKILL_SET_TEXT": "The IT landscape is continuously evolving, with new technologies and methodologies. Staying motivated to expand my IT skills requires a strategic approach, a curious mindset, and a commitment to lifelong learning.",
   "MY_SKILL_SET_CHALLENGE": "Challenge me",
   "MY_SKILL_SET_HOVER": "I am always happy to learn new technologies, just tell me what you need.",
+  
   "MY_WORK": "My Work",
   "MY_WORK_ONGOING": "Ongoing project",
   "MY_WORK_ONGOING_TEXT": "I am currently working on developing an online shop for pet foods. This is for me both exciting and challenging. In my work the key to success lies in a good planning and execution.",
+  "PROJECT": "Project",
+  
   "CONTACT_ME": "Contact",
   "CONTACT_ME_TEXT_1": "Let us work toghether.",
   "CONTACT_ME_TEXT_2": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
+  
   "CONTACT_ME_FORM_NAME": "Your name",
   "CONTACT_ME_FORM_NAME_REQUIRED": "Your name is required",
   "CONTACT_ME_FORM_MAIL": "Your email is required",
   "CONTACT_ME_FORM_MAIL_REQUIRED": "Your email",
   "CONTACT_ME_FORM_MESSAGE": "Your message is required",
   "CONTACT_ME_FORM_MESSAGE_REQUIRED": "Your message",
+  
   "CONTACT_ME_FORM_TEXT_1": "I've read the",
   "CONTACT_ME_FORM_TEXT_2": "privacy policy",  
   "CONTACT_ME_FORM_TEXT_3": "and agree to the processing of my data as outlined.",
+  
   "CONTACT_ME_LEGAL_NOTICE": "Legal Notice",
   "CONTACT_ME_PRIVACY_POLICY": "Privacy Policy"
 }

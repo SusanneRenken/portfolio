@@ -2,7 +2,7 @@
   <div class="title-content">
     <div>{{ project.id }}</div>
     <div>
-      <div>Project {{ project.name }}</div>
+      <div>{{ 'PROJECT' | translate }} {{ project.name }}</div>
       <div>{{ project.techStack }}</div>
     </div>
   </div>
@@ -14,7 +14,7 @@
   <div class="project-content">
     <div>
       <p class="expand-container" [class.expanded]="isDesktop || isExpanded">
-        {{ project.about }}
+        {{ aboutLanguage }}
       </p>
 
       <img src="assets/img/{{ project.image }}" alt="Project image" />

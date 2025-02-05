@@ -12,6 +12,7 @@
   "MY_WORK": "Projekte",
   "MY_WORK_ONGOING": "Laufendes Projekt",
   "MY_WORK_ONGOING_TEXT": "Derzeit arbeite ich an der Entwicklung eines Online-Shops für Tierfutter. Das ist für mich sowohl spannend als auch herausfordernd. In meiner Arbeit liegt der Schlüssel zum Erfolg in guter Planung und Umsetzung.",
+  "PROJECT": "Projekt",
 
   "CONTACT_ME": "Kontakt",
   "CONTACT_ME_TEXT_1": "Lass uns zusammenarbeiten.",
@@ -31,4 +32,3 @@
   "CONTACT_ME_LEGAL_NOTICE": "Impressum",
   "CONTACT_ME_PRIVACY_POLICY": "Datenschutzerklärung"
 }
-
