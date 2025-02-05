@@ -10,7 +10,10 @@ import { LanguageService } from '../shared/services/language.service';
   selector: 'app-privacy-policy',
   standalone: true,
   imports: [FooterComponent, CommonModule, RouterModule],
-  templateUrl: './privacy-policy.component.html',
+  template: `
+    <div class="legals" [innerHTML]="privacyHtml"></div>
+    <app-footer></app-footer>
+  `,
   styleUrls: ['./privacy-policy.component.scss'],
 })
 export class PrivacyPolicyComponent implements OnInit {
@@ -28,7 +31,7 @@ export class PrivacyPolicyComponent implements OnInit {
 
   loadPrivacyPolicy(lang: string) {
     this.http
-      .get(`assets/legal-documents/privacy-policy.en.html`, {
+      .get(`assets/legal-documents/privacy-policy.${lang}.html`, {
         responseType: 'text',
       })
       .subscribe((html) => {
