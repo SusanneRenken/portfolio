@@ -1,15 +1,12 @@
 <section>
   <div>
-    <h1>Contact Me</h1>
+    <h1>{{ 'CONTACT_ME' | translate }}</h1>
     <div>
       <app-contact-form></app-contact-form>
 
       <div class="content">
-        <p>Let us work toghether.</p>
-        <p>
-          Contact me through this form, I am interested in hearing from you,
-          knowing your ideas and contributing to your projects with my work.
-        </p>
+        <p>{{ 'CONTACT_ME_TEXT_1' | translate }}</p>
+        <p>{{ 'CONTACT_ME_TEXT_2' | translate }}</p>
 
         <div class="contact-info">
           <a>
@@ -28,8 +25,8 @@
         </a>
 
         <div>
-          <a routerLink="./legal-notice/">Legal Notice</a>
-          <a routerLink="./privacy-policy/">Privacy Policy</a>
+          <a routerLink="./legal-notice/">{{ 'CONTACT_ME_LEGAL_NOTICE' | translate }}</a>
+          <a routerLink="./privacy-policy/">{{ 'CONTACT_ME_PRIVACY_POLICY' | translate }}</a>
           <p>&#64; Susanne Renken 2025</p>
         </div>
       </div>

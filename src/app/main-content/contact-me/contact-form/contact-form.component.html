@@ -7,7 +7,9 @@
     id="name"
     name="name"
     [attr.placeholder]="
-      name.invalid && name.touched ? 'Your name is required' : 'Your name'
+      name.invalid && name.touched
+        ? ('CONTACT_ME_FORM_NAME_REQUIRED' | translate)
+        : ('CONTACT_ME_FORM_NAME' | translate)
     "
     required
   />
@@ -20,13 +22,15 @@
     id="email"
     name="email"
     [attr.placeholder]="
-      email.invalid && email.touched ? 'Your email is required' : 'Your email'
+      email.invalid && email.touched
+        ? ('CONTACT_ME_FORM_MAIL_REQUIRED' | translate)
+        : ('CONTACT_ME_FORM_MAIL' | translate)
     "
     required
     pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
   />
 
-  <label for="message" class="sr-only">Subject</label>
+  <label for="message" class="sr-only">Message</label>
   <textarea
     #message="ngModel"
     [(ngModel)]="contactData.message"
@@ -34,8 +38,8 @@
     name="message"
     [attr.placeholder]="
       message.invalid && message.touched
-        ? 'Your message is required'
-        : 'Your message'
+        ? ('CONTACT_ME_FORM_MESSAGE_REQUIRED' | translate)
+        : ('CONTACT_ME_FORM_MESSAGE' | translate)
     "
     required
     minlength="4"
@@ -43,19 +47,24 @@
 
   <div class="accept-privacy-policy">
     <img
-      [src]=" 'assets/img/checkbox-' + (isAccepted ? 'checked' : 'default') + '.svg' "
+      [src]="
+        'assets/img/checkbox-' + (isAccepted ? 'checked' : 'default') + '.svg'
+      "
       alt="Checkbox"
       [class.accepted]="isAccepted"
       (click)="onAccept()"
     />
     <p>
-      I've read the
+      {{ 'CONTACT_ME_FORM_TEXT_1' | translate }}
       <!-- Hier muss noch der Link eingefügt werden -->
-      <a href="privacy-policy">privacy policy</a>
-      and agree to the processing of my data as outlined.
+      <a href="privacy-policy">{{ 'CONTACT_ME_FORM_TEXT_2' | translate }}</a>
+      {{ 'CONTACT_ME_FORM_TEXT_3' | translate }}
     </p>
   </div>
 
-  <input type="submit" value="Send" [disabled]="!isAccepted || !contactForm.valid"/>
-
+  <input
+    type="submit"
+    value="Send"
+    [disabled]="!isAccepted || !contactForm.valid"
+  />
 </form>

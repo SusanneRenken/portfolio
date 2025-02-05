@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-my-skill-set',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './my-skill-set.component.html',
   styleUrl: './my-skill-set.component.scss',
 })

@@ -1,12 +1,7 @@
 <section>
-  <h1>My Skill Set</h1>
+  <h1>{{ 'MY_SKILL_SET' | translate }}</h1>
   <div>
-    <p>
-      The IT landscape is continuously evolving, with new technologies and
-      methodologies. Staying motivated to expand my IT skills requires a
-      strategic approach, a curious mindset, and a commitment to lifelong
-      learning.
-    </p>
+    <p>{{ 'MY_SKILL_SET_TEXT' | translate }}</p>
 
     <div>
       @for (element of skillIconsList; track element.name) {
@@ -23,12 +18,9 @@
           <div>
             <img src="assets/img/challenge-me.svg" alt="" />
           </div>
-          <p>Challenge me</p>
+          <p>{{ 'MY_SKILL_SET_CHALLENGE' | translate }}</p>
         </div>
-        <span>
-          I am always happy to learn new technologies, just tell me what you
-          need.
-        </span>
+        <span>{{ 'MY_SKILL_SET_HOVER' | translate }}</span>
       </div>
     </div>
   </div>

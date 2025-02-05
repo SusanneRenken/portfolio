@@ -8,4 +8,9 @@ export class LanguageService {
   changeLanguage(lang: string): void {
     this.translate.use(lang);
   }
+
+  getCurrentLanguage(): string {
+    return this.translate.currentLang || this.translate.getDefaultLang();
+  }
+
 }

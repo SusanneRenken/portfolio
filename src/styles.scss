@@ -4,11 +4,11 @@
   font-family: "Quantico";
   font-size: 18px;
   color: rgb(255, 253, 253);
-  box-sizing: border-box;  
+  box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
-html{
+html {
   overflow: hidden;
 }
 
@@ -70,6 +70,19 @@ h1 {
   transform: rotate(180deg);
 }
 
+h2 {
+  margin-block: 32px 8px;
+  font-size: 24px;
+  color: var(--main-color);
+}
+
+h3 {
+  margin-block: 12px 4px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--main-color);
+}
+
 :root {
   --main-color: rgb(76, 114, 219);
 }
@@ -118,6 +131,32 @@ button {
   }
 }
 
+.legals h1 {
+  -webkit-text-stroke: none;
+  writing-mode: horizontal-tb;
+  transform: none;
+}
+
+.legals section {
+  height: 100vh;
+  overflow-y: auto;
+  padding: 40px 80px;
+  flex: 0 0 calc(100vw - 172px);
+  background: linear-gradient(
+    70deg,
+    rgb(10, 10, 10),
+    rgb(38, 38, 38),
+    rgb(10, 10, 10)
+  );
+}
+
+@media (max-width: 1199.98px) {
+  .legals section {
+    padding: 32px 56px;
+    flex: 0 0 calc(100vw - 132px);
+  }
+}
+
 @media (max-width: 991.98px) {
   * {
     font-size: 16px;
@@ -138,6 +177,11 @@ button {
     height: 200px;
     padding: 16px 24px;
     border-radius: 24px;
+  }
+
+  .legals section {
+    padding: 32px 48px;
+    flex: 0 0 calc(100vw - 100px);
   }
 }
 
@@ -163,10 +207,27 @@ button {
   .arrow-img {
     display: none;
   }
+
+  .legals section {
+    width: 100%;
+    overflow-y: auto;
+    padding: 40px 32px;
+    flex: 0 0 auto;
+    background: linear-gradient(
+      15deg,
+      rgb(10, 10, 10),
+      rgb(38, 38, 38),
+      rgb(10, 10, 10)
+    );
+  }
 }
 
 @media (max-width: 575.98px) {
   h1 {
     font-size: clamp(32px, 10vw, 48px);
+  }
+
+  .legals section {
+    padding: 32px 32px 32px 16px;
   }
 }

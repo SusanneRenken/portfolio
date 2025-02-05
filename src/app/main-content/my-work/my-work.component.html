@@ -1,5 +1,5 @@
 <section>
-  <h1>My Work</h1>
+  <h1>{{ 'MY_WORK' | translate }}</h1>
   <div>
     @for (singleproject of projects; track singleproject.id) {
     <app-project
@@ -11,13 +11,9 @@
     <div class="ongoing-project">
       <div>
         <div>3</div>
-        <span>Ongoing project</span>
+        <span>{{ 'MY_WORK_ONGOING' | translate }}</span>
       </div>
-      <p>
-        I am currently working on developing an online shop for pet foods. This
-        is for me both exciting and challenging. In my work the key to success
-        lies in a good planning and execution.
-      </p>
+      <p>{{ 'MY_WORK_ONGOING_TEXT' | translate }}</p>
       <!-- <a href="#contact_me"><button>Let's talk</button></a> -->
     </div>
   </div>
