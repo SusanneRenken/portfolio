@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { LanguageService } from '../../services/language.service';
 import { Router, RouterModule } from '@angular/router';
@@ -9,14 +9,17 @@ import { Router, RouterModule } from '@angular/router';
   standalone: true,
   imports: [CommonModule, TranslateModule, RouterModule],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+  styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
-  constructor(private languageService: LanguageService, private router:Router ) {}
+  constructor(
+    private languageService: LanguageService,
+    private router: Router
+  ) {}
 
   isMenuOpen = false;
-
   currentLang = this.languageService.getCurrentLanguage();
+  activeSection: string = '';
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
@@ -52,5 +55,28 @@ export class NavbarComponent {
     }
   }
 
+  
 
+
+  // @HostListener('document:scroll', [])
+  // onScroll(): void {
+  //   console.log(
+  //     'Scroll-Event ausgelöst! Aktuelle Scroll-Position:',
+  //     window.scrollY
+  //   );
+  // }
+
+  // @HostListener('window:scroll', [])
+  // onScroll(): void {
+  //   let sections = document.querySelectorAll('section');
+  //   let scrollY = window.scrollY + window.innerHeight / 2;
+
+  //   sections.forEach((section: Element) => {
+  //     let offsetTop = section.getBoundingClientRect().top + window.scrollY;
+  //     let offsetBottom = offsetTop + section.clientHeight;
+  //     if (scrollY >= offsetTop && scrollY <= offsetBottom) {
+  //       this.activeSection = section.getAttribute('id') || '';
+  //     }
+  //   });
+  // }
 }

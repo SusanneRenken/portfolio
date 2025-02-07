@@ -20,4 +20,5 @@ import { FooterComponent } from '../shared/components/footer/footer.component';
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss',
 })
-export class MainContentComponent {}
+export class MainContentComponent {
+}
