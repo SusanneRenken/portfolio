@@ -88,6 +88,7 @@ nav {
     align-self: flex-end;
   }
   > a {
+    cursor: pointer;
     font-size: 24px;
     color: rgb(48, 48, 48);
     background-color: transparent;
@@ -99,24 +100,32 @@ nav {
       -webkit-text-stroke: 1.2px rgb(48, 48, 48);
     }
   }
-  > div {
-    font-size: 24px;
-    color: rgb(48, 48, 48);
-    > span {
-      cursor: pointer;
-      font-size: 24px;
-      color: rgb(48, 48, 48);
-      background-color: transparent;
-      &:hover {
-        color: transparent;
-        -webkit-text-stroke: 1.2px rgb(48, 48, 48);
-      }
-    }
-  }
 }
 
 .mobile-menu.show {
   display: flex;
+}
+
+.language-switcher {
+  width: 140px;
+  padding-top: 16px;
+  font-size: 18px;
+  color: rgb(48, 48, 48);
+  border-top: 1px solid rgb(48, 48, 48);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  > span {
+    cursor: pointer;
+    font-size: 20px;
+    color: rgb(48, 48, 48);
+    background-color: transparent;
+    &:hover {
+      color: transparent;
+      -webkit-text-stroke: 0.8px rgb(48, 48, 48);
+    }
+  }
 }
 
 @media (max-width: 1199.98px) {

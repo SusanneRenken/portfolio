@@ -16,7 +16,7 @@ export class NavbarComponent {
 
   isMenuOpen = false;
 
-  currentLang = '';
+  currentLang = this.languageService.getCurrentLanguage();
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;

@@ -96,7 +96,6 @@ a {
     gap: 8px;
     > span {
       cursor: pointer;
-      font-weight: 700;
       line-height: 1.15;
       &:hover {
         color: var(--main-color);
@@ -107,6 +106,12 @@ a {
 
 .arrow-img {
   margin-block: 16px;
+}
+
+.active {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--main-color);
 }
 
 @media (max-width: 1199.98px) {

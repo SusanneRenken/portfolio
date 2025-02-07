@@ -19,9 +19,11 @@
   <a (click)="toggleMenu(); navigate('my_skill_set')">{{ "MY_SKILL_SET" | translate }}</a>
   <a (click)="toggleMenu(); navigate('my_work')">{{ "MY_WORK" | translate }}</a>
   <a (click)="toggleMenu(); navigate('contact_me')">{{ "CONTACT_ME" | translate }}</a>
-  <div>
-    <span (click)="switchLanguage('de')">DE</span>
+  <div class="language-switcher">
+    <span
+    (click)="switchLanguage('de')">DE</span>
     |
-    <span (click)="switchLanguage('en')">EN</span>
+    <span
+    (click)="switchLanguage('en')">EN</span>
   </div>
 </div>

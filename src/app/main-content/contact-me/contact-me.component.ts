@@ -14,14 +14,12 @@ import { TranslateModule } from '@ngx-translate/core';
 
 export class ContactMeComponent {
   constructor(private languageService: LanguageService) {}
+  currentLang = this.languageService.getCurrentLanguage();
 
-  switchLanguageToGerman() {
-    this.languageService.changeLanguage('de');
+
+  switchLanguage(lang: string) {
+    this.languageService.changeLanguage(lang);    
+    this.currentLang = lang;
   }
-
-  switchLanguageToEnglish() {
-    this.languageService.changeLanguage('en');
-  }
-
 
 }

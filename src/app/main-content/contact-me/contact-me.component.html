@@ -65,9 +65,17 @@
       </a>
     </div>
     <div>
-      <span (click)="switchLanguageToGerman()">DE</span>
+      <span
+        [class.active]="currentLang === 'de'"
+        (click)="switchLanguage('de')"
+        >DE</span
+      >
       |
-      <span (click)="switchLanguageToEnglish()">EN</span>
+      <span
+        [class.active]="currentLang === 'en'"
+        (click)="switchLanguage('en')"
+        >EN</span
+      >
     </div>
   </div>
 </section>
