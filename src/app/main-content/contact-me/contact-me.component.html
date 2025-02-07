@@ -1,12 +1,12 @@
 <section>
   <div>
-    <h1>{{ 'CONTACT_ME' | translate }}</h1>
+    <h1>{{ "CONTACT_ME" | translate }}</h1>
     <div>
       <app-contact-form></app-contact-form>
 
       <div class="content">
-        <p>{{ 'CONTACT_ME_TEXT_1' | translate }}</p>
-        <p>{{ 'CONTACT_ME_TEXT_2' | translate }}</p>
+        <p>{{ "CONTACT_ME_TEXT_1" | translate }}</p>
+        <p>{{ "CONTACT_ME_TEXT_2" | translate }}</p>
 
         <div class="contact-info">
           <a>
@@ -25,8 +25,12 @@
         </a>
 
         <div>
-          <a routerLink="./legal-notice/">{{ 'CONTACT_ME_LEGAL_NOTICE' | translate }}</a>
-          <a routerLink="./privacy-policy/">{{ 'CONTACT_ME_PRIVACY_POLICY' | translate }}</a>
+          <a routerLink="./legal-notice/" [queryParams]="{ lang: currentLang }">{{
+            "CONTACT_ME_LEGAL_NOTICE" | translate
+          }}</a>
+          <a routerLink="./privacy-policy/" [queryParams]="{ lang: currentLang }">{{
+            "CONTACT_ME_PRIVACY_POLICY" | translate
+          }}</a>
           <p>&#64; Susanne Renken 2025</p>
         </div>
       </div>

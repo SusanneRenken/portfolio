@@ -56,7 +56,7 @@
     />
     <p>
       {{ "CONTACT_ME_FORM_TEXT_1" | translate }}
-      <a routerLink="./privacy-policy/">{{ "CONTACT_ME_FORM_TEXT_2" | translate }}</a>
+      <a routerLink="./privacy-policy/" [queryParams]="{ lang: currentLang }">{{ "CONTACT_ME_FORM_TEXT_2" | translate }}</a>
       {{ "CONTACT_ME_FORM_TEXT_3" | translate }}
     </p>
   </div>

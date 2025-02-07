@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { ActivatedRoute, RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -14,9 +14,25 @@ import { TranslateService } from '@ngx-translate/core';
 export class AppComponent {
   title = 'portfolio';
 
-  constructor(private translate: TranslateService) {
-    this.translate.setDefaultLang('en');
-    this.translate.use('en');
+  // constructor(private translate: TranslateService) {
+  //   this.translate.setDefaultLang('en');
+  //   this.translate.use('en');
+  // }
+
+  constructor(
+    private route: ActivatedRoute,
+    private translate: TranslateService
+  ) {
+    // Query-Parameter auslesen
+    this.route.queryParams.subscribe(params => {
+      const lang = params['lang'];
+      if (lang) {
+        this.translate.use(lang);
+      } else {
+        // Fallback, falls kein Param da ist
+        this.translate.use('en');
+      }
+    });
   }
 
 }

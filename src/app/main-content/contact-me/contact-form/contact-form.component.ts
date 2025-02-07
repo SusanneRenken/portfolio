@@ -3,6 +3,7 @@ import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
+import { LanguageService } from '../../../shared/services/language.service';
 
 @Component({
   selector: 'app-contact-form',
@@ -25,6 +26,8 @@ export class ContactFormComponent {
   isAccepted:boolean = false;
 
   mailTest = true;
+
+  constructor(private languageService: LanguageService) {}
 
   post = {
     endPoint: 'https://deineDomain.de/sendMail.php',
@@ -60,5 +63,9 @@ export class ContactFormComponent {
 
   onAccept() {
     this.isAccepted = !this.isAccepted;
+  }
+
+  get currentLang(): string {
+    return this.languageService.getCurrentLanguage();
   }
 }

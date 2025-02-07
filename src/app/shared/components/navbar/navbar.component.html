@@ -1,13 +1,13 @@
 <nav>
-  <a href="#landing_page">
+  <a (click)="navigate('landing_page')">
     <img src="assets/img/Logo_Susanne-07.png" alt="Profile Image" />
   </a>
 
   <div>
-    <a href="#why_me">{{ "WHY_ME" | translate }}</a>
-    <a href="#my_skill_set">{{ "MY_SKILL_SET" | translate }}</a>
-    <a href="#my_work">{{ "MY_WORK" | translate }}</a>
-    <a href="#contact_me">{{ "CONTACT_ME" | translate }}</a>
+    <a (click)="navigate('why_me')">{{ "WHY_ME" | translate }}</a>
+    <a (click)="navigate('my_skill_set')">{{ "MY_SKILL_SET" | translate }}</a>
+    <a (click)="navigate('my_work')">{{ "MY_WORK" | translate }}</a>
+    <a (click)="navigate('contact_me')">{{ "CONTACT_ME" | translate }}</a>
   </div>
 
   <img src="assets/img/burger.svg" alt="Burger Menu" (click)="toggleMenu()" />
@@ -15,13 +15,13 @@
 
 <div class="mobile-menu" [class.show]="isMenuOpen">
   <img src="assets/img/close.svg" alt="Close Menu" (click)="toggleMenu()" />
-  <a (click)="toggleMenu()" href="#why_me">{{ "WHY_ME" | translate }}</a>
-  <a (click)="toggleMenu()" href="#my_skill_set">{{ "MY_SKILL_SET" | translate }}</a>
-  <a (click)="toggleMenu()" href="#my_work">{{ "MY_WORK" | translate }}</a>
-  <a (click)="toggleMenu()" href="#contact_me">{{ "CONTACT_ME" | translate }}</a>
+  <a (click)="toggleMenu(); navigate('why_me')">{{ "WHY_ME" | translate }}</a>
+  <a (click)="toggleMenu(); navigate('my_skill_set')">{{ "MY_SKILL_SET" | translate }}</a>
+  <a (click)="toggleMenu(); navigate('my_work')">{{ "MY_WORK" | translate }}</a>
+  <a (click)="toggleMenu(); navigate('contact_me')">{{ "CONTACT_ME" | translate }}</a>
   <div>
-    <span (click)="switchLanguageToGerman()">DE</span>
+    <span (click)="switchLanguage('de')">DE</span>
     |
-    <span (click)="switchLanguageToEnglish()">EN</span>
+    <span (click)="switchLanguage('en')">EN</span>
   </div>
 </div>
