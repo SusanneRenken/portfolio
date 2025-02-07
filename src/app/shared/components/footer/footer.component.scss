@@ -52,6 +52,7 @@ footer {
         display: flex;
         gap: 24px;
         > a {
+          cursor: pointer;
           text-decoration: none;
           font-size: 14px;
           color: rgb(56, 56, 56);

@@ -98,6 +98,20 @@ nav {
       -webkit-text-stroke: 1.2px rgb(48, 48, 48);
     }
   }
+  > div {
+    font-size: 24px;
+    color: rgb(48, 48, 48);
+    > span {
+      cursor: pointer;
+      font-size: 24px;
+      color: rgb(48, 48, 48);
+      background-color: transparent;
+      &:hover {
+        color: transparent;
+        -webkit-text-stroke: 1.2px rgb(48, 48, 48);
+      }
+    }
+  }
 }
 
 .mobile-menu.show {

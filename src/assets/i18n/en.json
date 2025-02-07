@@ -3,6 +3,7 @@
   "WHY_ME_TEXT": "I am motivated to continuously learn new technologies and develop myself. My ability to solve complex problems and my passion for programming make me a valuable member of your team.",
   "WHY_ME_LOCATED": "located in Schneverdingen",
   "WHY_ME_REMOTE": "open for remote work",
+  "WHY_ME_BTN": "Contact me",
   
   "MY_SKILL_SET": "Skills",
   "MY_SKILL_SET_TEXT": "The IT landscape is continuously evolving, with new technologies and methodologies. Staying motivated to expand my IT skills requires a strategic approach, a curious mindset, and a commitment to lifelong learning.",
@@ -28,6 +29,7 @@
   "CONTACT_ME_FORM_TEXT_1": "I've read the",
   "CONTACT_ME_FORM_TEXT_2": "privacy policy",  
   "CONTACT_ME_FORM_TEXT_3": "and agree to the processing of my data as outlined.",
+  "CONTACT_ME_FORM_BTN": "Send",
   
   "CONTACT_ME_LEGAL_NOTICE": "Legal Notice",
   "CONTACT_ME_PRIVACY_POLICY": "Privacy Policy"

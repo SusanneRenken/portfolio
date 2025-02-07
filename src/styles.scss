@@ -8,7 +8,7 @@
   scroll-behavior: smooth;
 }
 
-html {
+html,body {
   overflow: hidden;
 }
 
@@ -173,12 +173,6 @@ button {
     border-radius: 24px;
   }
 
-  textarea {
-    height: 200px;
-    padding: 16px 24px;
-    border-radius: 24px;
-  }
-
   .legals section {
     padding: 32px 48px;
     flex: 0 0 calc(100vw - 100px);
@@ -195,12 +189,6 @@ button {
   input {
     height: 60px;
     padding-inline: 32px;
-    border-radius: 30px;
-  }
-
-  textarea {
-    height: 240px;
-    padding: 24px 32px;
     border-radius: 30px;
   }
 

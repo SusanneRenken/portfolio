@@ -55,16 +55,15 @@
       (click)="onAccept()"
     />
     <p>
-      {{ 'CONTACT_ME_FORM_TEXT_1' | translate }}
-      <!-- Hier muss noch der Link eingefügt werden -->
-      <a href="privacy-policy">{{ 'CONTACT_ME_FORM_TEXT_2' | translate }}</a>
-      {{ 'CONTACT_ME_FORM_TEXT_3' | translate }}
+      {{ "CONTACT_ME_FORM_TEXT_1" | translate }}
+      <a routerLink="./privacy-policy/">{{ "CONTACT_ME_FORM_TEXT_2" | translate }}</a>
+      {{ "CONTACT_ME_FORM_TEXT_3" | translate }}
     </p>
   </div>
 
   <input
     type="submit"
-    value="Send"
+    [value]="'CONTACT_ME_FORM_BTN' | translate"
     [disabled]="!isAccepted || !contactForm.valid"
   />
 </form>

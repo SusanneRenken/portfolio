@@ -4,19 +4,24 @@
   </a>
 
   <div>
-    <a href="#why_me">{{ 'WHY_ME' | translate }}</a>
-    <a href="#my_skill_set">{{ 'MY_SKILL_SET' | translate }}</a>
-    <a href="#my_work">{{ 'MY_WORK' | translate }}</a>
-    <a href="#contact_me">{{ 'CONTACT_ME' | translate }}</a>
+    <a href="#why_me">{{ "WHY_ME" | translate }}</a>
+    <a href="#my_skill_set">{{ "MY_SKILL_SET" | translate }}</a>
+    <a href="#my_work">{{ "MY_WORK" | translate }}</a>
+    <a href="#contact_me">{{ "CONTACT_ME" | translate }}</a>
   </div>
 
   <img src="assets/img/burger.svg" alt="Burger Menu" (click)="toggleMenu()" />
 </nav>
 
 <div class="mobile-menu" [class.show]="isMenuOpen">
-  <img src="assets/img/close.svg" alt="Close Menu" (click)="toggleMenu()">
-  <a href="#why_me" (click)="toggleMenu()">Why Me</a>
-  <a href="#my_skill_set" (click)="toggleMenu()">Skills</a>
-  <a href="#my_work" (click)="toggleMenu()">My Work</a>
-  <a href="#contact_me" (click)="toggleMenu()">Contact</a>
+  <img src="assets/img/close.svg" alt="Close Menu" (click)="toggleMenu()" />
+  <a (click)="toggleMenu()" href="#why_me">{{ "WHY_ME" | translate }}</a>
+  <a (click)="toggleMenu()" href="#my_skill_set">{{ "MY_SKILL_SET" | translate }}</a>
+  <a (click)="toggleMenu()" href="#my_work">{{ "MY_WORK" | translate }}</a>
+  <a (click)="toggleMenu()" href="#contact_me">{{ "CONTACT_ME" | translate }}</a>
+  <div>
+    <span (click)="switchLanguageToGerman()">DE</span>
+    |
+    <span (click)="switchLanguageToEnglish()">EN</span>
+  </div>
 </div>

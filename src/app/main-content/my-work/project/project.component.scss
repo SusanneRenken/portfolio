@@ -62,7 +62,7 @@ section {
     }
     > div {
       display: flex;
-      gap: 16px;
+      gap: 12px;
     }
   }
   > img {
@@ -214,6 +214,7 @@ section {
     gap: 24px;
     > div {
       gap: 0px;
+      align-items: center;
       > img {
         display: block;
         width: 100%;
