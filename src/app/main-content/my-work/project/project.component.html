@@ -34,7 +34,7 @@
 
   <div class="show-me" (click)="onToggle()">
     <span>
-      {{ isExpanded ? "Show me less" : "Show me more" }}
+      {{ isExpanded ? ( 'MY_WORK_SHOW_LESS' | translate ) : ( 'MY_WORK_SHOW_MORE' | translate ) }}
     </span>
     <img
       src="assets/img/triangle-{{ isExpanded ? 'up' : 'down' }}.svg"

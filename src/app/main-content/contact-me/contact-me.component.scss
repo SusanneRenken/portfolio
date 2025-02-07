@@ -177,12 +177,12 @@ a {
     position: relative;
     right: auto;
     top: auto;
+    margin-top: 40px;
+    flex-direction: column-reverse;
     justify-content: center;
+    gap: 24px;
     > :first-child {
       flex-direction: row;
-    }
-    > :nth-child(2) {
-      display: none;
     }
   }
 }
@@ -201,6 +201,8 @@ a {
   }
 
   .social-media {
-    margin-top: 40px;
+    > :nth-child(2) {
+      display: none;
+    }
   }
 }
