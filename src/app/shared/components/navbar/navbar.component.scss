@@ -59,13 +59,6 @@ nav {
   }
 }
 
-nav > div > a.active,
-.mobile-menu a.active {
-  color: transparent;
-        -webkit-text-stroke: 1.2px rgb(48, 48, 48);
-        writing-mode: vertical-rl;
-}
-
 .mobile-menu {
   position: absolute;
   top: 0;
@@ -106,6 +99,12 @@ nav > div > a.active,
       -webkit-text-stroke: 1.2px rgb(48, 48, 48);
     }
   }
+}
+
+nav > div > a.active,
+.mobile-menu a.active {
+  color: transparent;
+  -webkit-text-stroke: 1.2px rgb(48, 48, 48);
 }
 
 .mobile-menu.show {
@@ -220,4 +219,3 @@ nav > div > a.active,
     }
   }
 }
-

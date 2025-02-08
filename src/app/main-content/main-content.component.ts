@@ -62,7 +62,7 @@ export class MainContentComponent implements AfterViewInit, OnDestroy {
       if (candidate !== null) {
         activeSectionId = candidate.id;
       }
-    } else {
+    } else if (window.innerWidth > 575.98) {
       let candidate: HTMLElement | null = null;
       let candidateTop = Infinity;
       const threshold = window.innerHeight / 2;
