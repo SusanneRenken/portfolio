@@ -119,6 +119,7 @@ section {
 
 @media (max-width: 767.98px) {
   section {
+    align-items: start;
     > img {
       height: auto;
       max-height: 100%;
@@ -126,7 +127,7 @@ section {
     }
 
     > div {
-      margin-bottom: 15vh;
+      margin-top: 25vh;
       display: flex;
       flex-direction: column-reverse;
     }
