@@ -48,9 +48,8 @@ nav {
       text-align: center;
       display: inline-block;
       &:hover {
-        color: transparent;
-        -webkit-text-stroke: 1.2px rgb(48, 48, 48);
-        writing-mode: vertical-rl;
+        font-weight: thin;
+        color: rgb(255, 253, 253);
       }
     }
   }
@@ -58,6 +57,13 @@ nav {
   > img {
     display: none;
   }
+}
+
+nav > div > a.active,
+.mobile-menu a.active {
+  color: transparent;
+        -webkit-text-stroke: 1.2px rgb(48, 48, 48);
+        writing-mode: vertical-rl;
 }
 
 .mobile-menu {
@@ -214,3 +220,4 @@ nav {
     }
   }
 }
+

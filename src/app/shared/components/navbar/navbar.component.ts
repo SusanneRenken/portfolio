@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { LanguageService } from '../../services/language.service';
 import { Router, RouterModule } from '@angular/router';
+import { ScrollSpyService } from '../../services/scroll-spy.service';
 
 @Component({
   selector: 'app-navbar',
@@ -11,15 +12,22 @@ import { Router, RouterModule } from '@angular/router';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })
-export class NavbarComponent {
-  constructor(
-    private languageService: LanguageService,
-    private router: Router
-  ) {}
-
+export class NavbarComponent implements OnInit {
   isMenuOpen = false;
   currentLang = this.languageService.getCurrentLanguage();
   activeSection: string = '';
+
+  constructor(
+    private languageService: LanguageService,
+    private router: Router,
+    private scrollSpyService: ScrollSpyService
+  ) {}
+
+  ngOnInit(): void {
+    this.scrollSpyService.activeSection$.subscribe(section => {
+      this.activeSection = section;
+    });
+  }
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
@@ -54,29 +62,4 @@ export class NavbarComponent {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
-
-  
-
-
-  // @HostListener('document:scroll', [])
-  // onScroll(): void {
-  //   console.log(
-  //     'Scroll-Event ausgelöst! Aktuelle Scroll-Position:',
-  //     window.scrollY
-  //   );
-  // }
-
-  // @HostListener('window:scroll', [])
-  // onScroll(): void {
-  //   let sections = document.querySelectorAll('section');
-  //   let scrollY = window.scrollY + window.innerHeight / 2;
-
-  //   sections.forEach((section: Element) => {
-  //     let offsetTop = section.getBoundingClientRect().top + window.scrollY;
-  //     let offsetBottom = offsetTop + section.clientHeight;
-  //     if (scrollY >= offsetTop && scrollY <= offsetBottom) {
-  //       this.activeSection = section.getAttribute('id') || '';
-  //     }
-  //   });
-  // }
 }

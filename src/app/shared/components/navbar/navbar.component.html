@@ -4,10 +4,30 @@
   </a>
 
   <div>
-    <a (click)="navigate('why_me')">{{ "WHY_ME" | translate }}</a>
-    <a (click)="navigate('my_skill_set')">{{ "MY_SKILL_SET" | translate }}</a>
-    <a (click)="navigate('my_work')">{{ "MY_WORK" | translate }}</a>
-    <a (click)="navigate('contact_me')">{{ "CONTACT_ME" | translate }}</a>
+    <a
+      (click)="navigate('why_me')"
+      [ngClass]="{ active: activeSection === 'why_me' }"
+    >
+      {{ "WHY_ME" | translate }}
+    </a>
+    <a
+      (click)="navigate('my_skill_set')"
+      [ngClass]="{ active: activeSection === 'my_skill_set' }"
+    >
+      {{ "MY_SKILL_SET" | translate }}
+    </a>
+    <a
+      (click)="navigate('my_work')"
+      [ngClass]="{ active: activeSection === 'my_work' }"
+    >
+      {{ "MY_WORK" | translate }}
+    </a>
+    <a
+      (click)="navigate('contact_me')"
+      [ngClass]="{ active: activeSection === 'contact_me' }"
+    >
+      {{ "CONTACT_ME" | translate }}
+    </a>
   </div>
 
   <img src="assets/img/burger.svg" alt="Burger Menu" (click)="toggleMenu()" />
@@ -15,15 +35,32 @@
 
 <div class="mobile-menu" [class.show]="isMenuOpen">
   <img src="assets/img/close.svg" alt="Close Menu" (click)="toggleMenu()" />
-  <a (click)="toggleMenu(); navigate('why_me')">{{ "WHY_ME" | translate }}</a>
-  <a (click)="toggleMenu(); navigate('my_skill_set')">{{ "MY_SKILL_SET" | translate }}</a>
-  <a (click)="toggleMenu(); navigate('my_work')">{{ "MY_WORK" | translate }}</a>
-  <a (click)="toggleMenu(); navigate('contact_me')">{{ "CONTACT_ME" | translate }}</a>
+  <a
+    (click)="toggleMenu(); navigate('why_me')"
+    [ngClass]="{ active: activeSection === 'why_me' }"
+  >
+    {{ "WHY_ME" | translate }}
+  </a>
+  <a
+    (click)="toggleMenu(); navigate('my_skill_set')"
+    [ngClass]="{ active: activeSection === 'my_skill_set' }"
+  >
+    {{ "MY_SKILL_SET" | translate }}
+  </a>
+  <a
+    (click)="toggleMenu(); navigate('my_work')"
+    [ngClass]="{ active: activeSection === 'my_work' }"
+  >
+    {{ "MY_WORK" | translate }}
+  </a>
+  <a
+    (click)="toggleMenu(); navigate('contact_me')"
+    [ngClass]="{ active: activeSection === 'contact_me' }"
+  >
+    {{ "CONTACT_ME" | translate }}
+  </a>
   <div class="language-switcher">
-    <span
-    (click)="switchLanguage('de')">DE</span>
-    |
-    <span
-    (click)="switchLanguage('en')">EN</span>
+    <span (click)="switchLanguage('de')">DE</span> |
+    <span (click)="switchLanguage('en')">EN</span>
   </div>
 </div>
