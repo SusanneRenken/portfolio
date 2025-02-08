@@ -14,7 +14,6 @@ import { TranslateService } from '@ngx-translate/core';
 export class AppComponent {
   title = 'portfolio';
 
-
   constructor(
     private route: ActivatedRoute,
     private translate: TranslateService
