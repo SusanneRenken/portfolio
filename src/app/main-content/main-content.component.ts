@@ -79,7 +79,6 @@ export class MainContentComponent implements AfterViewInit, OnDestroy {
         activeSectionId = candidate.id;
       }
     } else {
-      // Mobile: keine aktive Section setzen
       activeSectionId = '';
     }
 
