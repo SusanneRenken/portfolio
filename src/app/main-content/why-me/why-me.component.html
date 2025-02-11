@@ -1,28 +1,34 @@
 <section>
-  <h1>{{ 'WHY_ME' | translate }}</h1>
+  <h1>{{ "WHY_ME" | translate }}</h1>
   <div>
-    <p>{{ 'WHY_ME_TEXT' | translate }}</p>
+    <p>{{ "WHY_ME_TEXT" | translate }}</p>
 
     <div class="content">
       <span>I am</span>
 
-      <div>
+      <div (click)="openActiveOverlay(1)">
         <img class="img-located" src="assets/img/located-default.svg" alt="" />
-        <p>{{ 'WHY_ME_LOCATED' | translate }}</p>
+        <p>{{ "WHY_ME_LOCATED" | translate }}</p>
       </div>
 
-      <div>
+      <div (click)="openActiveOverlay(2)">
         <img class="img-remote" src="assets/img/remote-default.svg" alt="" />
-        <p>{{ 'WHY_ME_REMOTE' | translate }}</p>
+        <p>{{ "WHY_ME_REMOTE" | translate }}</p>
       </div>
     </div>
 
-    <a href="#contact_me"><button>{{ 'WHY_ME_BTN' | translate }}</button></a>
-
-    
+    <a href="#contact_me"
+      ><button>{{ "WHY_ME_BTN" | translate }}</button></a
+    >
   </div>
 
   <a class="arrow-img" href="#my_skill_set">
     <img src="assets/img/arrow-right.svg" alt="Arrow right" />
   </a>
 </section>
+
+<app-overlay
+  [ability]="selectedAbility"
+  [isOpen]="overlayOpen"
+  (overlayClosed)="onOverlayClosed()"
+></app-overlay>

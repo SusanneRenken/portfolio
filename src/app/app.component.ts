@@ -23,7 +23,7 @@ export class AppComponent {
       if (lang) {
         this.translate.use(lang);
       } else {
-        this.translate.use('en');
+        this.translate.use('de');
       }
     });
   }

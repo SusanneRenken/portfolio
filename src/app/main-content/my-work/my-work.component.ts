@@ -21,5 +21,4 @@ export class MyWorkComponent {
       this.expandedProjectId = projectId;
     }
   }
-
 }
