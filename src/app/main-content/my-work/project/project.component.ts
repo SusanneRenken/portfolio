@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -8,7 +8,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   templateUrl: './project.component.html',
   styleUrl: './project.component.scss'
 })
-export class ProjectComponent implements OnInit {
+export class ProjectComponent implements OnInit, OnChanges {
   @Input() project: any;
   @Input() isExpanded: boolean = false;
   @Output() toggleRequest = new EventEmitter<void>();
@@ -32,14 +32,19 @@ export class ProjectComponent implements OnInit {
     });
   }
 
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['project'] && changes['project'].currentValue) {
+      this.updateAboutText(this.translate.currentLang);
+    }
+  }
+
   updateAboutText(lang: string) {
     this.aboutLanguage = lang === 'de'
-      ? this.project.aboutDe
-      : this.project.aboutEn;
+      ? this.project?.aboutDe
+      : this.project?.aboutEn;
   }
 
   onToggle() {
     this.toggleRequest.emit();
   }
-  
 }
