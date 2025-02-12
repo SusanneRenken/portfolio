@@ -10,7 +10,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class ProjectComponent implements OnInit {
   @Input() project: any;
-  @Input() isExpanded: boolean = false;
+  @Input() isActive: boolean = false;
   @Output() toggleRequest = new EventEmitter<void>();
 
   isDesktop = false;

@@ -12,13 +12,13 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class MyWorkComponent {
   projects = PROJECTS;
-  expandedProjectId: number | null = null;
+  activeProjectId: number | null = null;
 
   toggleProjectExpansion(projectId: number) {
-    if (this.expandedProjectId === projectId) {
-      this.expandedProjectId = null;
+    if (this.activeProjectId === projectId) {
+      this.activeProjectId = null;
     } else {
-      this.expandedProjectId = projectId;
+      this.activeProjectId = projectId;
     }
   }
 }
