@@ -9,12 +9,11 @@
         <p>{{ "CONTACT_ME_TEXT_2" | translate }}</p>
 
         <div class="contact-info">
-          <a>
+          <a href="mailto:contact@susanne-renken.com">
             <img src="assets/img/mail.svg" alt="" />
-            <!-- Hier muss noch die E-Mailadresse angepasst werden -->
-            E-mail: renken.susanne&#64;gmail.com
+            E-Mail: contact&#64;susanne-renken.com
           </a>
-          <a>
+          <a href="tel:+491733963852">
             <img src="assets/img/phone.svg" alt="" />
             Tel: 0173 3963 852
           </a>
@@ -65,15 +64,11 @@
       </a>
     </div>
     <div>
-      <span
-        [class.active]="currentLang === 'de'"
-        (click)="switchLanguage('de')"
+      <span [class.active]="currentLang === 'de'" (click)="switchLanguage('de')"
         >DE</span
       >
       |
-      <span
-        [class.active]="currentLang === 'en'"
-        (click)="switchLanguage('en')"
+      <span [class.active]="currentLang === 'en'" (click)="switchLanguage('en')"
         >EN</span
       >
     </div>

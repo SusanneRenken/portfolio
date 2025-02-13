@@ -1,5 +1,5 @@
-<section [class.show]="isOpen">
-  <div>
+<section [class.show]="isOpen" (click)="toggleOverlay()">
+  <div (click)="$event.stopPropagation()">
     <img
       src="assets/img/close.svg"
       alt="Close Window"

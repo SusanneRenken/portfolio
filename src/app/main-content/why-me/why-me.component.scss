@@ -10,7 +10,7 @@ section {
   > div {
     display: flex;
     flex-direction: column;
-    gap: 56px;
+    gap: 48px;
     > a {
       align-self: flex-end;
     }
@@ -18,10 +18,9 @@ section {
 }
 
 .content {
-  height: 80px;
   display: flex;
-  justify-content: space-between;
-  align-items: end;
+  flex-direction: column;
+  gap: 32px;
   > span {
     font-size: 48px;
     font-weight: bold;
@@ -30,34 +29,49 @@ section {
     align-self: flex-start;
   }
   > div {
-    cursor: pointer;
-    height: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    > p {
-      text-align: center;
-    }
-
-    &:hover {
+    > div {
+      cursor: pointer;
+      height: 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
       > p {
-        color: var(--main-color);
+        text-align: center;
+      }
+      .img-view {
+        height: 40px;
+      }
+      .img-idea {
+        height: 40px;
       }
 
-      .img-located {
-        content: url(../../../assets/img/located-hover.svg);
-      }
+      &:hover {
+        > p {
+          color: var(--main-color);
+        }
 
-      .img-remote {
-        content: url(../../../assets/img/remote-hover.svg);
+        .img-located {
+          content: url(../../../assets/img/wm-located-hover1.svg);
+        }
+
+        .img-remote {
+          margin-top: 1px;
+          content: url(../../../assets/img/wm-remote-hover1.svg);
+        }
+
+        .img-view {
+          content: url(../../../assets/img/wm-view-hover.svg);
+        }
+
+        .img-idea {
+          content: url(../../../assets/img/wm-idea-hover.svg);
+        }
       }
     }
   }
-}
-
-.img-remote {
-  margin-right: 14px;
 }
 
 .arrow-img {
@@ -73,7 +87,7 @@ section {
     padding-right: calc(100% - 60px - 720px);
   }
   .arrow-img {
-    top: 480px;
+    top: 560px;
   }
 }
 
@@ -87,12 +101,14 @@ section {
     }
   }
   .content {
-    height: 100px;
     > span {
       font-size: 32px;
     }
-    > div {
-      width: 160px;
+    >div{
+      >div{
+        width: 90px;
+        height: 100px;
+      }
     }
   }
   .img-located {
