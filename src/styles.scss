@@ -63,10 +63,19 @@ body {
   src: url("./assets/font/quantico-v17-latin-700italic.woff2") format("woff2");
 }
 
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Anta';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/font/anta-v1-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 h1 {
   font-size: 54px;
   color: transparent;
   -webkit-text-stroke: 2.5px var(--main-bright-color);
+  // -webkit-text-stroke: 0.5px var(--main-bright-color);
   writing-mode: vertical-rl;
   transform: rotate(180deg);
 }
@@ -84,13 +93,11 @@ h3 {
   color: var(--main-bright-color);
 }
 
+p{
+  line-height: 1.5;
+}
+
 :root {
-  // --main-color: rgb(76, 114, 219);
-  // --main-dark-color: rgb(10, 10, 10);
-  // --second-dark-color: rgb(38, 38, 38);
-
-  // --main-color: rgb(137, 188, 217);
-
   --main-bright-color: rgb(137, 188, 217);
   --second-bright-color: rgb(29, 66, 88);
   --main-dark-color: rgb(38, 46, 52);
