@@ -7,23 +7,25 @@
 
 app-landing-page {
   flex: 0 0 calc(100vw - 172px);
-  background-color: rgb(10, 10, 10);
+  background-color: var(--main-dark-color);
 }
 
 app-why-me {
   flex: 0 0 calc(100vw - 172px);
   background: linear-gradient(
     70deg,
-    rgb(10, 10, 10),
-    rgb(38, 38, 38),
-    rgb(10, 10, 10)
+    var(--main-dark-color),
+    var(--main-dark-color),
+    var(--second-dark-color),
+    var(--main-dark-color),
+    var(--main-dark-color)
   );
   display: flex;
 }
 
 app-my-skill-set {
   flex: 0 0 calc(100vw - 172px);
-  background-color: rgb(10, 10, 10);
+  background-color: var(--main-dark-color);
   display: flex;
   align-items: end;
 }
@@ -31,16 +33,18 @@ app-my-skill-set {
 app-my-work {
   background: linear-gradient(
     70deg,
-    rgb(10, 10, 10),
-    rgb(38, 38, 38),
-    rgb(10, 10, 10)
+    var(--main-dark-color),
+    var(--main-dark-color),
+    var(--second-dark-color),
+    var(--main-dark-color),
+    var(--main-dark-color)
   );
   display: flex;
   align-items: center;
 }
 
 app-contact-me {
-  background-color: rgb(10, 10, 10);
+  background-color: var(--main-dark-color);
 }
 
 @media (max-width: 1199.98px) {
@@ -90,9 +94,11 @@ app-contact-me {
     justify-content: center;
     background: linear-gradient(
       15deg,
-      rgb(10, 10, 10),
-      rgb(38, 38, 38),
-      rgb(10, 10, 10)
+      var(--main-dark-color),
+      var(--main-dark-color),
+      var(--second-dark-color),
+      var(--main-dark-color),
+      var(--main-dark-color)
     );
   }
 

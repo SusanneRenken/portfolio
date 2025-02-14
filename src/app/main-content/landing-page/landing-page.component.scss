@@ -45,9 +45,9 @@ section {
   > span {
     font-size: 100px;
     font-weight: bold;
-    color: var(--main-color);
-    -webkit-text-stroke: 0.5px rgb(26, 46, 100);
-    text-shadow: 2px 2px 3px rgb(10, 10, 10);
+    color: var(--main-bright-color);
+    -webkit-text-stroke: 0.5px var(--second-dark-color);
+    text-shadow: 2px 2px 3px var(--main-dark-color);
     opacity: 0;
     transform: translateY(120px);
     animation: flyIn 0.6s ease-out forwards;
@@ -64,7 +64,7 @@ section {
 .font-job {
   font-size: 48px;
   font-weight: bold;
-  color: rgba(10, 10, 10, 0.5);
+  color: rgba(38, 46, 52, 0.5);
   -webkit-text-stroke: 0.5px rgb(255, 253, 253);
   align-self: flex-end;
   opacity: 0;

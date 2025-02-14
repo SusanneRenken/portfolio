@@ -24,7 +24,7 @@ section {
   > span {
     font-size: 48px;
     font-weight: bold;
-    color: var(--main-color);
+    color: var(--main-bright-color);
     line-height: 0.85;
     align-self: flex-start;
   }
@@ -50,16 +50,16 @@ section {
 
       &:hover {
         > p {
-          color: var(--main-color);
+          color: var(--main-bright-color);
         }
 
         .img-located {
-          content: url(../../../assets/img/wm-located-hover1.svg);
+          content: url(../../../assets/img/wm-located-hover.svg);
         }
 
         .img-remote {
           margin-top: 1px;
-          content: url(../../../assets/img/wm-remote-hover1.svg);
+          content: url(../../../assets/img/wm-remote-hover.svg);
         }
 
         .img-view {

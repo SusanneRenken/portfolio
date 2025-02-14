@@ -3,9 +3,9 @@ footer {
   height: 100%;
   background: linear-gradient(
     135deg,
-    rgb(59, 107, 238),
-    rgb(59, 107, 238),
-    rgb(33, 58, 126)
+    var(--main-bright-color),
+    var(--main-bright-color),
+    var(--second-bright-color)
   );
   > * {
     display: none;
@@ -25,9 +25,9 @@ footer {
     padding-block: 24px;
     background: linear-gradient(
       150deg,
-      rgb(59, 107, 238),
-      rgb(59, 107, 238),
-      rgb(33, 58, 126)
+      var(--main-bright-color),
+      var(--main-bright-color),
+      var(--second-bright-color)
     );
     display: flex;
     justify-content: center;
@@ -46,7 +46,7 @@ footer {
       align-items: center;
       gap: 12px;
       > p {
-        color: rgb(56, 56, 56);
+        color: var(--second-dark-color);
       }
       > div {
         display: flex;
@@ -55,9 +55,10 @@ footer {
           cursor: pointer;
           text-decoration: none;
           font-size: 14px;
-          color: rgb(56, 56, 56);
+          color: var(--second-dark-color);
           &:hover {
-            color: rgb(37, 37, 37);
+            color: var(--main-dark-color);
+            text-decoration: underline;
           }
         }
       }

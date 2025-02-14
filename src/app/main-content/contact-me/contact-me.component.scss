@@ -21,7 +21,7 @@ section {
   justify-content: space-between;
   align-items: end;
   > :first-child {
-    color: rgb(147, 165, 214);
+    color: var(--main-bright-color);
   }
   > :nth-child(2) {
     text-align: justify;
@@ -42,10 +42,10 @@ a {
   cursor: pointer;
   text-decoration: none;
   &:hover {
-    color: rgb(147, 165, 214);
+    color: var(--main-bright-color);
   }
   &:active {
-    color: var(--main-color);
+    color: var(--main-bright-color);
     text-decoration: underline;
   }
 }
@@ -98,7 +98,7 @@ a {
       cursor: pointer;
       line-height: 1.15;
       &:hover {
-        color: var(--main-color);
+        color: var(--main-bright-color);
       }
     }
   }
@@ -111,7 +111,7 @@ a {
 .active {
   font-size: 18px;
   font-weight: 700;
-  color: var(--main-color);
+  color: var(--main-bright-color);
 }
 
 @media (max-width: 1199.98px) {
