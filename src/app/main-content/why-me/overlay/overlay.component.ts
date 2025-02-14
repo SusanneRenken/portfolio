@@ -1,13 +1,5 @@
 import { CommonModule } from '@angular/common';
-import {
-  Component,
-  EventEmitter,
-  Input,
-  OnInit,
-  OnChanges,
-  SimpleChanges,
-  Output,
-} from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, OnChanges, SimpleChanges, Output } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -15,7 +7,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   standalone: true,
   imports: [CommonModule, TranslateModule],
   templateUrl: './overlay.component.html',
-  styleUrls: ['./overlay.component.scss'],
+  styleUrls: ['./overlay.component.scss']
 })
 export class OverlayComponent implements OnInit, OnChanges {
   private _ability: any;
@@ -38,11 +30,12 @@ export class OverlayComponent implements OnInit, OnChanges {
 
   public contentStyle = { transform: 'translateY(100vh)' };
   public isClosing = false;
+  public internalShow: boolean = false;
 
   constructor(private translate: TranslateService) {}
 
   ngOnInit() {
-    this.translate.onLangChange.subscribe((event) => {
+    this.translate.onLangChange.subscribe(event => {
       this.updateAboutText(event.lang);
     });
   }
@@ -50,6 +43,7 @@ export class OverlayComponent implements OnInit, OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['isOpen']) {
       if (changes['isOpen'].currentValue) {
+        this.internalShow = true;
         this.isClosing = false;
         this.contentStyle.transform = 'translateY(100vh)';
         setTimeout(() => {
@@ -60,19 +54,20 @@ export class OverlayComponent implements OnInit, OnChanges {
   }
 
   updateAboutText(lang: string) {
-    if (!this._ability) {
-      return;
-    }
-    this.headlineLanguage =
-      lang === 'de' ? this._ability.headlineDe : this._ability.headlineEN;
+    if (!this._ability) { return; }
+    this.headlineLanguage = (lang === 'de')
+      ? this._ability.headlineDe
+      : this._ability.headlineEN;
 
-    this.aboutLanguage =
-      lang === 'de' ? this._ability.aboutDe : this._ability.aboutEn;
+    this.aboutLanguage = (lang === 'de')
+      ? this._ability.aboutDe
+      : this._ability.aboutEn;
   }
 
   toggleOverlay() {
     if (!this.isClosing) {
       this.isClosing = true;
+      this.internalShow = false;
       this.contentStyle.transform = 'translateY(100vh)';
     }
   }
