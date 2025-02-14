@@ -9,13 +9,13 @@
   "WHY_ME_BTN": "Contact me",
   
   "MY_SKILL_SET": "Skills",
-  "MY_SKILL_SET_TEXT": "The IT landscape is continuously evolving, with new technologies and methodologies. Staying motivated to expand my IT skills requires a strategic approach, a curious mindset, and a commitment to lifelong learning.",
+  "MY_SKILL_SET_TEXT": "In the dynamic world of IT, innovation and progress are inextricably linked. For me, new technologies and methods are not just tools, but springboards for fresh ideas and efficient solutions. With strategic foresight, unwavering curiosity, and a passion for lifelong learning, I continuously expand my skills – ready to actively shape the future.",
   "MY_SKILL_SET_CHALLENGE": "Challenge me",
-  "MY_SKILL_SET_HOVER": "I am always happy to learn new technologies, just tell me what you need.",
+  "MY_SKILL_SET_HOVER": "Do you have an idea? Tell me which technology you have in mind.",
   
   "MY_WORK": "My Work",
   "MY_WORK_ONGOING": "Ongoing project",
-  "MY_WORK_ONGOING_TEXT": "I am currently working on developing an online shop for pet foods. This is for me both exciting and challenging. In my work the key to success lies in a good planning and execution.",
+  "MY_WORK_ONGOING_TEXT": "I am developing a Slack clone that redefines team communication – with an intuitive user interface, real-time messaging, and smart channel organization, I bring a fresh approach to collaboration. This project is the perfect blend of exciting challenges and creative ingenuity – exactly what I love.",
   "PROJECT": "Project",
   "MY_WORK_SHOW_MORE": "Show me more",  
   "MY_WORK_SHOW_LESS": "Show me less",
@@ -28,7 +28,7 @@
   "CONTACT_ME_FORM_NAME_REQUIRED": "Your name is required",
   "CONTACT_ME_FORM_MAIL": "Your email is required",
   "CONTACT_ME_FORM_MAIL_REQUIRED": "Your email",
-  "CONTACT_ME_FORM_MESSAGE": "Your message is required",
+  "CONTACT_ME_FORM_MESSAGE": "Your message is required (min. 4 characters)",
   "CONTACT_ME_FORM_MESSAGE_REQUIRED": "Your message",
   
   "CONTACT_ME_FORM_TEXT_1": "I've read the",

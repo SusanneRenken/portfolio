@@ -9,13 +9,13 @@
   "WHY_ME_BTN": "Kontaktiere mich",
 
   "MY_SKILL_SET": "Skills",
-  "MY_SKILL_SET_TEXT": "Die IT-Landschaft entwickelt sich kontinuierlich weiter, mit neuen Technologien und Methoden. Um motiviert zu bleiben und meine IT-Fähigkeiten auszubauen, sind ein strategischer Ansatz, eine neugierige Denkweise und die Bereitschaft zum lebenslangen Lernen notwendig.",
+  "MY_SKILL_SET_TEXT": "In der dynamischen Welt der IT sind Innovation und Fortschritt untrennbar miteinander verbunden. Neue Technologien und Methoden sind für mich nicht nur Werkzeuge, sondern Sprungbretter für frische Ideen und effiziente Lösungen. Mit strategischem Weitblick, unerschütterlicher Neugier und der Leidenschaft für lebenslanges Lernen erweitere ich kontinuierlich meine Fähigkeiten – bereit, die Zukunft aktiv mitzugestalten.",
   "MY_SKILL_SET_CHALLENGE": "Fordere mich",
-  "MY_SKILL_SET_HOVER": "Ich lerne gerne neue Technologien – sag mir einfach, was du brauchst.",
+  "MY_SKILL_SET_HOVER": "Hast du eine Idee? Sag mir, welche Technologie du im Sinn hast.",
 
   "MY_WORK": "Projekte",
   "MY_WORK_ONGOING": "Laufendes Projekt",
-  "MY_WORK_ONGOING_TEXT": "Derzeit arbeite ich an der Entwicklung eines Online-Shops für Tierfutter. Das ist für mich sowohl spannend als auch herausfordernd. In meiner Arbeit liegt der Schlüssel zum Erfolg in guter Planung und Umsetzung.",
+  "MY_WORK_ONGOING_TEXT": "Ich entwickle einen Slack-Klone, der Teamkommunikation neu definiert – mit intuitiver Oberfläche, Echtzeitnachrichten und cleverer Kanalorganisation bringe ich frischen Wind in die Zusammenarbeit. Dieses Projekt ist für mich die perfekte Mischung aus spannender Herausforderung und kreativem Ideenreichtum – genau das, was ich liebe.",
   "PROJECT": "Projekt",
   "MY_WORK_SHOW_MORE": "Zeig mir mehr",  
   "MY_WORK_SHOW_LESS": "Zeig mir weniger",
@@ -29,7 +29,7 @@
   "CONTACT_ME_FORM_MAIL": "Deine E-Mail",
   "CONTACT_ME_FORM_MAIL_REQUIRED": "Deine E-Mail ist erforderlich",
   "CONTACT_ME_FORM_MESSAGE": "Deine Nachricht",
-  "CONTACT_ME_FORM_MESSAGE_REQUIRED": "Deine Nachricht ist erforderlich",
+  "CONTACT_ME_FORM_MESSAGE_REQUIRED": "Deine Nachricht ist erforderlich (min. 4 Zeichen)",
 
   "CONTACT_ME_FORM_TEXT_1": "Ich habe die",
   "CONTACT_ME_FORM_TEXT_2": "Datenschutzerklärung",
