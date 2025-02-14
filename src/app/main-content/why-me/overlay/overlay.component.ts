@@ -1,14 +1,23 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnInit,
+  OnChanges,
+  SimpleChanges,
+  Output,
+} from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-overlay',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './overlay.component.html',
-  styleUrls: ['./overlay.component.scss']
+  styleUrls: ['./overlay.component.scss'],
 })
-export class OverlayComponent implements OnInit {
+export class OverlayComponent implements OnInit, OnChanges {
   private _ability: any;
 
   @Input() set ability(value: any) {
@@ -17,7 +26,6 @@ export class OverlayComponent implements OnInit {
       this.updateAboutText(this.translate.currentLang);
     }
   }
-
   get ability() {
     return this._ability;
   }
@@ -28,26 +36,50 @@ export class OverlayComponent implements OnInit {
   headlineLanguage = '';
   aboutLanguage = '';
 
+  public contentStyle = { transform: 'translateY(100vh)' };
+  public isClosing = false;
+
   constructor(private translate: TranslateService) {}
 
   ngOnInit() {
-    this.translate.onLangChange.subscribe(event => {
+    this.translate.onLangChange.subscribe((event) => {
       this.updateAboutText(event.lang);
     });
   }
 
-  updateAboutText(lang: string) {
-    if (!this._ability) { return; }
-    this.headlineLanguage = (lang === 'de')
-      ? this._ability.headlineDe
-      : this._ability.headlineEN;
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['isOpen']) {
+      if (changes['isOpen'].currentValue) {
+        this.isClosing = false;
+        this.contentStyle.transform = 'translateY(100vh)';
+        setTimeout(() => {
+          this.contentStyle.transform = 'translateY(0)';
+        }, 50);
+      }
+    }
+  }
 
-    this.aboutLanguage = (lang === 'de')
-      ? this._ability.aboutDe
-      : this._ability.aboutEn;
+  updateAboutText(lang: string) {
+    if (!this._ability) {
+      return;
+    }
+    this.headlineLanguage =
+      lang === 'de' ? this._ability.headlineDe : this._ability.headlineEN;
+
+    this.aboutLanguage =
+      lang === 'de' ? this._ability.aboutDe : this._ability.aboutEn;
   }
 
   toggleOverlay() {
-    this.overlayClosed.emit();
+    if (!this.isClosing) {
+      this.isClosing = true;
+      this.contentStyle.transform = 'translateY(100vh)';
+    }
+  }
+
+  onTransitionEnd(event: TransitionEvent) {
+    if (event.propertyName === 'transform' && this.isClosing) {
+      this.overlayClosed.emit();
+    }
   }
 }

@@ -9,6 +9,7 @@ section {
   display: none;
   justify-content: center;
   align-items: center;
+
   > div {
     position: relative;
     width: 640px;
@@ -19,6 +20,8 @@ section {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    transition: transform 0.5s ease; /* CSS-Transition für die Animation */
+
     > img {
       cursor: pointer;
       position: absolute;
@@ -44,7 +47,7 @@ section {
 
 @media (max-width: 767.98px) {
   section {
-    >div{
+    > div {
       width: 90vw;
       max-height: 90vh;
       > img {
