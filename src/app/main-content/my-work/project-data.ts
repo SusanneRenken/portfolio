@@ -21,7 +21,7 @@ export const PROJECTS: Projects[] = [
     image: 'join.jpg',
     repositoryUrl: 'https://github.com/SusanneRenken/join/',
     liveDemoUrl:
-      'https://susanne-renken.developerakademie.net/FERTIG/m10_join/',
+      'https://join.susanne-renken.com',
   },
   {
     id: 2,
@@ -34,6 +34,6 @@ export const PROJECTS: Projects[] = [
     image: 'sharkie.jpg',
     repositoryUrl: 'https://github.com/SusanneRenken/sharkie/',
     liveDemoUrl:
-      'https://susanne-renken.developerakademie.net/FERTIG/m12_sharkie/index.html',
+      'https://sharkie.susanne-renken.com',
   },
 ];
