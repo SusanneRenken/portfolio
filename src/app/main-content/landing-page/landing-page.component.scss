@@ -47,7 +47,7 @@ section {
     font-weight: bold;
     color: var(--main-bright-color);
     -webkit-text-stroke: 0.5px var(--second-dark-color);
-    text-shadow: 2px 2px 3px var(--main-dark-color);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
     opacity: 0;
     transform: translateY(120px);
     animation: flyIn 0.6s ease-out forwards;

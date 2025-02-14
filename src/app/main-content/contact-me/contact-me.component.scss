@@ -23,9 +23,6 @@ section {
   > :first-child {
     color: var(--main-bright-color);
   }
-  > :nth-child(2) {
-    text-align: justify;
-  }
 
   > :nth-last-child(1) {
     display: flex;

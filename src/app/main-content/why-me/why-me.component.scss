@@ -41,10 +41,7 @@ section {
       > p {
         text-align: center;
       }
-      .img-view {
-        height: 40px;
-      }
-      .img-idea {
+      > img {
         height: 40px;
       }
 
@@ -104,19 +101,12 @@ section {
     > span {
       font-size: 32px;
     }
-    >div{
-      >div{
+    > div {
+      > div {
         width: 90px;
         height: 100px;
       }
     }
-  }
-  .img-located {
-    width: 28px;
-  }
-
-  .img-remote {
-    width: 48px;
   }
 }
 
@@ -134,7 +124,7 @@ section {
     padding: 40px clamp(16px, 5vw, 32px);
     gap: clamp(12px, 3vw, 24px);
     > div {
-      > button {
+      > a {
         align-self: center;
       }
     }
@@ -142,16 +132,20 @@ section {
 
   .content {
     height: auto;
-    flex-direction: column;
     align-items: center;
-    gap: 16px;
+    gap: 24px;
     > span {
       padding-bottom: 16px;
       align-self: auto;
     }
     > div {
-      width: auto;
-      height: 72px;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      > div{
+        height: 80px;
+        width: auto;
+      }
     }
   }
 }

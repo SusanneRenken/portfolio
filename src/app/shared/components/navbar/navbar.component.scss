@@ -8,7 +8,7 @@ nav {
   padding-top: 16px;
   padding-bottom: 80px;
   background: linear-gradient(
-    135deg,
+    225deg,
     var(--main-bright-color),
     var(--main-bright-color),
     var(--second-bright-color)
@@ -41,7 +41,6 @@ nav {
     > a {
       cursor: pointer;
       font-size: 30px;
-      // color: rgb(48, 48, 48);
       color: var(--main-dark-color);
       background-color: transparent;
       text-decoration: none;
@@ -69,7 +68,7 @@ nav {
   height: auto;
   padding-block: 16px 32px;
   background: linear-gradient(
-    150deg,
+    30deg,
     var(--main-bright-color),
     var(--main-bright-color),
     var(--second-bright-color)
@@ -173,7 +172,7 @@ nav > div > a.active,
     width: 100%;
     padding: 16px 32px;
     background: linear-gradient(
-      150deg,
+      30deg,
       var(--main-bright-color),
       var(--main-bright-color),
       var(--second-bright-color)
