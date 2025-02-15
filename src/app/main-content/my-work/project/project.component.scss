@@ -169,7 +169,7 @@ section {
 
 @media (max-width: 767.98px) {
   section {
-    width: 510px;
+    width: 100%;
     height: auto;
     border-top-left-radius: 32px;
     border-top-right-radius: 32px;
@@ -187,8 +187,8 @@ section {
       align-items: center;
       > img {
         display: block;
-        width: 100%;
-        height: auto;
+        width: 400px;
+        height: 300px;
         margin-block: 24px;
         box-shadow: 0px 0px 12px var(--main-dark-color);
         flex-shrink: 0;
@@ -205,7 +205,6 @@ section {
 
 @media (max-width: 575.98px) {
   section {
-    width: 100%;
     height: auto;
     padding: 16px;
     gap: 0px;
@@ -219,13 +218,13 @@ section {
   .title-content {
     gap: 8px;
     > :first-child {
-      font-size: 40px;
-      line-height: 0.85;
+      font-size: 32px;
+      line-height: 1;
     }
     > :nth-child(2) {
       > :first-child {
         font-size: 24px;
-        line-height: 1.2;
+        line-height: 1.1;
       }
       > :nth-child(2) {
         display: none;
@@ -236,6 +235,8 @@ section {
   .project-content {
     > div {
       > img {
+        width: 100%;
+        height: auto;
         margin-block: 24px 8px;
       }
     }

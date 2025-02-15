@@ -199,7 +199,6 @@ button {
 
 @media (max-width: 767.98px) {
   h1 {
-    -webkit-text-stroke: none;
     writing-mode: horizontal-tb;
     transform: none;
   }
@@ -232,6 +231,7 @@ button {
 
 @media (max-width: 575.98px) {
   h1 {
+    -webkit-text-stroke: 1px var(--main-bright-color);
     font-size: clamp(32px, 10vw, 48px);
   }
 

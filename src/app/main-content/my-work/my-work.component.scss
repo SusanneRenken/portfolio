@@ -1,12 +1,22 @@
 section {
-  padding-inline: 80px;
+  height: 100%;
+  padding-block: 80px;
+  padding-left: 40px;
   display: flex;
-  align-items: start;
-  gap: 40px;
+  align-items: center;
+  gap: 24px;
   > div {
     display: flex;
     align-items: start;
-    gap: 56px;
+    gap: 40px;
+    > div {
+      display: flex;
+      align-items: start;
+      gap: 56px;
+    }
+  }
+  .arrow-img {
+    align-self: end;
   }
 }
 
@@ -29,7 +39,7 @@ section {
       border-bottom: none;
       border-top-left-radius: 8px;
       border-top-right-radius: 8px;
-      &:hover{
+      &:hover {
         font-size: 18px;
       }
       &.active {
@@ -73,10 +83,6 @@ section {
   }
 }
 
-.arrow-img {
-  align-self: end;
-}
-
 @media (max-width: 1199.98px) {
   section {
     padding-inline: 60px;
@@ -92,7 +98,7 @@ section {
 @media (max-width: 767.98px) {
   section {
     width: 100%;
-    padding: 40px calc((100% - 510px) / 2);
+    padding: 32px 40px 16px 40px;
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -100,8 +106,11 @@ section {
       width: 100%;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      gap: 56px;
+      gap: 24px;
+      > div {
+        flex-direction: column;
+        gap: 32px;
+      }
     }
   }
 
@@ -114,7 +123,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 56px;
+    gap: 32px;
   }
 
   .ongoing-project {
@@ -124,7 +133,23 @@ section {
 
 @media (max-width: 575.98px) {
   section {
-    padding: 40px clamp(16px, 5vw, 32px);
-    gap: clamp(12px, 3vw, 24px);
+    padding: 24px 16px 8px 16px;
+    > div {
+      gap: 16px;
+    }
+  }
+
+  .ongoing-project {
+    > div {
+      align-items: start;
+      > div {
+        font-size: 32px;
+        line-height: 1;
+      }
+      > span {
+        font-size: 24px;
+        line-height: 1.1;
+      }
+    }
   }
 }

@@ -1,38 +1,43 @@
 <section>
-  <h1>{{ "MY_WORK" | translate }}</h1>
   <div>
-    <div class="project-container">
-      <div>
+    <h1 id="my_work">{{ "MY_WORK" | translate }}</h1>
+    <div>
+      <div class="project-container">
+        <div>
+          @for (singleproject of projects; track singleproject.id) {
+          <span
+            [class.active]="activeProject === singleproject.id"
+            (click)="showProject(singleproject.id)"
+            >{{ singleproject.id }}. {{ singleproject.name }}</span
+          >
+          }
+        </div>
+        <app-project
+          [project]="projects[activeProject - 1]"
+          [isExpanded]="true"
+        ></app-project>
+      </div>
+      <div class="project-container-mobile">
         @for (singleproject of projects; track singleproject.id) {
-        <span [class.active]="activeProject === singleproject.id" (click)="showProject(singleproject.id)"
-          >{{ singleproject.id }}. {{ singleproject.name }}</span
-        >
+        <app-project
+          [project]="singleproject"
+          [isExpanded]="expandedProjectId === singleproject.id"
+          (toggleRequest)="toggleProjectExpansion(singleproject.id)"
+        ></app-project>
         }
       </div>
-      <app-project
-        [project]="projects[activeProject - 1]"
-        [isExpanded]="true"
-      ></app-project>
-    </div>
-    <div class="project-container-mobile">
-      @for (singleproject of projects; track singleproject.id) {
-      <app-project
-        [project]="singleproject"
-        [isExpanded]="expandedProjectId === singleproject.id"
-        (toggleRequest)="toggleProjectExpansion(singleproject.id)"
-      ></app-project>
-      }
-    </div>
 
-    <div class="ongoing-project">
-      <div>
-        <div>3</div>
-        <span>{{ "MY_WORK_ONGOING" | translate }}</span>
+      <div class="ongoing-project">
+        <div>
+          <div>3</div>
+          <span>{{ "MY_WORK_ONGOING" | translate }}</span>
+        </div>
+        <p>{{ "MY_WORK_ONGOING_TEXT" | translate }}</p>
+        <!-- <a href="#contact_me"><button>Let's talk</button></a> -->
       </div>
-      <p>{{ "MY_WORK_ONGOING_TEXT" | translate }}</p>
-      <!-- <a href="#contact_me"><button>Let's talk</button></a> -->
     </div>
   </div>
+
   <a class="arrow-img" href="#contact_me">
     <img src="assets/img/arrow-right.svg" alt="Arrow right" />
   </a>

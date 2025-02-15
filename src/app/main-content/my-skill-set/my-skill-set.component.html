@@ -1,26 +1,28 @@
 <section>
-  <h1>{{ 'MY_SKILL_SET' | translate }}</h1>
   <div>
-    <p>{{ 'MY_SKILL_SET_TEXT' | translate }}</p>
-
+    <h1 id="my_skill_set">{{ "MY_SKILL_SET" | translate }}</h1>
     <div>
-      @for (element of skillIconsList; track element.name) {
-      <div class="content">
-        <div>
-          <img [src]="element.url" alt="" />
-        </div>
-        <p>{{ element.name }}</p>
-      </div>
-      }
+      <p>{{ "MY_SKILL_SET_TEXT" | translate }}</p>
 
-      <div class="challenge-container">
+      <div>
+        @for (element of skillIconsList; track element.name) {
         <div class="content">
           <div>
-            <img src="assets/img/challenge-me.svg" alt="" />
+            <img [src]="element.url" alt="" />
           </div>
-          <p>{{ 'MY_SKILL_SET_CHALLENGE' | translate }}</p>
+          <p>{{ element.name }}</p>
         </div>
-        <span>{{ 'MY_SKILL_SET_HOVER' | translate }}</span>
+        }
+
+        <div class="challenge-container">
+          <div class="content">
+            <div>
+              <img src="assets/img/challenge-me.svg" alt="" />
+            </div>
+            <p>{{ "MY_SKILL_SET_CHALLENGE" | translate }}</p>
+          </div>
+          <span>{{ "MY_SKILL_SET_HOVER" | translate }}</span>
+        </div>
       </div>
     </div>
   </div>

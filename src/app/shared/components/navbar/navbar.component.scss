@@ -6,7 +6,7 @@ nav {
   width: 172px;
   height: 100%;
   padding-top: 16px;
-  padding-bottom: 80px;
+  padding-bottom: 40px;
   background: linear-gradient(
     225deg,
     var(--main-bright-color),
@@ -32,7 +32,7 @@ nav {
   }
 
   > div {
-    height: 70vh;
+    height: 75vh;
     background-color: transparent;
     display: flex;
     flex-direction: column;

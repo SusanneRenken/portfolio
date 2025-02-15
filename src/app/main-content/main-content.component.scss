@@ -10,27 +10,9 @@ app-landing-page {
   background-color: var(--main-dark-color);
 }
 
-app-why-me {
-  flex: 0 0 calc(100vw - 172px);
-  background: linear-gradient(
-    70deg,
-    var(--main-dark-color),
-    var(--main-dark-color),
-    var(--second-dark-color),
-    var(--main-dark-color),
-    var(--main-dark-color)
-  );
-  display: flex;
-}
-
-app-my-skill-set {
-  flex: 0 0 calc(100vw - 172px);
-  background-color: var(--main-dark-color);
-  display: flex;
-  align-items: end;
-}
-
+app-why-me,
 app-my-work {
+  // flex: 0 0 calc(100vw - 172px);
   background: linear-gradient(
     70deg,
     var(--main-dark-color),
@@ -39,12 +21,13 @@ app-my-work {
     var(--main-dark-color),
     var(--main-dark-color)
   );
-  display: flex;
-  align-items: center;
 }
 
+app-my-skill-set,
 app-contact-me {
+  // flex: 0 0 calc(100vw - 172px);
   background-color: var(--main-dark-color);
+
 }
 
 @media (max-width: 1199.98px) {
@@ -52,9 +35,7 @@ app-contact-me {
     margin-left: 132px;
   }
 
-  app-landing-page,
-  app-why-me,
-  app-my-skill-set {
+  app-landing-page {
     flex: 0 0 calc(100vw - 132px);
   }
 }
