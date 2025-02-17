@@ -16,10 +16,10 @@ import { ScrollSpyService } from '../shared/services/scroll-spy.service';
     MySkillSetComponent,
     MyWorkComponent,
     ContactMeComponent,
-    FooterComponent
+    FooterComponent,
   ],
   templateUrl: './main-content.component.html',
-  styleUrls: ['./main-content.component.scss']
+  styleUrls: ['./main-content.component.scss'],
 })
 export class MainContentComponent implements AfterViewInit, OnDestroy {
   private onScrollBound: any;
@@ -42,7 +42,9 @@ export class MainContentComponent implements AfterViewInit, OnDestroy {
 
   onScroll(): void {
     const nativeElement = this.elementRef.nativeElement as HTMLElement;
-    const sections = nativeElement.querySelectorAll('[id]') as NodeListOf<HTMLElement>;
+    const sections = nativeElement.querySelectorAll(
+      '[id]'
+    ) as NodeListOf<HTMLElement>;
     const sectionsArray = Array.from(sections);
     let activeSectionId = '';
 

@@ -2,7 +2,7 @@
   <div class="title-content">
     <div>{{ project.id }}</div>
     <div>
-      <div>{{ 'PROJECT' | translate }} {{ project.name }}</div>
+      <div>{{ "PROJECT" | translate }} {{ project.name }}</div>
       <div>{{ project.techStack }}</div>
     </div>
   </div>
@@ -20,10 +20,20 @@
       <img src="assets/img/{{ project.image }}" alt="Project image" />
 
       <div class="expand-container" [class.expanded]="isDesktop || isExpanded">
-        <a class="project-btn secondary" href="{{ project.repositoryUrl }}" target="_blank" rel="noopener">
+        <a
+          class="project-btn secondary"
+          href="{{ project.repositoryUrl }}"
+          target="_blank"
+          rel="noopener"
+        >
           GitHub
         </a>
-        <a class="project-btn primary" href="{{ project.liveDemoUrl }}" target="_blank" rel="noopener">
+        <a
+          class="project-btn primary"
+          href="{{ project.liveDemoUrl }}"
+          target="_blank"
+          rel="noopener"
+        >
           Live Test
         </a>
       </div>
@@ -34,7 +44,11 @@
 
   <div class="show-me" (click)="onToggle()">
     <span>
-      {{ isExpanded ? ( 'MY_WORK_SHOW_LESS' | translate ) : ( 'MY_WORK_SHOW_MORE' | translate ) }}
+      {{
+        isExpanded
+          ? ("MY_WORK_SHOW_LESS" | translate)
+          : ("MY_WORK_SHOW_MORE" | translate)
+      }}
     </span>
     <img
       src="assets/img/triangle-{{ isExpanded ? 'up' : 'down' }}.svg"

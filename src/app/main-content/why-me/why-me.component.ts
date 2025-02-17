@@ -8,7 +8,7 @@ import { ABILITIES } from './ability.data';
   standalone: true,
   imports: [TranslateModule, OverlayComponent],
   templateUrl: './why-me.component.html',
-  styleUrl: './why-me.component.scss'
+  styleUrl: './why-me.component.scss',
 })
 export class WhyMeComponent {
   abilities = ABILITIES;
@@ -17,15 +17,14 @@ export class WhyMeComponent {
 
   openActiveOverlay(id: number) {
     this.activeAbility = id;
-    this.overlayOpen = true;  
+    this.overlayOpen = true;
   }
 
-  get selectedAbility() {    
-    return this.abilities.find(a => a.id === this.activeAbility);
+  get selectedAbility() {
+    return this.abilities.find((a) => a.id === this.activeAbility);
   }
 
   onOverlayClosed() {
     this.overlayOpen = false;
   }
-
 }

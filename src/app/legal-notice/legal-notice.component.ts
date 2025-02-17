@@ -16,8 +16,6 @@ import { LanguageService } from '../shared/services/language.service';
   `,
   styleUrls: ['./legal-notice.component.scss'],
 })
-
-
 export class LegalNoticeComponent implements OnInit {
   legalHtml: SafeHtml = '';
 

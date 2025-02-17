@@ -12,5 +12,4 @@ export class LanguageService {
   getCurrentLanguage(): string {
     return this.translate.currentLang || this.translate.getDefaultLang();
   }
-
 }

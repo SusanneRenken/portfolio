@@ -1,4 +1,12 @@
-import { Component, Input, Output, EventEmitter, OnInit, OnChanges, SimpleChanges } from '@angular/core';
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  OnInit,
+  OnChanges,
+  SimpleChanges,
+} from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -6,7 +14,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   standalone: true,
   imports: [TranslateModule],
   templateUrl: './project.component.html',
-  styleUrl: './project.component.scss'
+  styleUrl: './project.component.scss',
 })
 export class ProjectComponent implements OnInit, OnChanges {
   @Input() project: any;
@@ -27,7 +35,7 @@ export class ProjectComponent implements OnInit, OnChanges {
 
     this.updateAboutText(this.translate.currentLang);
 
-    this.translate.onLangChange.subscribe(event => {
+    this.translate.onLangChange.subscribe((event) => {
       this.updateAboutText(event.lang);
     });
   }
@@ -39,9 +47,8 @@ export class ProjectComponent implements OnInit, OnChanges {
   }
 
   updateAboutText(lang: string) {
-    this.aboutLanguage = lang === 'de'
-      ? this.project?.aboutDe
-      : this.project?.aboutEn;
+    this.aboutLanguage =
+      lang === 'de' ? this.project?.aboutDe : this.project?.aboutEn;
   }
 
   onToggle() {

@@ -24,7 +24,7 @@ export class NavbarComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.scrollSpyService.activeSection$.subscribe(section => {
+    this.scrollSpyService.activeSection$.subscribe((section) => {
       this.activeSection = section;
     });
   }

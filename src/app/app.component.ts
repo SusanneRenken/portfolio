@@ -7,9 +7,9 @@ import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet ,NavbarComponent],
+  imports: [CommonModule, RouterOutlet, NavbarComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'portfolio';
@@ -18,7 +18,7 @@ export class AppComponent {
     private route: ActivatedRoute,
     private translate: TranslateService
   ) {
-    this.route.queryParams.subscribe(params => {
+    this.route.queryParams.subscribe((params) => {
       const lang = params['lang'];
       if (lang) {
         this.translate.use(lang);
@@ -27,5 +27,4 @@ export class AppComponent {
       }
     });
   }
-
 }

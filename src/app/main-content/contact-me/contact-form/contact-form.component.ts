@@ -11,9 +11,7 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss',
 })
-
 export class ContactFormComponent {
-
   http = inject(HttpClient);
 
   contactData = {
@@ -22,7 +20,7 @@ export class ContactFormComponent {
     message: '',
   };
 
-  isAccepted:boolean = false;
+  isAccepted: boolean = false;
 
   mailTest = true;
 
@@ -41,10 +39,10 @@ export class ContactFormComponent {
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+      this.http
+        .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-
             ngForm.resetForm();
             this.isAccepted = !this.isAccepted;
           },
@@ -54,7 +52,6 @@ export class ContactFormComponent {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
       ngForm.resetForm();
       this.isAccepted = !this.isAccepted;
     }
@@ -63,5 +60,4 @@ export class ContactFormComponent {
   onAccept() {
     this.isAccepted = !this.isAccepted;
   }
-
 }

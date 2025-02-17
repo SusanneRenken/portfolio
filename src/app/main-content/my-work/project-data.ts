@@ -20,8 +20,7 @@ export const PROJECTS: Projects[] = [
     techStack: 'JavaScript | HTML | CSS | Firebase',
     image: 'join.jpg',
     repositoryUrl: 'https://github.com/SusanneRenken/join/',
-    liveDemoUrl:
-      'https://join.susanne-renken.com',
+    liveDemoUrl: 'https://join.susanne-renken.com',
   },
   {
     id: 2,
@@ -33,7 +32,6 @@ export const PROJECTS: Projects[] = [
     techStack: 'JavaScript | HTML | CSS | Firebase',
     image: 'sharkie.jpg',
     repositoryUrl: 'https://github.com/SusanneRenken/sharkie/',
-    liveDemoUrl:
-      'https://sharkie.susanne-renken.com',
+    liveDemoUrl: 'https://sharkie.susanne-renken.com',
   },
 ];

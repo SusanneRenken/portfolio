@@ -9,17 +9,14 @@ import { TranslateModule } from '@ngx-translate/core';
   standalone: true,
   imports: [ContactFormComponent, RouterModule, TranslateModule],
   templateUrl: './contact-me.component.html',
-  styleUrl: './contact-me.component.scss'
+  styleUrl: './contact-me.component.scss',
 })
-
 export class ContactMeComponent {
   constructor(private languageService: LanguageService) {}
   currentLang = this.languageService.getCurrentLanguage();
 
-
   switchLanguage(lang: string) {
-    this.languageService.changeLanguage(lang);    
+    this.languageService.changeLanguage(lang);
     this.currentLang = lang;
   }
-
 }
