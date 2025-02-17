@@ -60,6 +60,7 @@ nav {
   }
 }
 
+/* -- MOBILE MENU CONTAINER -- */
 .mobile-menu {
   position: absolute;
   top: 0;
@@ -82,11 +83,16 @@ nav {
   flex-direction: column;
   gap: 16px;
   z-index: 9999;
+
+  /* Standard-Animation: Menü kommt von oben herunter */
+  animation: navbarEffectShow 0.5s ease-in-out forwards;
+
   > img {
     cursor: pointer;
     margin: 0 24px 16px 0;
     align-self: flex-end;
   }
+
   > a {
     cursor: pointer;
     font-size: 24px;
@@ -102,16 +108,55 @@ nav {
   }
 }
 
+/**
+ * Bei aktiven Link: Rand-Effekt
+ */
 nav > div > a.active,
 .mobile-menu a.active {
   color: transparent;
   -webkit-text-stroke: 1.2px var(--second-dark-color);
 }
 
+/**
+ * Menü vollständig anzeigen
+ */
 .mobile-menu.show {
   display: flex;
+  animation: navbarEffectShow 0.5s ease-in-out forwards;
 }
 
+/* 
+   Neu hinzugefügte Hide-Animation:
+   - Gleiche Dauer (0.5s), aber verschwindet wieder nach oben.
+   - Wichtig: Wir behalten display: flex, damit das Element 
+     sichtbar bleibt, bis die Animation endet. 
+*/
+.mobile-menu.hide {
+  display: flex;
+  animation: navbarEffectHide 0.5s ease-in-out forwards;
+}
+
+/* --- KEYFRAMES --- */
+@keyframes navbarEffectShow {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Neu: Versteckt das Menü wieder nach oben */
+@keyframes navbarEffectHide {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+/* LANGUAGE-SWITCHER */
 .language-switcher {
   width: 140px;
   padding-top: 16px;
@@ -122,6 +167,7 @@ nav > div > a.active,
   justify-content: center;
   align-items: center;
   gap: 12px;
+
   > span {
     cursor: pointer;
     font-size: 20px;
@@ -134,6 +180,7 @@ nav > div > a.active,
   }
 }
 
+/* --- MEDIA QUERIES --- */
 @media (max-width: 1199.98px) {
   nav {
     width: 132px;
@@ -211,9 +258,11 @@ nav > div > a.active,
     padding: 16px clamp(16px, 5vw, 32px);
     justify-content: space-between;
     gap: 0;
+
     > div {
       display: none;
     }
+
     > img {
       display: block;
       cursor: pointer;

@@ -33,7 +33,7 @@
   <img src="assets/img/burger.svg" alt="Burger Menu" (click)="toggleMenu()" />
 </nav>
 
-<div class="mobile-menu" [class.show]="isMenuOpen">
+<div class="mobile-menu" [class.show]="isMenuOpen" [class.hide]="!isMenuOpen">
   <img src="assets/img/close.svg" alt="Close Menu" (click)="toggleMenu()" />
   <a
     (click)="toggleMenu(); navigate('why_me')"
