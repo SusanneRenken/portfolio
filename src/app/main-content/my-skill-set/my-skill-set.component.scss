@@ -245,3 +245,52 @@ section {
     }
   }
 }
+
+.content.clicked {
+  > div {
+    &::before {
+      animation: skillEffectBefore 1s forwards;
+    }
+    > img {
+      animation: skillEffectImage 1s forwards;
+    }
+  }
+
+  > p {
+    display: block;
+    animation: skillEffectText 1s forwards;
+  }
+}
+
+@keyframes skillEffectBefore {
+  0%,
+  50% {
+    background-color: rgba(137, 188, 217, 0.5);
+    filter: blur(20px);
+  }
+  100% {
+    background-color: transparent;
+    filter: blur(0px);
+  }
+}
+
+@keyframes skillEffectImage {
+  0%,
+  50% {
+    filter: drop-shadow(0px 0px 8px var(--second-dark-color));
+  }
+  100% {
+    filter: none;
+  }
+}
+
+
+@keyframes skillEffectText {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

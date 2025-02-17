@@ -1,17 +1,21 @@
 <section>
   <div>
-    <h1 id="my_skill_set">{{ "MY_SKILL_SET" | translate }}</h1>
+    <h1>{{ "MY_SKILL_SET" | translate }}</h1>
     <div>
       <p>{{ "MY_SKILL_SET_TEXT" | translate }}</p>
 
       <div>
         @for (element of skillIconsList; track element.name) {
-        <div class="content">
-          <div>
-            <img [src]="element.url" alt="" />
+          <div
+            class="content"
+            (click)="triggerSkillEffect(element.name)"
+            [ngClass]="{ 'clicked': activeName === element.name }"
+          >
+            <div>
+              <img [src]="element.url" alt="" />
+            </div>
+            <p>{{ element.name }}</p>
           </div>
-          <p>{{ element.name }}</p>
-        </div>
         }
 
         <div class="challenge-container">

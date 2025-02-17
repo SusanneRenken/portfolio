@@ -10,7 +10,7 @@ import { ScrollSpyService } from '../../services/scroll-spy.service';
   standalone: true,
   imports: [CommonModule, TranslateModule, RouterModule],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss',
+  styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
   isMenuOpen = false;
@@ -58,7 +58,27 @@ export class NavbarComponent implements OnInit {
 
   scrollToId(id: string) {
     const element = document.getElementById(id);
-    if (element) {
+    if (!element) {
+      return;
+    }
+
+    if (window.innerWidth >= 768) {
+      const mainContent = document.querySelector(
+        'app-main-content'
+      ) as HTMLElement;
+      if (!mainContent) {
+        return;
+      }
+
+      const rect = element.getBoundingClientRect();
+      const containerRect = mainContent.getBoundingClientRect();
+
+      const distanceToContainerLeft = rect.left - containerRect.left;
+
+      const scrollLeftPos = mainContent.scrollLeft + distanceToContainerLeft;
+
+      mainContent.scrollTo({ left: scrollLeftPos, behavior: 'smooth' });
+    } else {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
