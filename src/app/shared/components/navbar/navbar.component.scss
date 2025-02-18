@@ -52,6 +52,10 @@ nav {
         font-weight: thin;
         color: rgb(255, 253, 253);
       }
+      &.active {
+        color: transparent;
+        -webkit-text-stroke: 1.2px var(--second-dark-color);
+      }
     }
   }
 
@@ -60,103 +64,10 @@ nav {
   }
 }
 
-/* -- MOBILE MENU CONTAINER -- */
 .mobile-menu {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: auto;
-  padding-block: 16px 32px;
-  background: linear-gradient(
-    30deg,
-    var(--main-bright-color),
-    var(--main-bright-color),
-    var(--second-bright-color)
-  );
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  box-shadow: 0 4px 16px var(--main-dark-color);
   display: none;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 16px;
-  z-index: 9999;
-
-  /* Standard-Animation: Menü kommt von oben herunter */
-  animation: navbarEffectShow 0.5s ease-in-out forwards;
-
-  > img {
-    cursor: pointer;
-    margin: 0 24px 16px 0;
-    align-self: flex-end;
-  }
-
-  > a {
-    cursor: pointer;
-    font-size: 24px;
-    color: var(--second-dark-color);
-    background-color: transparent;
-    text-decoration: none;
-    text-align: center;
-    display: inline-block;
-    &:hover {
-      color: transparent;
-      -webkit-text-stroke: 1.2px var(--second-dark-color);
-    }
-  }
 }
 
-/**
- * Bei aktiven Link: Rand-Effekt
- */
-nav > div > a.active,
-.mobile-menu a.active {
-  color: transparent;
-  -webkit-text-stroke: 1.2px var(--second-dark-color);
-}
-
-/**
- * Menü vollständig anzeigen
- */
-.mobile-menu.show {
-  display: flex;
-  animation: navbarEffectShow 0.5s ease-in-out forwards;
-}
-
-/* 
-   Neu hinzugefügte Hide-Animation:
-   - Gleiche Dauer (0.5s), aber verschwindet wieder nach oben.
-   - Wichtig: Wir behalten display: flex, damit das Element 
-     sichtbar bleibt, bis die Animation endet. 
-*/
-.mobile-menu.hide {
-  display: flex;
-  animation: navbarEffectHide 0.5s ease-in-out forwards;
-}
-
-/* --- KEYFRAMES --- */
-@keyframes navbarEffectShow {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-/* Neu: Versteckt das Menü wieder nach oben */
-@keyframes navbarEffectHide {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-100%);
-  }
-}
-
-/* LANGUAGE-SWITCHER */
 .language-switcher {
   width: 140px;
   padding-top: 16px;
@@ -180,7 +91,6 @@ nav > div > a.active,
   }
 }
 
-/* --- MEDIA QUERIES --- */
 @media (max-width: 1199.98px) {
   nav {
     width: 132px;
@@ -267,5 +177,81 @@ nav > div > a.active,
       display: block;
       cursor: pointer;
     }
+  }
+
+  .mobile-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    padding-block: 16px 32px;
+    background: linear-gradient(
+      30deg,
+      var(--main-bright-color),
+      var(--main-bright-color),
+      var(--second-bright-color)
+    );
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 0 4px 16px var(--main-dark-color);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+    z-index: 9999;
+
+    > img {
+      cursor: pointer;
+      margin: 0 24px 16px 0;
+      align-self: flex-end;
+    }
+
+    > a {
+      cursor: pointer;
+      font-size: 24px;
+      color: var(--second-dark-color);
+      background-color: transparent;
+      text-decoration: none;
+      text-align: center;
+      display: inline-block;
+      &:hover {
+        color: transparent;
+        -webkit-text-stroke: 1.2px var(--second-dark-color);
+      }
+      &.active {
+        color: transparent;
+        -webkit-text-stroke: 1.2px var(--second-dark-color);
+      }
+    }
+
+    &.show {
+      display: flex;
+      animation: navbarEffectShow 0.5s ease-in-out forwards;
+    }
+
+    &.hide {
+      display: flex;
+      animation: navbarEffectHide 0.5s ease-in-out forwards;
+    }
+  }
+}
+
+@keyframes navbarEffectShow {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes navbarEffectHide {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
   }
 }

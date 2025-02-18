@@ -45,7 +45,9 @@ input[type="submit"] {
   align-self: end;
   &:not(:disabled) {
     cursor: pointer;
+    color: var(--main-dark-color);
     background-color: var(--main-bright-color);
+    border: none;
 
     &:hover {
       background: linear-gradient(

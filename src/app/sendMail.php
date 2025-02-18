@@ -18,16 +18,16 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $name = $params->name;
             $message = $params->message;
     
-            $recipient = 'renken.susanne@gmail.com';  
+            $recipient = 'contact@susanne-renken.com';  
             $subject = "Contact From <$email>";
-            $message = "From:" . $name . "<br>" . $message ;
+            $message = "From: " . $name . "<br>" . "Mail: " . $email  . "<br><br>" . $message;
     
             $headers   = array();
             $headers[] = 'MIME-Version: 1.0';
             $headers[] = 'Content-type: text/html; charset=utf-8';
 
             // Additional headers
-            $headers[] = "From: noreply@mywebsite.com";
+            $headers[] = "From: noreply@susanne-renken.com";
 
             mail($recipient, $subject, $message, implode("\r\n", $headers));
             break;

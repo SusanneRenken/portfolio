@@ -21,13 +21,12 @@ export class ContactFormComponent {
   };
 
   isAccepted: boolean = false;
-
-  mailTest = true;
+  mailTest = false;
 
   constructor() {}
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://susanne-renken.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {

@@ -14,6 +14,7 @@ import { ScrollSpyService } from '../../services/scroll-spy.service';
 })
 export class NavbarComponent implements OnInit {
   isMenuOpen = false;
+  isClosing = false;
   currentLang = this.languageService.getCurrentLanguage();
   activeSection: string = '';
 
@@ -30,7 +31,15 @@ export class NavbarComponent implements OnInit {
   }
 
   toggleMenu() {
-    this.isMenuOpen = !this.isMenuOpen;
+    if (!this.isMenuOpen && !this.isClosing) {
+      this.isMenuOpen = true;
+    } else if (this.isMenuOpen && !this.isClosing) {
+      this.isClosing = true;
+      setTimeout(() => {
+        this.isMenuOpen = false;
+        this.isClosing = false;
+      }, 500);
+    }
   }
 
   switchLanguage(lang: string) {
