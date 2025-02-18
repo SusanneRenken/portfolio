@@ -35,6 +35,8 @@
   "CONTACT_ME_FORM_TEXT_2": "Datenschutzerklärung",
   "CONTACT_ME_FORM_TEXT_3": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
   "CONTACT_ME_FORM_BTN": "Senden",
+  "CONTACT_FEEDBACK_SUCCESS": "Ihre Nachricht wurde erfolgreich gesendet.",
+  "CONTACT_FEEDBACK_ERROR": "Leider ist ein Fehler aufgetreten. Sie können mich direkt über contact@susanne-renken.com anschreiben.",
 
   "CONTACT_ME_LEGAL_NOTICE": "Impressum",
   "CONTACT_ME_PRIVACY_POLICY": "Datenschutzerklärung"

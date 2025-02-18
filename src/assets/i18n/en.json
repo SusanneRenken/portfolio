@@ -35,6 +35,8 @@
   "CONTACT_ME_FORM_TEXT_2": "privacy policy",  
   "CONTACT_ME_FORM_TEXT_3": "and agree to the processing of my data as outlined.",
   "CONTACT_ME_FORM_BTN": "Send",
+  "CONTACT_FEEDBACK_SUCCESS": "Your message has been sent successfully.",
+  "CONTACT_FEEDBACK_ERROR": "Unfortunately, an error occurred. You can contact me directly at contact@susanne-renken.com",
   
   "CONTACT_ME_LEGAL_NOTICE": "Legal Notice",
   "CONTACT_ME_PRIVACY_POLICY": "Privacy Policy"

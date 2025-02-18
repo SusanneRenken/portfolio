@@ -2,7 +2,19 @@
   <div>
     <h1>{{ "CONTACT_ME" | translate }}</h1>
     <div>
-      <app-contact-form></app-contact-form>
+      <app-contact-form (feedback)="onFeedback($event)"></app-contact-form>
+
+      @if (feedbackMessage) {
+      <div
+        class="feedback"
+        [ngClass]="{
+          'feedback-success': feedbackSuccess,
+          'feedback-error': !feedbackSuccess
+        }"
+      >
+        {{ feedbackMessage | translate }}
+      </div>
+      }
 
       <div class="content">
         <p>{{ "CONTACT_ME_TEXT_1" | translate }}</p>
@@ -24,12 +36,12 @@
         </a>
 
         <div>
-          <a routerLink="./legal-notice/">{{
-            "CONTACT_ME_LEGAL_NOTICE" | translate
-          }}</a>
-          <a routerLink="./privacy-policy/">{{
-            "CONTACT_ME_PRIVACY_POLICY" | translate
-          }}</a>
+          <a routerLink="./legal-notice/">
+            {{ "CONTACT_ME_LEGAL_NOTICE" | translate }}
+          </a>
+          <a routerLink="./privacy-policy/">
+            {{ "CONTACT_ME_PRIVACY_POLICY" | translate }}
+          </a>
           <p>&#64; Susanne Renken 2025</p>
         </div>
       </div>

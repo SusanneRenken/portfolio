@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component, inject, Output, EventEmitter } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
@@ -13,6 +13,8 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class ContactFormComponent {
   http = inject(HttpClient);
+
+  @Output() feedback = new EventEmitter<{ success: boolean; key: string }>();
 
   contactData = {
     name: '',
@@ -38,21 +40,22 @@ export class ContactFormComponent {
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http
-        .post(this.post.endPoint, this.post.body(this.contactData))
-        .subscribe({
-          next: (response) => {
-            ngForm.resetForm();
-            this.isAccepted = !this.isAccepted;
-          },
-          error: (error) => {
-            console.error(error);
-          },
-          complete: () => console.info('send post complete'),
-        });
+      this.http.post(this.post.endPoint, this.post.body(this.contactData)).subscribe({
+        next: (response) => {
+          ngForm.resetForm();
+          this.isAccepted = false;
+          this.feedback.emit({ success: true, key: 'CONTACT_FEEDBACK_SUCCESS' });
+        },
+        error: (error) => {
+          console.error(error);
+          this.feedback.emit({ success: false, key: 'CONTACT_FEEDBACK_ERROR' });
+        },
+        complete: () => console.info('send post complete'),
+      });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
-      this.isAccepted = !this.isAccepted;
+      this.isAccepted = false;
+      this.feedback.emit({ success: true, key: 'CONTACT_FEEDBACK_SUCCESS' });
     }
   }
 

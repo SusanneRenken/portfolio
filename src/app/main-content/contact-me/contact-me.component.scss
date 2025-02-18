@@ -202,3 +202,48 @@ a {
     display: none;
   }
 }
+
+/* --- Feedback-Styles und Animation --- */
+@keyframes slideFeedback {
+  0% {
+    transform: translate(calc(-100vw - 50%), -50%);
+    opacity: 0;
+  }
+  20% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  80% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(100vw - 50%), -50%);
+    opacity: 0;
+  }
+}
+
+.feedback {
+  width: 640px;
+  max-width: 90%;
+  padding: 32px;
+  background: linear-gradient(90deg, rgb(45, 56, 63), rgb(58, 74, 84));
+  border-radius: 32px;
+  box-shadow: 0px 0px 6px 0px rgba(255, 255, 255, 0.6);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: slideFeedback 2.5s ease-out forwards;
+  z-index: 1000;
+  text-align: center;
+  color: #fff;
+}
+
+.feedback-success {
+  border: 2px solid green;
+}
+
+.feedback-error {
+  border: 2px solid red;
+}
