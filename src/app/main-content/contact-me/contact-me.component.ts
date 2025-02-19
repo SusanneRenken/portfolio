@@ -13,17 +13,9 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './contact-me.component.scss',
 })
 export class ContactMeComponent {
-  constructor(private languageService: LanguageService) {}
-
-  currentLang = this.languageService.getCurrentLanguage();
-
   feedbackMessage: string | null = null;
   feedbackSuccess: boolean = true;
 
-  switchLanguage(lang: string) {
-    this.languageService.changeLanguage(lang);
-    this.currentLang = lang;
-  }
 
   onFeedback(event: { success: boolean; key: string }) {
     this.feedbackMessage = event.key;

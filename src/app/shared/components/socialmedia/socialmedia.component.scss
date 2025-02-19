@@ -1,0 +1,69 @@
+section {
+  position: absolute;
+  right: 120px;
+  top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  z-index: 999;
+}
+
+.social-media {
+  display: flex;
+  gap: 16px;
+  > img {
+    cursor: pointer;
+  }
+  .img-github:hover {
+    content: url(../../../../assets/img/github-btn-hover.svg);
+  }
+  .img-mail:hover {
+    content: url(../../../../assets/img/mail-btn-hover.svg);
+  }
+  .img-linkedin:hover {
+    content: url(../../../../assets/img/linkedin-btn-hover.svg);
+  }
+}
+
+.language-switch {
+  display: flex;
+  align-items: end;
+  gap: 8px;
+  > span {
+    cursor: pointer;
+    line-height: 1.15;
+    &:hover {
+      color: var(--main-bright-color);
+    }
+  }
+}
+
+.active {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--main-bright-color);
+}
+
+@media (max-width: 1199.98px) {
+    section {
+        right: 100px;
+    }
+}
+
+@media (max-width: 991.98px) {
+  .social-media {
+    top: 24px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  section  {
+    position: relative;
+    right: auto;
+    top: auto;
+    margin-top: 40px;
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 24px;
+  }
+}

@@ -4,11 +4,12 @@ import { TranslateModule } from '@ngx-translate/core';
 import { LanguageService } from '../../services/language.service';
 import { Router, RouterModule } from '@angular/router';
 import { ScrollSpyService } from '../../services/scroll-spy.service';
+import { SocialmediaComponent } from '../socialmedia/socialmedia.component';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, TranslateModule, RouterModule],
+  imports: [CommonModule, TranslateModule, RouterModule, SocialmediaComponent],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
 })
