@@ -4,9 +4,9 @@
   display: flex;
 }
 
-app-footer {
-  display: none;
-}
+// app-footer {
+//   display: none;
+// }
 
 @media (max-width: 1199.98px) {
   :host {
@@ -28,5 +28,9 @@ app-footer {
     margin-left: 0;
     overflow-y: auto;
     flex-direction: column;
+  }
+
+  app-footer {
+    display: block;
   }
 }

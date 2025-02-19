@@ -1,4 +1,10 @@
-import { Component, AfterViewInit, OnDestroy, ElementRef } from '@angular/core';
+import {
+  Component,
+  AfterViewInit,
+  OnDestroy,
+  ElementRef,
+  HostListener,
+} from '@angular/core';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { WhyMeComponent } from './why-me/why-me.component';
 import { MySkillSetComponent } from './my-skill-set/my-skill-set.component';
@@ -23,11 +29,33 @@ import { ScrollSpyService } from '../shared/services/scroll-spy.service';
 })
 export class MainContentComponent implements AfterViewInit, OnDestroy {
   private onScrollBound: any;
+  private isThrottled = false;
+  private readonly throttleDuration = 500;
 
   constructor(
     private elementRef: ElementRef,
     private scrollSpyService: ScrollSpyService
   ) {}
+
+  @HostListener('wheel', ['$event'])
+  onWheel(event: WheelEvent): void {
+    if (this.isThrottled) {
+      return;
+    }
+
+    if (window.innerWidth > 767.98 && event.deltaY !== 0) {
+      event.preventDefault();
+
+      const fixedStep = 1000;
+      this.elementRef.nativeElement.scrollLeft +=
+        event.deltaY > 0 ? fixedStep : -fixedStep;
+
+      this.isThrottled = true;
+      setTimeout(() => {
+        this.isThrottled = false;
+      }, this.throttleDuration);
+    }
+  }
 
   ngAfterViewInit(): void {
     this.onScrollBound = this.onScroll.bind(this);

@@ -49,8 +49,7 @@ export class ContactFormComponent {
         error: (error) => {
           console.error(error);
           this.feedback.emit({ success: false, key: 'CONTACT_FEEDBACK_ERROR' });
-        },
-        complete: () => console.info('send post complete'),
+        }
       });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();

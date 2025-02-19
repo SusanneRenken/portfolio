@@ -12,7 +12,6 @@ app-landing-page {
 
 app-why-me,
 app-my-work {
-  // flex: 0 0 calc(100vw - 172px);
   background: linear-gradient(
     70deg,
     var(--main-dark-color),
@@ -25,7 +24,6 @@ app-my-work {
 
 app-my-skill-set,
 app-contact-me {
-  // flex: 0 0 calc(100vw - 172px);
   background-color: var(--main-dark-color);
 }
 
