@@ -29,4 +29,8 @@ app-footer {
     overflow-y: auto;
     flex-direction: column;
   }
+
+  app-footer {
+    display: flex;
+  }
 }
