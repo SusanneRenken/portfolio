@@ -6,8 +6,9 @@ import { LanguageService } from '../../services/language.service';
   standalone: true,
   imports: [],
   templateUrl: './socialmedia.component.html',
-  styleUrl: './socialmedia.component.scss'
+  styleUrl: './socialmedia.component.scss',
 })
+
 export class SocialmediaComponent {
   constructor(private languageService: LanguageService) {}
 
