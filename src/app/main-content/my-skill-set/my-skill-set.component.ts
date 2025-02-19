@@ -5,10 +5,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-my-skill-set',
   standalone: true,
-  imports: [
-    CommonModule,
-    TranslateModule
-  ],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './my-skill-set.component.html',
   styleUrls: ['./my-skill-set.component.scss'],
 })
