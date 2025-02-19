@@ -13,6 +13,7 @@ import { Subscription } from 'rxjs';
   standalone: true,
   imports: [FooterComponent, CommonModule, RouterModule],
   template: `
+    <div class="legal-gap"></div>
     <div class="legals" [innerHTML]="legalHtml"></div>
     <app-footer></app-footer>
   `,
@@ -32,9 +33,11 @@ export class LegalNoticeComponent implements OnInit, OnDestroy {
     const currentLang = this.languageService.getCurrentLanguage() || 'en';
     this.loadLegalNotice(currentLang);
 
-    this.langChangeSub = this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
-      this.loadLegalNotice(event.lang);
-    });
+    this.langChangeSub = this.translate.onLangChange.subscribe(
+      (event: LangChangeEvent) => {
+        this.loadLegalNotice(event.lang);
+      }
+    );
   }
 
   ngOnDestroy() {

@@ -1,7 +1,22 @@
 :host {
   height: 100vh;
   margin-left: 172px;
+  background: linear-gradient(
+    70deg,
+    var(--main-dark-color),
+    var(--main-dark-color),
+    var(--second-dark-color),
+    var(--main-dark-color),
+    var(--main-dark-color)
+  );
   display: flex;
+  flex-direction: column;
+}
+
+.legal-gap {
+  flex-shrink: 0;
+  width: 100%;
+  height: 64px;
 }
 
 app-footer {
@@ -27,7 +42,19 @@ app-footer {
     margin-top: 64px;
     margin-left: 0;
     overflow-y: auto;
+    background: linear-gradient(
+      15deg,
+      var(--main-dark-color),
+      var(--main-dark-color),
+      var(--second-dark-color),
+      var(--main-dark-color),
+      var(--main-dark-color)
+    );
     flex-direction: column;
+  }
+
+  .legal-gap {
+    display: none;
   }
 
   app-footer {
