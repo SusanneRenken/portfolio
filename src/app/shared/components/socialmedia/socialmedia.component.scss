@@ -45,9 +45,9 @@ section {
 }
 
 @media (max-width: 1199.98px) {
-    section {
-        right: 100px;
-    }
+  section {
+    right: 100px;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -57,13 +57,19 @@ section {
 }
 
 @media (max-width: 767.98px) {
-  section  {
+  section {
     position: relative;
     right: auto;
     top: auto;
-    margin-top: 40px;
+    padding-block: 16px;
     flex-direction: column-reverse;
     justify-content: center;
-    gap: 24px;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .language-switch {
+    display: none;
   }
 }

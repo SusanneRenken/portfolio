@@ -12,6 +12,10 @@ footer {
   }
 }
 
+app-socialmedia {
+  display: none;
+}
+
 @media (max-width: 1199.98px) {
   footer {
     width: 80px;
@@ -19,6 +23,11 @@ footer {
 }
 
 @media (max-width: 767.98px) {
+  app-socialmedia {
+    display: block;
+    background-color: var(--main-dark-color);
+  }
+
   footer {
     width: 100%;
     height: auto;
