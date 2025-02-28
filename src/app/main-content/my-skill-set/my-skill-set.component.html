@@ -6,16 +6,16 @@
 
       <div>
         @for (element of skillIconsList; track element.name) {
-          <div
-            class="content"
-            (click)="triggerSkillEffect(element.name)"
-            [ngClass]="{ 'clicked': activeName === element.name }"
-          >
-            <div>
-              <img [src]="element.url" alt="" />
-            </div>
-            <p>{{ element.name }}</p>
+        <div
+          class="content"
+          (click)="triggerSkillEffect(element.name)"
+          [ngClass]="{ clicked: activeName === element.name }"
+        >
+          <div>
+            <img [src]="element.url" alt="" />
           </div>
+          <p>{{ element.name }}</p>
+        </div>
         }
 
         <div class="challenge-container">
@@ -31,7 +31,7 @@
     </div>
   </div>
 
-  <a class="arrow-img" href="#my_work">
+  <a class="arrow-img" (click)="goToNextSection()">
     <img src="assets/img/arrow-right.svg" alt="Arrow right" />
   </a>
 </section>

@@ -8,7 +8,6 @@ import { LanguageService } from '../../services/language.service';
   templateUrl: './socialmedia.component.html',
   styleUrl: './socialmedia.component.scss',
 })
-
 export class SocialmediaComponent {
   constructor(private languageService: LanguageService) {}
 

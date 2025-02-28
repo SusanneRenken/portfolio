@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { OverlayComponent } from './overlay/overlay.component';
 import { ABILITIES } from './ability.data';
+import { NavigationService } from '../../shared/services/navigation.service';
 
 @Component({
   selector: 'app-why-me',
@@ -14,6 +15,12 @@ export class WhyMeComponent {
   abilities = ABILITIES;
   activeAbility: number = 1;
   overlayOpen = false;
+
+  constructor(private navigationService: NavigationService) {}
+
+  goToNextSection() {
+    this.navigationService.navigate('my_skill_set');
+  }
 
   openActiveOverlay(id: number) {
     this.activeAbility = id;

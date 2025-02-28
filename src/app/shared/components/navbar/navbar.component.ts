@@ -5,6 +5,7 @@ import { LanguageService } from '../../services/language.service';
 import { Router, RouterModule } from '@angular/router';
 import { ScrollSpyService } from '../../services/scroll-spy.service';
 import { SocialmediaComponent } from '../socialmedia/socialmedia.component';
+import { NavigationService } from '../../services/navigation.service';
 
 @Component({
   selector: 'app-navbar',
@@ -21,8 +22,8 @@ export class NavbarComponent implements OnInit {
 
   constructor(
     private languageService: LanguageService,
-    private router: Router,
-    private scrollSpyService: ScrollSpyService
+    private scrollSpyService: ScrollSpyService,
+    private navigationService: NavigationService
   ) {}
 
   ngOnInit(): void {
@@ -49,47 +50,6 @@ export class NavbarComponent implements OnInit {
   }
 
   navigate(targetId?: string) {
-    if (this.router.url === '/') {
-      if (targetId) {
-        this.scrollToId(targetId);
-      }
-    } else {
-      this.currentLang = this.languageService.getCurrentLanguage();
-      this.router.navigateByUrl('/').then(() => {
-        if (targetId) {
-          setTimeout(() => {
-            this.scrollToId(targetId);
-          }, 100);
-          this.languageService.changeLanguage(this.currentLang);
-        }
-      });
-    }
-  }
-
-  scrollToId(id: string) {
-    const element = document.getElementById(id);
-    if (!element) {
-      return;
-    }
-
-    if (window.innerWidth >= 768) {
-      const mainContent = document.querySelector(
-        'app-main-content'
-      ) as HTMLElement;
-      if (!mainContent) {
-        return;
-      }
-
-      const rect = element.getBoundingClientRect();
-      const containerRect = mainContent.getBoundingClientRect();
-
-      const distanceToContainerLeft = rect.left - containerRect.left;
-
-      const scrollLeftPos = mainContent.scrollLeft + distanceToContainerLeft;
-
-      mainContent.scrollTo({ left: scrollLeftPos, behavior: 'smooth' });
-    } else {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    this.navigationService.navigate(targetId);
   }
 }

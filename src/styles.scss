@@ -22,8 +22,6 @@ html {
   display: none;
 }
 
-
-
 @font-face {
   font-display: swap;
   font-family: "Quantico";
@@ -116,6 +114,7 @@ button {
 }
 
 .arrow-img {
+  cursor: pointer;
   position: relative;
   z-index: 3;
   width: 160px;

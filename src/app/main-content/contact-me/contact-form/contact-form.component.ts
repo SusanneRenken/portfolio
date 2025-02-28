@@ -40,17 +40,25 @@ export class ContactFormComponent {
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData)).subscribe({
-        next: (response) => {
-          ngForm.resetForm();
-          this.isAccepted = false;
-          this.feedback.emit({ success: true, key: 'CONTACT_FEEDBACK_SUCCESS' });
-        },
-        error: (error) => {
-          console.error(error);
-          this.feedback.emit({ success: false, key: 'CONTACT_FEEDBACK_ERROR' });
-        }
-      });
+      this.http
+        .post(this.post.endPoint, this.post.body(this.contactData))
+        .subscribe({
+          next: (response) => {
+            ngForm.resetForm();
+            this.isAccepted = false;
+            this.feedback.emit({
+              success: true,
+              key: 'CONTACT_FEEDBACK_SUCCESS',
+            });
+          },
+          error: (error) => {
+            console.error(error);
+            this.feedback.emit({
+              success: false,
+              key: 'CONTACT_FEEDBACK_ERROR',
+            });
+          },
+        });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
       this.isAccepted = false;

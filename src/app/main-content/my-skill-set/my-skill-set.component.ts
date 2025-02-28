@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
+import { NavigationService } from '../../shared/services/navigation.service';
 
 @Component({
   selector: 'app-my-skill-set',
@@ -24,6 +25,12 @@ export class MySkillSetComponent {
   ];
 
   activeName: string | null = null;
+
+  constructor(private navigationService: NavigationService) {}
+
+  goToNextSection() {
+    this.navigationService.navigate('my_work');
+  }
 
   triggerSkillEffect(name: string) {
     this.activeName = name;
