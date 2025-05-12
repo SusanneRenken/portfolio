@@ -34,4 +34,16 @@ export const PROJECTS: Projects[] = [
     repositoryUrl: 'https://github.com/SusanneRenken/sharkie/',
     liveDemoUrl: 'https://sharkie.susanne-renken.com',
   },
+  {
+    id: 3,
+    name: 'DA Bubble',
+    aboutEn:
+      'This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.',
+    aboutDe:
+      'Diese App ist eine Slack-Klon-App. Sie revolutioniert die Teamkommunikation und Zusammenarbeit mit ihrer intuitiven Benutzeroberfläche, Echtzeitnachrichten und einer robusten Kanalorganisation.',
+    techStack: 'Angular | TypeScript | Firebase',
+    image: 'dabubble.png',
+    repositoryUrl: 'https://github.com/SusanneRenken/DA-Bubble/',
+    liveDemoUrl: 'https://dabubble.susanne-renken.com/access',
+  },
 ];
