@@ -1,0 +1,28 @@
+<div class="project-container">
+  <span>{{ title }}</span>
+
+  <div>
+    @for (singleproject of projects; track singleproject.id) {
+    <span
+      [class.active]="activeProject?.id === singleproject.id"
+      (click)="selectProject(singleproject)"
+    >
+      {{ singleproject.id }}. {{ singleproject.name }}
+    </span>
+    }
+  </div>
+
+  <app-project [project]="activeProject" [isExpanded]="true"></app-project>
+</div>
+
+<div class="project-container-mobile">
+  <span>{{ title }}</span>
+
+  @for (singleproject of projects; track singleproject.id) {
+  <app-project
+    [project]="singleproject"
+    [isExpanded]="expandedProjectId === singleproject.id"
+    (toggleRequest)="toggleMobile(singleproject.id)"
+  ></app-project>
+  }
+</div>

@@ -2,67 +2,19 @@
   <div>
     <h1>{{ "MY_WORK" | translate }}</h1>
     <div>
-      <div class="project-container">
-        <span>Frontend</span>
+      <app-project-section
+        title="Frontend"
+        [expandedProjectId]="expandedProjectId"
+        [projects]="frontendProjects"
+        (toggle)="toggleProjectExpansion($event)"
+      ></app-project-section>
 
-        <div>
-          @for (singleproject of frontendProjects; track singleproject.id) {
-          <span
-            [class.active]="activeFrontendProject?.id === singleproject.id"
-            (click)="showFrontendProject(singleproject)"
-          >
-            {{ singleproject.id }}. {{ singleproject.name }}
-          </span>
-          }
-        </div>
-
-        <app-project
-          [project]="activeFrontendProject"
-          [isExpanded]="true"
-        ></app-project>
-      </div>
-
-      <div class="project-container">
-        <span>Backend</span>
-
-        <div>
-          @for (singleproject of backendProjects; track singleproject.id) {
-          <span
-            [class.active]="activeBackendProject?.id === singleproject.id"
-            (click)="showBackendProject(singleproject)"
-          >
-            {{ singleproject.id }}. {{ singleproject.name }}
-          </span>
-          }
-        </div>
-
-        <app-project
-          [project]="activeBackendProject"
-          [isExpanded]="true"
-        ></app-project>
-      </div>
-
-      <div class="project-container-mobile">
-        <span>Frontend</span>
-        @for (p of frontendProjects; track p.id) {
-        <app-project
-          [project]="p"
-          [isExpanded]="expandedProjectId === p.id"
-          (toggleRequest)="toggleProjectExpansion(p.id)"
-        ></app-project>
-        }
-      </div>
-
-      <div class="project-container-mobile">
-        <span>Backend</span>
-        @for (p of backendProjects; track p.id) {
-        <app-project
-          [project]="p"
-          [isExpanded]="expandedProjectId === p.id"
-          (toggleRequest)="toggleProjectExpansion(p.id)"
-        ></app-project>
-        }
-      </div>
+      <app-project-section
+        title="Backend"
+        [expandedProjectId]="expandedProjectId"
+        [projects]="backendProjects"
+        (toggle)="toggleProjectExpansion($event)"
+      ></app-project-section>
 
       <div class="ongoing-project">
         <div>

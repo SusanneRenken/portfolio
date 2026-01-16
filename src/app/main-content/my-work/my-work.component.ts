@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProjectComponent } from './project/project.component';
+import { ProjectSectionComponent } from './project-section/project-section.component';
 import type { Project } from './project.model';
 import { PROJECTS } from './project-data';
 import { TranslateModule } from '@ngx-translate/core';
@@ -8,7 +8,7 @@ import { NavigationService } from '../../shared/services/navigation.service';
 @Component({
   selector: 'app-my-work',
   standalone: true,
-  imports: [ProjectComponent, TranslateModule],
+  imports: [TranslateModule, ProjectSectionComponent],
   templateUrl: './my-work.component.html',
   styleUrl: './my-work.component.scss',
 })
@@ -18,9 +18,6 @@ export class MyWorkComponent implements OnInit {
   frontendProjects: Project[] = [];
   backendProjects: Project[] = [];
 
-  activeBackendProject: Project | null = null;
-  activeFrontendProject: Project | null = null;
-
   expandedProjectId: number | null = null;
 
   constructor(private navigationService: NavigationService) {}
@@ -29,16 +26,6 @@ export class MyWorkComponent implements OnInit {
     this.frontendProjects = this.projects.filter((p) => p.id >= 1 && p.id <= 3);
     this.backendProjects = this.projects.filter((p) => p.id >= 4 && p.id <= 6);
 
-    this.activeFrontendProject = this.frontendProjects[0];
-    this.activeBackendProject = this.backendProjects[0];
-  }
-
-  showFrontendProject(project: Project): void {
-    this.activeFrontendProject = project;
-  }
-
-  showBackendProject(project: Project): void {
-    this.activeBackendProject = project;
   }
 
   goToNextSection() {
