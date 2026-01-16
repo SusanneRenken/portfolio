@@ -23,6 +23,10 @@ section {
 .project-container {
   display: flex;
   flex-direction: column;
+  > span {
+    font-size: 30px;
+    color: var(--main-bright-color);
+  }
   > div {
     display: flex;
     gap: 8px;
@@ -124,6 +128,11 @@ section {
     flex-direction: column;
     align-items: center;
     gap: 32px;
+    > span {
+      font-size: 24px;
+      color: var(--main-bright-color);
+      line-height: 1.1;
+    }
   }
 
   .ongoing-project {

@@ -3,26 +3,63 @@
     <h1>{{ "MY_WORK" | translate }}</h1>
     <div>
       <div class="project-container">
+        <span>Frontend</span>
+
         <div>
-          @for (singleproject of projects; track singleproject.id) {
+          @for (singleproject of frontendProjects; track singleproject.id) {
           <span
-            [class.active]="activeProject === singleproject.id"
-            (click)="showProject(singleproject.id)"
-            >{{ singleproject.id }}. {{ singleproject.name }}</span
+            [class.active]="activeFrontendProject?.id === singleproject.id"
+            (click)="showFrontendProject(singleproject)"
           >
+            {{ singleproject.id }}. {{ singleproject.name }}
+          </span>
           }
         </div>
+
         <app-project
-          [project]="projects[activeProject - 1]"
+          [project]="activeFrontendProject"
           [isExpanded]="true"
         ></app-project>
       </div>
-      <div class="project-container-mobile">
-        @for (singleproject of projects; track singleproject.id) {
+
+      <div class="project-container">
+        <span>Backend</span>
+
+        <div>
+          @for (singleproject of backendProjects; track singleproject.id) {
+          <span
+            [class.active]="activeBackendProject?.id === singleproject.id"
+            (click)="showBackendProject(singleproject)"
+          >
+            {{ singleproject.id }}. {{ singleproject.name }}
+          </span>
+          }
+        </div>
+
         <app-project
-          [project]="singleproject"
-          [isExpanded]="expandedProjectId === singleproject.id"
-          (toggleRequest)="toggleProjectExpansion(singleproject.id)"
+          [project]="activeBackendProject"
+          [isExpanded]="true"
+        ></app-project>
+      </div>
+
+      <div class="project-container-mobile">
+        <span>Frontend</span>
+        @for (p of frontendProjects; track p.id) {
+        <app-project
+          [project]="p"
+          [isExpanded]="expandedProjectId === p.id"
+          (toggleRequest)="toggleProjectExpansion(p.id)"
+        ></app-project>
+        }
+      </div>
+
+      <div class="project-container-mobile">
+        <span>Backend</span>
+        @for (p of backendProjects; track p.id) {
+        <app-project
+          [project]="p"
+          [isExpanded]="expandedProjectId === p.id"
+          (toggleRequest)="toggleProjectExpansion(p.id)"
         ></app-project>
         }
       </div>
