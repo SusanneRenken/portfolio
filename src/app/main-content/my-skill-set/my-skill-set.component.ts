@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 import { NavigationService } from '../../shared/services/navigation.service';
@@ -10,7 +10,7 @@ import { NavigationService } from '../../shared/services/navigation.service';
   templateUrl: './my-skill-set.component.html',
   styleUrls: ['./my-skill-set.component.scss'],
 })
-export class MySkillSetComponent {
+export class MySkillSetComponent implements OnInit {
   skillIconsList = [
     { url: 'assets/img/angular.svg', name: 'Angular' },
     { url: 'assets/img/rxjs.svg', name: 'RxJS' },
@@ -35,13 +35,22 @@ export class MySkillSetComponent {
 
   activeName: string | null = null;
 
+  private readonly SKILL_HINT_KEY = 'hasSeenSkillHint';
+  hasSeenSkillHint: boolean = false;
+
   constructor(private navigationService: NavigationService) {}
+
+  ngOnInit(): void {
+    this.hasSeenSkillHint = localStorage.getItem(this.SKILL_HINT_KEY) !== null;
+  }
 
   goToNextSection() {
     this.navigationService.navigate('my_work');
   }
 
   triggerSkillEffect(name: string) {
+    localStorage.setItem(this.SKILL_HINT_KEY, '1');
+    this.hasSeenSkillHint = true;
     this.activeName = name;
     setTimeout(() => {
       if (this.activeName === name) {

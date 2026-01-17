@@ -4,18 +4,22 @@
     <div>
       <p>{{ "MY_SKILL_SET_TEXT" | translate }}</p>
 
+      <p class="hint" [class.hidden]="hasSeenSkillHint">
+        Neugierig? Tippe auf ein Icon.
+      </p>
+
       <div>
         @for (element of skillIconsList; track element.name) {
-        <div
-          class="content"
-          (click)="triggerSkillEffect(element.name)"
-          [ngClass]="{ clicked: activeName === element.name }"
-        >
-          <div>
-            <img [src]="element.url" alt="" />
+          <div
+            class="content"
+            (click)="triggerSkillEffect(element.name)"
+            [ngClass]="{ clicked: activeName === element.name }"
+          >
+            <div>
+              <img [src]="element.url" alt="" />
+            </div>
+            <p>{{ element.name }}</p>
           </div>
-          <p>{{ element.name }}</p>
-        </div>
         }
 
         <div class="challenge-container">

@@ -31,13 +31,14 @@ section {
       line-height: 0.85;
       align-self: flex-start;
     }
-    > p {
-      display: none;
-    }
   }
   > a {
     align-self: flex-end;
   }
+}
+
+.hint {
+  display: none;
 }
 
 .content-img {
@@ -140,21 +141,26 @@ section {
     align-items: center;
     gap: 32px;
     > div {
-      gap: 24px;
+      gap: 12px;
       > span {
         align-self: center;
-      }
-      > p {
-        display: block;
-        text-align: center;
-        font-size: 12px;
-        opacity: 0.5;
       }
     }
     > a {
       margin-top: 16px;
       align-self: center;
     }
+  }
+
+  .hint {
+    display: block;
+    font-size: 12px;
+    opacity: 0.5;
+    text-align: center;
+  }
+
+  .hint.hidden {
+    opacity: 0;
   }
 
   .content-img {
@@ -185,7 +191,7 @@ section {
   .why-me-content {
     gap: 24px;
     > div {
-      gap: 20px;
+      gap: 10px;
       > span {
         font-size: 32px;
       }
