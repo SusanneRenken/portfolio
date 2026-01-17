@@ -8,13 +8,14 @@
         <span>{{ "WHY_ME_IAM" | translate }}</span>
 
         <div class="content-img">
-          <div (click)="openActiveOverlay(1)">
-            <img
-              class="img-located"
-              src="assets/img/wm-located-default.svg"
-              alt=""
-            />
-            <p>{{ "WHY_ME_LOCATED" | translate }}</p>
+          <div (click)="openActiveOverlay(4)">
+            <img class="img-idea" src="assets/img/wm-idea-default.svg" alt="" />
+            <p>{{ "WHY_ME_IDEA" | translate }}</p>
+          </div>
+
+          <div (click)="openActiveOverlay(3)">
+            <img class="img-view" src="assets/img/wm-view-default.svg" alt="" />
+            <p>{{ "WHY_ME_VIEW" | translate }}</p>
           </div>
 
           <div (click)="openActiveOverlay(2)">
@@ -26,14 +27,13 @@
             <p>{{ "WHY_ME_REMOTE" | translate }}</p>
           </div>
 
-          <div (click)="openActiveOverlay(3)">
-            <img class="img-view" src="assets/img/wm-view-default.svg" alt="" />
-            <p>{{ "WHY_ME_VIEW" | translate }}</p>
-          </div>
-
-          <div (click)="openActiveOverlay(4)">
-            <img class="img-idea" src="assets/img/wm-idea-default.svg" alt="" />
-            <p>{{ "WHY_ME_IDEA" | translate }}</p>
+          <div (click)="openActiveOverlay(1)">
+            <img
+              class="img-located"
+              src="assets/img/wm-located-default.svg"
+              alt=""
+            />
+            <p>{{ "WHY_ME_LOCATED" | translate }}</p>
           </div>
         </div>
       </div>
