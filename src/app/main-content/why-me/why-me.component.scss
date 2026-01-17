@@ -31,6 +31,9 @@ section {
       line-height: 0.85;
       align-self: flex-start;
     }
+    > p {
+      display: none;
+    }
   }
   > a {
     align-self: flex-end;
@@ -140,6 +143,12 @@ section {
       gap: 24px;
       > span {
         align-self: center;
+      }
+      > p {
+        display: block;
+        text-align: center;
+        font-size: 12px;
+        opacity: 0.5;
       }
     }
     > a {

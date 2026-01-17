@@ -6,6 +6,10 @@
 
       <div>
         <span>{{ "WHY_ME_IAM" | translate }}</span>
+        
+        @if (!hasSeenAboutHint) {
+          <p>Neugierig? Tippe auf ein Icon.</p>
+        }
 
         <div class="content-img">
           <div (click)="openActiveOverlay(4)">
