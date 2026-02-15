@@ -21,7 +21,7 @@ export class MySkillSetComponent implements OnInit {
     { url: 'assets/img/python.svg', name: 'Python' },
     { url: 'assets/img/django.svg', name: 'Django' },
     { url: 'assets/img/drf.svg', name: 'DRF' },
-    { url: 'assets/img/api.svg', name: 'Rest-Api' },
+    { url: 'assets/img/api.svg', name: 'REST API' },
     { url: 'assets/img/postgresql.svg', name: 'PostgreSQL' },
     { url: 'assets/img/redis.svg', name: 'Redis' },
     { url: 'assets/img/docker.svg', name: 'Docker' },
