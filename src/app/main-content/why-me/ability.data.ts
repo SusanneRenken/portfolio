@@ -12,8 +12,8 @@ export const ABILITIES: Abilities[] = [
     id: 1,
     headlineDe: 'Wohnort Schneverdingen',
     headlineEN: 'Location Schneverdingen',
-    aboutDe: '',
-    aboutEn: '',
+    aboutDe: 'Ich lebe in Schneverdingen in der Lüneburger Heide und arbeite flexibel im Remote- oder Hybrid-Modell. Regelmäßige Präsenz im regionalen Umfeld ist für mich ebenso selbstverständlich wie punktuelle Einsätze vor Ort bei weiter entfernten Standorten.',
+    aboutEn: 'I am based in Schneverdingen in northern Germany and work flexibly in remote or hybrid setups. Regular on-site collaboration within the region is just as natural for me as occasional presence at more distant locations when required.',
     map: true,
   },
   {
@@ -21,9 +21,9 @@ export const ABILITIES: Abilities[] = [
     headlineDe: 'Flexibel vernetzt',
     headlineEN: 'Flexibly Connected',
     aboutDe:
-      'Die Freiheit der Remote-Arbeit öffnet mir Türen zu neuen Ideen, während der gemeinsame Austausch im Team den Funken der Innovation entfacht. Ob vor Ort in Schneverdingen oder im virtuellen Raum – im harmonischen Miteinander wächst aus Flexibilität nachhaltiger Erfolg. Jeder Code, den wir gemeinsam schreiben, bringt uns einen Schritt näher an visionäre Lösungen heran.',
+      'Ich arbeite strukturiert im Remote-Umfeld und schätze zugleich den direkten Austausch im Team. Offene Kommunikation, transparente Prozesse und gegenseitiges Feedback sind für mich entscheidend, um gemeinsam hochwertige und nachhaltige Softwarelösungen zu entwickeln – vor Ort wie digital.',
     aboutEn:
-      'The freedom of remote work opens doors to new ideas, while a collaborative team environment sparks innovation. Whether on-site in Schneverdingen or in the virtual realm, our harmonious collaboration transforms flexibility into sustainable success. Every line of code we write together brings us one step closer to visionary solutions.',
+      'I work in a structured way within remote environments while also valuing direct collaboration in a team. Open communication, transparent processes, and constructive feedback are essential for me to build high-quality and sustainable software solutions – both on-site and digitally.',
     map: false,
   },
   {
@@ -31,9 +31,9 @@ export const ABILITIES: Abilities[] = [
     headlineDe: 'Klar im Blick',
     headlineEN: 'Clear Insight',
     aboutDe:
-      'Es gibt immer eine Lösung, die nur darauf wartet, entdeckt zu werden. Mit analytischem Denken gehe ich den Dingen auf den Grund, konzentriere mich auf jedes Detail und arbeite mit Gewissenhaftigkeit daran, die beste Lösung zu finden. Dabei verliere ich nie das große Ganze aus den Augen. Bereits in meiner früheren Tätigkeit als Bauingenieurin konnte ich diese Fähigkeiten täglich unter Beweis stellen. Jede Herausforderung ist für mich eine Chance, Klarheit zu schaffen und mit einer frischen Perspektive neue Wege zu gehen.',
+      'Komplexe Probleme analysiere ich systematisch und zerlege sie in klar definierte Schritte. Detailgenauigkeit und technisches Verständnis helfen mir, Ursachen präzise zu identifizieren und stabile, durchdachte Lösungen zu entwickeln. Meine analytische Arbeitsweise bringe ich aus meiner früheren Tätigkeit als Bauingenieurin mit – heute setze ich sie gezielt in der Softwareentwicklung ein.',
     aboutEn:
-      'There is always a solution waiting to be discovered. With analytical thinking, I dig deep into matters, focus on every detail, and work diligently to find the best solution—never losing sight of the bigger picture. In my previous role as a civil engineer, I put these skills to work every day. Every challenge is an opportunity to create clarity and forge new paths with a fresh perspective.',
+      'I analyze complex problems systematically and break them down into clearly defined steps. Attention to detail and strong technical understanding enable me to identify root causes precisely and develop stable, well-designed solutions. I developed this analytical mindset during my previous work as a civil engineer – today, I apply it directly to software development.',
     map: false,
   },
   {
@@ -41,9 +41,10 @@ export const ABILITIES: Abilities[] = [
     headlineDe: 'Struktur & Vision',
     headlineEN: 'Structure & Vision',
     aboutDe:
-      'Verlässlichkeit ist der feste Anker in jedem Projekt, auf dem ich mit strategischem Planen und strukturierter Organisation aufbaue. Durchdachte Vorbereitung und klare Strukturen ermöglichen es mir, Visionen in greifbare Ergebnisse zu transformieren. So entsteht aus jedem Schritt eine fundierte Basis, die den Weg in eine innovative Zukunft ebnet.',
+      'Ich arbeite strukturiert und denke Projekte von Beginn an ganzheitlich. Klare Planung, saubere Architektur und nachvollziehbare Prozesse bilden für mich die Grundlage nachhaltiger Softwareentwicklung. So entstehen Lösungen, die nicht nur funktionieren, sondern langfristig wartbar und erweiterbar bleiben.',
     aboutEn:
-      'Reliability is the solid anchor in every project, built on strategic planning and structured organization. Thoughtful preparation and clear frameworks enable me to transform visions into tangible results. With every step, I lay a solid foundation that paves the way for an innovative future.',
+      'I approach projects with structure and a holistic perspective from the very beginning. Clear planning, clean architecture, and transparent processes form the foundation of sustainable software development for me. This results in solutions that not only work reliably but remain maintainable and scalable in the long term.',
     map: false,
   },
 ];
+
