@@ -24,8 +24,7 @@ export class MyWorkComponent implements OnInit {
 
   ngOnInit(): void {
     this.frontendProjects = this.projects.filter((p) => p.id >= 1 && p.id <= 3);
-    this.backendProjects = this.projects.filter((p) => p.id >= 4 && p.id <= 6);
-
+    this.backendProjects = this.projects.filter((p) => p.id >= 4 && p.id <= 7);
   }
 
   goToNextSection() {

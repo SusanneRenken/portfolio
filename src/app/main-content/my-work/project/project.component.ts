@@ -8,6 +8,7 @@ import {
   SimpleChanges,
 } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import type { Project } from '../project.model';
 
 @Component({
   selector: 'app-project',
@@ -17,12 +18,12 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrl: './project.component.scss',
 })
 export class ProjectComponent implements OnInit, OnChanges {
-  @Input() project: any;
+  @Input() project!: Project;
   @Input() isExpanded: boolean = false;
   @Output() toggleRequest = new EventEmitter<void>();
 
   isDesktop = false;
-  aboutLanguage = '';
+  aboutLanguage: string = '';
 
   constructor(private translate: TranslateService) {}
 

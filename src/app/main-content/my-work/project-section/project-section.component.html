@@ -2,27 +2,50 @@
   <span>{{ title }}</span>
 
   <div>
-    @for (singleproject of projects; track singleproject.id) {
-    <span
-      [class.active]="activeProject?.id === singleproject.id"
-      (click)="selectProject(singleproject)"
-    >
-      {{ singleproject.id }}. {{ singleproject.name }}
-    </span>
+    @for (singleproject of normalProjects; track singleproject.id) {
+      <span
+        [class.active]="
+          activeProject.id === singleproject.id && !showAdditional
+        "
+        (click)="selectProject(singleproject)"
+      >
+        {{ singleproject.id }}. {{ singleproject.name }}
+      </span>
+    }
+
+    @if (additionalProjects.length && title === "Backend") {
+      <span [class.active]="showAdditional" (click)="selectAdditional()">
+        weitere Projekte
+      </span>
     }
   </div>
 
-  <app-project [project]="activeProject" [isExpanded]="true"></app-project>
+  @if (showAdditional) {
+    <app-additional-projects
+      [projects]="additionalProjects"
+    ></app-additional-projects>
+  } @else {
+    <app-project [project]="activeProject" [isExpanded]="true"></app-project>
+  }
 </div>
 
 <div class="project-container-mobile">
   <span>{{ title }}</span>
 
-  @for (singleproject of projects; track singleproject.id) {
-  <app-project
-    [project]="singleproject"
-    [isExpanded]="expandedProjectId === singleproject.id"
-    (toggleRequest)="toggleMobile(singleproject.id)"
-  ></app-project>
+  @for (singleproject of normalProjects; track singleproject.id) {
+    <app-project
+      [project]="singleproject"
+      [isExpanded]="expandedProjectId === singleproject.id"
+      (toggleRequest)="toggleMobile(singleproject.id)"
+    ></app-project>
+  }
+
+  @if (additionalProjects.length && title === "Backend") {
+    <app-additional-projects
+      [projects]="additionalProjects"
+      [isExpanded]="expandedProjectId === 999"
+      (toggleRequest)="toggleMobile(999)"
+    >
+    </app-additional-projects>
   }
 </div>

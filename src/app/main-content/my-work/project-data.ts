@@ -60,5 +60,29 @@ export const PROJECTS: Project[] = [
     image: 'coderr.png',
     repositoryUrl: 'https://github.com/SusanneRenken/coderr/',
     liveDemoUrl: 'https://coderr.susanne-renken.com',
+  },
+  {
+    id: 6,
+    name: 'Quizly',
+    aboutEn:
+      'Quizly provides the technical foundation for structured task and board management. In the backend, I implemented a clearly defined Kanban logic with a well-structured architecture and clean data models. A stable API ensures reliable interaction with the frontend.',
+    aboutDe:
+      'Quizly bildet die technische Grundlage für strukturiertes Aufgaben- und Board-Management. Im Backend entwickle ich eine klar definierte Kanban-Logik mit durchdachter Architektur und sauberen Datenstrukturen. Eine stabile API sorgt für die zuverlässige Zusammenarbeit mit dem Frontend.',
+    techStack: 'Python | Django | DRF | ffmpeg | PostgreSQL',
+    image: 'quizly.png',
+    repositoryUrl: 'https://github.com/SusanneRenken/quizly/',
+    liveDemoUrl: 'https://quizly.susanne-renken.com',
+  },
+  {
+    id: 7,
+    name: 'Videoflix',
+    aboutEn:
+      'Videoflix is the backend of a video streaming platform built around a well-structured REST API. Users, profiles, videos, playlists and reviews are clearly modeled and connected through typical streaming workflows. Authentication, role management and data validation provide a stable and extensible foundation for modern frontend applications.',
+    aboutDe:
+      'Videoflix ist das Backend einer Video-Streaming-Plattform mit klar strukturierter REST-API. Nutzer, Profile, Videos, Playlists und Bewertungen werden sauber modelliert und in typischen Streaming-Workflows miteinander verknüpft. Authentifizierung, Rollenlogik und Datenvalidierung sorgen für eine stabile und erweiterbare Grundlage moderner Frontend-Anwendungen.',
+    techStack: 'Python | Django | DRF | PostgreSQL | Docker | Redis | JWTAuthentication',
+    image: 'videoflix.png',
+    repositoryUrl: 'https://github.com/SusanneRenken/videoflix/',
+    liveDemoUrl: 'https://videoflix.susanne-renken.com',
   }
 ];
