@@ -1,16 +1,16 @@
 <section class="additional-desktop">
-  @for (sigleproject of projects; track sigleproject.id) {
+  @for (singleproject of projects; track singleproject.id) {
     <div class="project">
-      <h2>{{ sigleproject.name }}</h2>
-      <div>{{ sigleproject.techStack }}</div>
-      <div>{{ getAboutText(sigleproject) }}</div>
+      <h2>{{ singleproject.name }}</h2>
+      <div>{{ singleproject.techStack }}</div>
+      <div>{{ getAboutText(singleproject) }}</div>
       <div>
         <div>
-          <img src="assets/img/{{ sigleproject.image }}" alt="Project image" />
+          <img src="assets/img/{{ singleproject.image }}" alt="Project image" />
         </div>
         <a
           class="project-btn secondary"
-          href="{{ sigleproject.repositoryUrl }}"
+          href="{{ singleproject.repositoryUrl }}"
           target="_blank"
           rel="noopener"
         >
@@ -25,4 +25,32 @@
   <div>
     {{ "MY_WORK_ADDITIONAL_PROJECTS" | translate }}
   </div>
+
+  @for (singleproject of projects; track singleproject.id; let i = $index) {
+    <div class="project">
+      <h2>{{ singleproject.name }}</h2>
+      <div>{{ singleproject.techStack }}</div>
+      <div>{{ getAboutText(singleproject) }}</div>
+      <div>
+        <div>
+          <img src="assets/img/{{ singleproject.image }}" alt="Project image" />
+        </div>
+        <a
+          class="project-btn secondary"
+          href="{{ singleproject.repositoryUrl }}"
+          target="_blank"
+          rel="noopener"
+        >
+          GitHub
+        </a>
+      </div>
+    </div>
+    @if (i == 0) {
+      <div class="logo-mobile">
+        <img src="assets/img/{{ projects[0].image }}" alt="Project image" />
+        <div class="divider"></div>
+        <img src="assets/img/{{ projects[1].image }}" alt="Project image" />
+      </div>
+    }
+  }
 </section>
