@@ -20,11 +20,11 @@ section {
   }
 }
 
-.ongoing-project {
+.experience-section {
   width: 360px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
   > div {
     display: flex;
     align-items: center;
@@ -41,6 +41,11 @@ section {
       color: var(--main-bright-color);
     }
   }
+  > span {
+    font-size: 18px;
+    color: var(--main-bright-color);
+  }
+
   > a {
     align-self: center;
   }
@@ -77,7 +82,7 @@ section {
     }
   }
 
-  .ongoing-project {
+  .experience-section {
     width: 100%;
   }
 }
@@ -90,7 +95,7 @@ section {
     }
   }
 
-  .ongoing-project {
+  .experience-section {
     > div {
       align-items: start;
       > div {
