@@ -65,24 +65,24 @@ export const PROJECTS: Project[] = [
     id: 6,
     name: 'Quizly',
     aboutEn:
-      'Quizly provides the technical foundation for structured task and board management. In the backend, I implemented a clearly defined Kanban logic with a well-structured architecture and clean data models. A stable API ensures reliable interaction with the frontend.',
+      'Quizly is an AI-powered backend that automatically generates quizzes from YouTube videos. A modular pipeline orchestrates video download, transcription (Whisper), and AI-based question generation (Gemini).',
     aboutDe:
-      'Quizly bildet die technische Grundlage für strukturiertes Aufgaben- und Board-Management. Im Backend entwickle ich eine klar definierte Kanban-Logik mit durchdachter Architektur und sauberen Datenstrukturen. Eine stabile API sorgt für die zuverlässige Zusammenarbeit mit dem Frontend.',
-    techStack: 'Python | Django | DRF | ffmpeg | PostgreSQL',
+      'Quizly ist ein KI-gestütztes Backend zur automatischen Generierung von Quizzen aus YouTube-Videos. Über eine klar strukturierte API wird eine Pipeline aus Video-Download, Transkription (Whisper) und KI-basierter Fragengenerierung (Gemini) orchestriert.',
+    techStack: 'DRF | FFmpeg | Whisper | Gemini API',
     image: 'quizly.png',
     repositoryUrl: 'https://github.com/SusanneRenken/quizly/',
-    liveDemoUrl: 'https://quizly.susanne-renken.com',
+    liveDemoUrl: '',
   },
   {
     id: 7,
     name: 'Videoflix',
     aboutEn:
-      'Videoflix is the backend of a video streaming platform built around a well-structured REST API. Users, profiles, videos, playlists and reviews are clearly modeled and connected through typical streaming workflows. Authentication, role management and data validation provide a stable and extensible foundation for modern frontend applications.',
+      'Videoflix is the backend of a video streaming platform featuring automated video processing and HLS streaming. Uploaded videos are transcoded via background workers into multiple resolutions and delivered as HLS streams.',
     aboutDe:
-      'Videoflix ist das Backend einer Video-Streaming-Plattform mit klar strukturierter REST-API. Nutzer, Profile, Videos, Playlists und Bewertungen werden sauber modelliert und in typischen Streaming-Workflows miteinander verknüpft. Authentifizierung, Rollenlogik und Datenvalidierung sorgen für eine stabile und erweiterbare Grundlage moderner Frontend-Anwendungen.',
-    techStack: 'Python | Django | DRF | PostgreSQL | Docker | Redis | JWTAuthentication',
+      'Videoflix ist das Backend einer Video-Streaming-Plattform mit HLS-Streaming und automatischer Videoverarbeitung. Hochgeladene Videos werden per Background Worker transkodiert, in mehrere Auflösungen konvertiert und als HLS-Streams bereitgestellt.',
+    techStack: 'Redis | django-rq | FFmpeg | HLS | Docker',
     image: 'videoflix.png',
     repositoryUrl: 'https://github.com/SusanneRenken/videoflix/',
-    liveDemoUrl: 'https://videoflix.susanne-renken.com',
+    liveDemoUrl: '',
   }
 ];
