@@ -15,10 +15,12 @@
 
   "MY_WORK": "Projekte",
   "MY_WORK_ONGOING": "Laufendes Projekt",
-  "MY_WORK_ONGOING_TEXT": "Ich tauche jetzt ein in die Welt des Backend und erweitere meinen Werkzeugkasten um alles, was hinter der Benutzeroberfläche passiert: Routen, Datenbanken, Authentifizierung, Testing. Mein Ziel: Aus schönen Frontends werden in Kürze komplette Anwendungen, die von der ersten Anfrage bis zur letzten Datenzeile aus einer Hand stammen.",
+  "MY_WORK_ONGOING_TEXT": "Ich tauche jetzt ein in die Welt des Backend und erweitere meinen Werkzeugkasten um alles, was hinter der Benutzeroberfläche passiert: Routen, Datenbanken, Authentifizierung, Testing. Mein Ziel: Aus schönen Frontends werden in Kürze komplette Anwendungen, die von der ersten Anfrage bis zur letzten Datenzeile aus einer Hand stammen.",
   "PROJECT": "Projekt",
   "MY_WORK_SHOW_MORE": "Zeig mir mehr",  
   "MY_WORK_SHOW_LESS": "Zeig mir weniger",
+  "MY_WORK_ADDITIONAL_PROJECTS": "Weitere Projekte",
+  "MY_WORK_ADDITIONAL_PROJECTS_TEXT": "Weitere Projekte aus meiner Entwicklungspraxis mit Fokus auf Architektur und API-Design.",
 
   "CONTACT_ME": "Kontakt",
   "CONTACT_ME_TEXT_1": "Lass uns zusammenarbeiten.",

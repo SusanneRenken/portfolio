@@ -19,6 +19,9 @@
   "PROJECT": "Project",
   "MY_WORK_SHOW_MORE": "Show me more",  
   "MY_WORK_SHOW_LESS": "Show me less",
+  "MY_WORK_ADDITIONAL_PROJECTS": "Additional Projects",
+  "MY_WORK_ADDITIONAL_PROJECTS_TEXT": "Additional projects from my development practice with a focus on architecture and API design.",
+
   
   "CONTACT_ME": "Contact",
   "CONTACT_ME_TEXT_1": "Let us work toghether.",

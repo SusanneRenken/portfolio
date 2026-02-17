@@ -5,7 +5,7 @@ import type { Project } from '../project.model';
 @Component({
   selector: 'app-additional-projects',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './additional-projects.component.html',
   styleUrl: './additional-projects.component.scss',
 })

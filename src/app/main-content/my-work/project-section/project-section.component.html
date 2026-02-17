@@ -15,7 +15,7 @@
 
     @if (additionalProjects.length && title === "Backend") {
       <span [class.active]="showAdditional" (click)="selectAdditional()">
-        weitere Projekte
+        {{ "MY_WORK_ADDITIONAL_PROJECTS" | translate }}
       </span>
     }
   </div>

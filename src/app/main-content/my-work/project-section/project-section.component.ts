@@ -2,11 +2,12 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import type { Project } from '../project.model';
 import { ProjectComponent } from '../project/project.component';
 import { AdditionalProjectsComponent } from '../additional-projects/additional-projects.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-project-section',
   standalone: true,
-  imports: [ProjectComponent, AdditionalProjectsComponent],
+  imports: [ProjectComponent, AdditionalProjectsComponent, TranslateModule],
   templateUrl: './project-section.component.html',
   styleUrl: './project-section.component.scss',
 })
