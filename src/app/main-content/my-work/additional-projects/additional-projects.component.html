@@ -1,31 +1,28 @@
 <section class="additional-desktop">
-  <span>
-    {{ "MY_WORK_ADDITIONAL_PROJECTS_TEXT" | translate }}
-  </span>
-  <div>
-    @for (sigleproject of projects; track sigleproject.id) {
-      <div class="project">
-        <h2>{{ sigleproject.name }}</h2>
-        <div>{{ sigleproject.techStack }}</div>
-        <div>{{ getAboutText(sigleproject) }}</div>
+  @for (sigleproject of projects; track sigleproject.id) {
+    <div class="project">
+      <h2>{{ sigleproject.name }}</h2>
+      <div>{{ sigleproject.techStack }}</div>
+      <div>{{ getAboutText(sigleproject) }}</div>
+      <div>
         <div>
-          <a
-            class="project-btn secondary"
-            href="{{ sigleproject.repositoryUrl }}"
-            target="_blank"
-            rel="noopener"
-          >
-            GitHub
-          </a>
           <img src="assets/img/{{ sigleproject.image }}" alt="Project image" />
         </div>
+        <a
+          class="project-btn secondary"
+          href="{{ sigleproject.repositoryUrl }}"
+          target="_blank"
+          rel="noopener"
+        >
+          GitHub
+        </a>
       </div>
-    }
-  </div>
+    </div>
+  }
 </section>
 
 <section class="additional-mobile">
   <div>
-    {{ "MY_WORK_ADDITIONAL_PROJECTS_TEXT" | translate }}
+    {{ "MY_WORK_ADDITIONAL_PROJECTS" | translate }}
   </div>
 </section>

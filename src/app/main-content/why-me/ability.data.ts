@@ -12,7 +12,7 @@ export const ABILITIES: Abilities[] = [
     id: 1,
     headlineDe: 'Wohnort Schneverdingen',
     headlineEN: 'Location Schneverdingen',
-    aboutDe: 'Ich lebe in Schneverdingen in der Lüneburger Heide und arbeite flexibel im Remote- oder Hybrid-Modell. Regelmäßige Präsenz im regionalen Umfeld ist für mich ebenso selbstverständlich wie punktuelle Einsätze vor Ort bei weiter entfernten Standorten.',
+    aboutDe: 'Ich lebe in Schneverdingen in der Lüneburger Heide und arbeite flexibel im Remote- oder Hybrid-Modell. Regelmäßige Präsenz im regionalen Umfeld ist für mich ebenso selbstverständlich wie punktuelle Einsätze vor Ort an weiter entfernten Standorten.',
     aboutEn: 'I am based in Schneverdingen in northern Germany and work flexibly in remote or hybrid setups. Regular on-site collaboration within the region is just as natural for me as occasional presence at more distant locations when required.',
     map: true,
   },

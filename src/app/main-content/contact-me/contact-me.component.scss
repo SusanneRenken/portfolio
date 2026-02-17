@@ -20,6 +20,9 @@ section {
   flex-direction: column;
   justify-content: space-between;
   align-items: end;
+  > p {
+    text-align: right;
+  }
   > :first-child {
     color: var(--main-bright-color);
   }

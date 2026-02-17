@@ -44,7 +44,7 @@ export const PROJECTS: Project[] = [
       'KanMind provides the technical foundation for structured task and board management. In the backend, I implemented a clearly defined Kanban logic with a well-structured architecture and clean data models. A stable API ensures reliable interaction with the frontend.',
     aboutDe:
       'KanMind bildet die technische Grundlage für strukturiertes Aufgaben- und Board-Management. Im Backend entwickle ich eine klar definierte Kanban-Logik mit durchdachter Architektur und sauberen Datenstrukturen. Eine stabile API sorgt für die zuverlässige Zusammenarbeit mit dem Frontend.',
-    techStack: 'Python | Django | DRF | Token Authentication | PostgreSQL',
+    techStack: 'Python | Django | DRF | PostgreSQL | Docker',
     image: 'kanmind.png',
     repositoryUrl: 'https://github.com/SusanneRenken/kanmind/',
     liveDemoUrl: 'https://kanmind.susanne-renken.com',
@@ -55,8 +55,8 @@ export const PROJECTS: Project[] = [
     aboutEn:
       'Coderr is the backend of a freelancer marketplace built around a well-structured REST API. Users, profiles, offers, orders and reviews are clearly modeled and connected through typical marketplace workflows. Authentication, role management and data validation provide a stable and extensible foundation for modern frontend applications.',
     aboutDe:
-      'Coderr ist das Backend einer Freelancer-Plattform mit klar strukturierter REST-API. Nutzer, Profile, Angebote, Aufträge und Bewertungen werden sauber modelliert und in typischen Marktplatz-Workflows miteinander verknüpft. Authentifizierung, Rollenlogik und Datenvalidierung sorgen für eine stabile und erweiterbare Grundlage moderner Frontend-Anwendungen.',
-    techStack: 'Python | Django | DRF | PostgreSQL | Docker | JWTAuthentication',
+      'Coderr ist das Backend einer Freelancer-Plattform mit klar strukturierter REST-API. Nutzer, Profile, Angebote, Aufträge und Bewertungen werden sauber modelliert und in typischen Marktplatz-Workflows verknüpft. Authentifizierung, Rollenlogik und Datenvalidierung sorgen für eine stabile und erweiterbare Grundlage moderner Frontend-Anwendungen.',
+    techStack: 'Python | Django | DRF | PostgreSQL | Docker | JWT',
     image: 'coderr.png',
     repositoryUrl: 'https://github.com/SusanneRenken/coderr/',
     liveDemoUrl: 'https://coderr.susanne-renken.com',
@@ -67,7 +67,7 @@ export const PROJECTS: Project[] = [
     aboutEn:
       'Quizly is an AI-powered backend that automatically generates quizzes from YouTube videos. A modular pipeline orchestrates video download, transcription (Whisper), and AI-based question generation (Gemini).',
     aboutDe:
-      'Quizly ist ein KI-gestütztes Backend zur automatischen Generierung von Quizzen aus YouTube-Videos. Über eine klar strukturierte API wird eine Pipeline aus Video-Download, Transkription (Whisper) und KI-basierter Fragengenerierung (Gemini) orchestriert.',
+      'Quizly ist ein KI-gestütztes Backend zur automatischen Quiz-Generierung aus YouTube-Videos. Über eine strukturierte API orchestriert es eine Pipeline aus Video-Download, Transkription und KI-gestützter Fragengenerierung.',
     techStack: 'DRF | FFmpeg | Whisper | Gemini API',
     image: 'quizly.png',
     repositoryUrl: 'https://github.com/SusanneRenken/quizly/',
@@ -77,9 +77,9 @@ export const PROJECTS: Project[] = [
     id: 7,
     name: 'Videoflix',
     aboutEn:
-      'Videoflix is the backend of a video streaming platform featuring automated video processing and HLS streaming. Uploaded videos are transcoded via background workers into multiple resolutions and delivered as HLS streams.',
+      'Videoflix is the backend of a streaming platform featuring HLS streaming and automated processing. Videos are transcoded via a background worker, converted into multiple resolutions, and delivered as HLS streams.',
     aboutDe:
-      'Videoflix ist das Backend einer Video-Streaming-Plattform mit HLS-Streaming und automatischer Videoverarbeitung. Hochgeladene Videos werden per Background Worker transkodiert, in mehrere Auflösungen konvertiert und als HLS-Streams bereitgestellt.',
+      'Videoflix ist das Backend einer Streaming-Plattform mit HLS-Streaming und automatischer Verarbeitung. Videos werden per Background Worker transkodiert, in mehrere Auflösungen konvertiert und als HLS-Streams bereitgestellt.',
     techStack: 'Redis | django-rq | FFmpeg | HLS | Docker',
     image: 'videoflix.png',
     repositoryUrl: 'https://github.com/SusanneRenken/videoflix/',

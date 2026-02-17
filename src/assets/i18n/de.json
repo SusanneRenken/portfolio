@@ -16,14 +16,13 @@
   "MY_WORK": "Projekte",
   "MY_WORK_EXPERIENCE_TITLE": "Berufserfahrung",
   "MY_WORK_EXPERIENCE_TECHSTACK": "Angular | Ionic | Image Editing Tool",
-  "MY_WORK_EXPERIENCE_TEXT_1": "Im Rahmen meiner Tätigkeit bei vernetzwerk entwickle ich Frontend-Features für die App meinegemeinde.digital. Aktuell konzipiere und implementiere ich ein Bildbearbeitungstool mit Rotations- und präziser Crop-Funktionalität.",
-  "MY_WORK_EXPERIENCE_TEXT_2": "Dabei arbeite ich an UI-Logik, Zustandsmanagement und der sauberen Integration in die bestehende Angular-Architektur mit Fokus auf Performance und Wartbarkeit.",
+  "MY_WORK_EXPERIENCE_TEXT_1": "Im Rahmen meiner Tätigkeit bei vernetzwerk entwickle ich Frontend-Features für die App meinegemeinde.digital.",
+  "MY_WORK_EXPERIENCE_TEXT_2": " Aktuell konzipiere und implementiere ich ein Bildbearbeitungstool mit Rotations- und präziser Crop-Funktionalität. Dabei arbeite ich an UI-Logik, Zustandsmanagement und der sauberen Integration in die bestehende Angular-Architektur mit Fokus auf Performance und Wartbarkeit.",
   "PROJECT": "Projekt",
   "MY_WORK_SHOW_MORE": "Zeig mir mehr",  
   "MY_WORK_SHOW_LESS": "Zeig mir weniger",
   "MY_WORK_ADDITIONAL_PROJECTS": "Weitere Projekte",
-  "MY_WORK_ADDITIONAL_PROJECTS_TEXT": "Weitere Projekte aus meiner Entwicklungspraxis mit Fokus auf Architektur und API-Design.",
-
+  
   "CONTACT_ME": "Kontakt",
   "CONTACT_ME_TEXT_1": "Lass uns zusammenarbeiten.",
   "CONTACT_ME_TEXT_2": "Ich freue mich auf deine Nachricht und darauf, gemeinsam Projekte umzusetzen.",
