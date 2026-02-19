@@ -7,39 +7,24 @@
       <div>
         <span>{{ "WHY_ME_IAM" | translate }}</span>
 
-        <p class="hint"  [class.hidden]="hasSeenAboutHint">
+        <p class="hint" [class.hidden]="hasSeenAboutHint">
           Neugierig? Tippe auf ein Icon.
         </p>
 
         <div class="content-img">
-          <div (click)="openActiveOverlay(4)">
-            <img class="img-idea" src="assets/img/wm-idea-default.svg" alt="" />
-            <p>{{ "WHY_ME_IDEA" | translate }}</p>
-          </div>
-
-          <div (click)="openActiveOverlay(3)">
-            <img class="img-view" src="assets/img/wm-view-default.svg" alt="" />
-            <p>{{ "WHY_ME_VIEW" | translate }}</p>
-          </div>
-
-          <div (click)="openActiveOverlay(2)">
-            <img
-              class="img-remote"
-              src="assets/img/wm-remote-default.svg"
-              alt=""
-            />
-            <p>{{ "WHY_ME_REMOTE" | translate }}</p>
-          </div>
-
-          <div (click)="openActiveOverlay(1)">
-            <img
-              class="img-located"
-              src="assets/img/wm-located-default.svg"
-              alt=""
-            />
-            <p>{{ "WHY_ME_LOCATED" | translate }}</p>
-          </div>
+          @for (ability of abilities; track ability.id) {
+            <div (click)="openActiveOverlay(ability.id)">
+              <img
+                [class]="ability.iconClass"
+                [src]="'assets/img/' + ability.icon"
+                [alt]="ability.headlineKey | translate"
+              />
+              <p>{{ ability.headlineKey | translate }}</p>
+            </div>
+          }
         </div>
+
+
       </div>
 
       <a href="#contact_me"

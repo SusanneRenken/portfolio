@@ -8,7 +8,7 @@ import {
   SimpleChanges,
   Output,
 } from '@angular/core';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-overlay',
@@ -18,35 +18,15 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrls: ['./overlay.component.scss'],
 })
 export class OverlayComponent implements OnInit, OnChanges {
-  private _ability: any;
-
-  @Input() set ability(value: any) {
-    this._ability = value;
-    if (value) {
-      this.updateAboutText(this.translate.currentLang);
-    }
-  }
-  get ability() {
-    return this._ability;
-  }
-
+  @Input() ability: any;
   @Input() isOpen = false;
   @Output() overlayClosed = new EventEmitter<void>();
 
-  headlineLanguage = '';
-  aboutLanguage = '';
-
   public contentStyle = { transform: 'translateY(100vh)' };
   public isClosing = false;
-  public internalShow: boolean = false;
+  public internalShow = false;
 
-  constructor(private translate: TranslateService) {}
-
-  ngOnInit() {
-    this.translate.onLangChange.subscribe((event) => {
-      this.updateAboutText(event.lang);
-    });
-  }
+  ngOnInit() {}
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['isOpen']) {
@@ -54,22 +34,12 @@ export class OverlayComponent implements OnInit, OnChanges {
         this.internalShow = true;
         this.isClosing = false;
         this.contentStyle.transform = 'translateY(100vh)';
+
         setTimeout(() => {
           this.contentStyle.transform = 'translateY(0)';
         }, 50);
       }
     }
-  }
-
-  updateAboutText(lang: string) {
-    if (!this._ability) {
-      return;
-    }
-    this.headlineLanguage =
-      lang === 'de' ? this._ability.headlineDe : this._ability.headlineEN;
-
-    this.aboutLanguage =
-      lang === 'de' ? this._ability.aboutDe : this._ability.aboutEn;
   }
 
   toggleOverlay() {
