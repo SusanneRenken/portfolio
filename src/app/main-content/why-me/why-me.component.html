@@ -1,35 +1,45 @@
 <section>
   <div>
     <h1>{{ "WHY_ME" | translate }}</h1>
+
     <div class="why-me-content">
       <p>{{ "WHY_ME_TEXT" | translate }}</p>
 
       <div>
-        <span>{{ "WHY_ME_IAM" | translate }}</span>
+        <div class="about-me">
+          <span>{{ "WHY_ME_ABOUTME" | translate }}</span>
+          <p class="hint" [class.hidden]="hasSeenAboutHint">
+            Neugierig? Tippe auf ein Icon.
+          </p>
 
-        <p class="hint" [class.hidden]="hasSeenAboutHint">
-          Neugierig? Tippe auf ein Icon.
-        </p>
-
-        <div class="content-img">
-          @for (ability of abilities; track ability.id) {
-            <div (click)="openActiveOverlay(ability.id)">
-              <img
-                [class]="ability.iconClass"
-                [src]="'assets/img/' + ability.icon"
-                [alt]="ability.headlineKey | translate"
-              />
-              <p>{{ ability.headlineKey | translate }}</p>
-            </div>
-          }
+          <div class="content-img">
+            @for (ability of abilities; track ability.id) {
+              <div (click)="openActiveOverlay(ability.id)">
+                <img
+                  [class]="ability.iconClass"
+                  [src]="'assets/img/' + ability.icon"
+                  [alt]="ability.headlineKey | translate"
+                />
+                <p>{{ ability.headlineKey | translate }}</p>
+              </div>
+            }
+          </div>
         </div>
 
+        <div class="about-me">
+          <span>{{ "WHY_ME_CAREER" | translate }}</span>
+          <div class="content-text">
+          @for (careerEntry of careerEntries; track careerEntry.id) {
+            <div>
+              <h2>{{ careerEntry.titleKey | translate }}</h2>
+              <div>{{ careerEntry.descriptionKey | translate }}</div>
+            </div>
+          }
 
+          </div>
+
+        </div>
       </div>
-
-      <a href="#contact_me"
-        ><button>{{ "WHY_ME_BTN" | translate }}</button></a
-      >
     </div>
   </div>
 

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { OverlayComponent } from './overlay/overlay.component';
 import { ABILITIES } from './ability.data';
+import { CAREER_ENTRIES } from './career.data';
 import { NavigationService } from '../../shared/services/navigation.service';
 
 @Component({
@@ -13,7 +14,8 @@ import { NavigationService } from '../../shared/services/navigation.service';
 })
 export class WhyMeComponent implements OnInit {
   abilities = ABILITIES;
-
+  careerEntries = CAREER_ENTRIES;
+  
   private readonly ABOUT_HINT_KEY = 'hasSeenAboutHint';
   hasSeenAboutHint: boolean = false;
 

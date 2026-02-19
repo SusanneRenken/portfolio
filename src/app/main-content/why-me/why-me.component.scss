@@ -23,17 +23,32 @@ section {
   > div {
     display: flex;
     flex-direction: column;
-    gap: 32px;
-    > span {
-      font-size: 48px;
-      font-weight: bold;
-      color: var(--main-bright-color);
-      line-height: 0.85;
-      align-self: flex-start;
-    }
+    gap: 128px;
   }
-  > a {
-    align-self: flex-end;
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  > span {
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--main-bright-color);
+    line-height: 0.85;
+    align-self: flex-start;
+  }
+}
+
+.content-text {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 24px;
+  > div {
+    > h2 {
+      margin-top: 0;
+    }
   }
 }
 

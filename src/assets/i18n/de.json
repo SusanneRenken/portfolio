@@ -1,6 +1,8 @@
 {
   "WHY_ME": "Über mich",
   "WHY_ME_TEXT": "Ich entwickle Software mit dem Anspruch, aus Ideen funktionierende und nachhaltige Lösungen zu machen. Technologie ist für mich nicht nur ein Werkzeug, sondern ein strukturierter Prozess: analysieren, planen, umsetzen, verbessern. Mich motiviert es, komplexe Anforderungen in klare, wartbare Systeme zu überführen.",
+  
+  "WHY_ME_ABOUTME": "Ich bin",  
   "WHY_ME_LOCATED": "Meine Heimat",
   "WHY_ME_LOCATED_TEXT": "Ich lebe in Schneverdingen in der Lüneburger Heide und arbeite flexibel im Remote- oder Hybrid-Modell. Regelmäßige Präsenz im regionalen Umfeld ist für mich ebenso selbstverständlich wie punktuelle Einsätze vor Ort an weiter entfernten Standorten.",
   "WHY_ME_REMOTE": "Flexibel vernetzt",  
@@ -9,8 +11,14 @@
   "WHY_ME_VIEW_TEXT": "Komplexe Probleme analysiere ich systematisch und zerlege sie in klar definierte Schritte. Detailgenauigkeit und technisches Verständnis helfen mir, Ursachen präzise zu identifizieren und stabile, durchdachte Lösungen zu entwickeln. Meine analytische Arbeitsweise bringe ich aus meiner früheren Tätigkeit als Bauingenieurin mit – heute setze ich sie gezielt in der Softwareentwicklung ein.",
   "WHY_ME_IDEA": "Struktur & Vision",
   "WHY_ME_IDEA_TEXT": "Ich arbeite strukturiert und denke Projekte von Beginn an ganzheitlich. Klare Planung, saubere Architektur und nachvollziehbare Prozesse bilden für mich die Grundlage nachhaltiger Softwareentwicklung. So entstehen Lösungen, die nicht nur funktionieren, sondern langfristig wartbar und erweiterbar bleiben.",
-  "WHY_ME_IAM": "Ich bin", 
-  "WHY_ME_BTN": "Kontaktiere mich",
+ 
+  "WHY_ME_CAREER": "Berufserfahrung",
+  "CAREER_ENTRY_1_TITLE": "Frontend-Entwicklerin",
+  "CAREER_ENTRY_1_DESC": "In meiner Rolle bei vernetzwerk entwickle ich Frontend-Features für die App meinegemeinde.digital. Aktuell konzipiere und implementiere ich ein Bildbearbeitungstool mit Rotations- und präziser Crop-Funktionalität. Dabei arbeite ich an UI-Logik, Zustandsmanagement und der sauberen Integration in die bestehende Angular-Architektur mit Fokus auf Performance und Wartbarkeit.",
+  "CAREER_ENTRY_2_TITLE": "selbst. Musiklehrerin",
+  "CAREER_ENTRY_2_DESC": "Als selbstständige Musiklehrerin habe ich nicht nur meine pädagogischen Fähigkeiten geschärft, sondern auch gelernt, mich schnell in neue Themen einzuarbeiten und flexibel auf die Bedürfnisse meiner Schüler einzugehen. Diese Erfahrungen haben meine Fähigkeit zur strukturierten Problemlösung und zum eigenverantwortlichen Arbeiten weiterentwickelt – Kompetenzen, die ich heute gezielt in der Softwareentwicklung einsetze.",
+  "CAREER_ENTRY_3_TITLE": "Bauingenieurin (MSc.)",
+  "CAREER_ENTRY_3_DESC": "Als Bauingenieurin habe ich komplexe Projekte geplant, koordiniert und erfolgreich umgesetzt. Dabei habe ich gelernt, strukturiert zu arbeiten, Herausforderungen analytisch anzugehen und Lösungen zu entwickeln, die sowohl technisch als auch wirtschaftlich überzeugen. Diese Fähigkeiten bringe ich heute gezielt in die Softwareentwicklung ein, um stabile und durchdachte Anwendungen zu schaffen.",
 
   "MY_SKILL_SET": "Skills",
   "MY_SKILL_SET_TEXT": "Technologie begeistert mich nicht wegen ihrer Neuheit, sondern wegen ihrer Möglichkeiten. Ich arbeite mich strukturiert in neue Konzepte ein und nutze sie bewusst, um stabile und durchdachte Lösungen zu entwickeln. Lernen ist für mich ein kontinuierlicher Prozess – nicht aus Pflicht, sondern aus Überzeugung.",
