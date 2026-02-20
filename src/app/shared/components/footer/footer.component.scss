@@ -17,7 +17,7 @@ app-socialmedia {
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 767.98px), (max-height: 700px) {
   app-socialmedia {
     display: block;
     background-color: var(--main-dark-color);

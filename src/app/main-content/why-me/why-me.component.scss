@@ -82,6 +82,10 @@ section {
   }
 }
 
+.career-arrow {
+  display: none;
+}
+
 .content-text {
   display: flex;
   justify-content: space-between;
@@ -91,8 +95,15 @@ section {
     flex: 1;
     > h2 {
       margin-top: 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
     > ul {
+      list-style-type: disc;
+      list-style-position: outside;
+      padding-left: 24px;
+      margin: 0;
       > li {
         margin-bottom: 8px;
       }
@@ -113,9 +124,16 @@ section {
   }
 
   .why-me-content {
+    gap: 40px;
     > div {
       flex-direction: row;
       gap: 100px;
+    }
+  }
+
+  .about-me {
+    > span {
+      font-size: 40px;
     }
   }
 
@@ -124,14 +142,56 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: none;
-    gap: 16px;
+    gap: 24px;
+    > div {
+      height: 72px;
+    }
+  }
+
+  .career-arrow {
+    display: inline-flex;
+    font-size: 24px;
+    color: var(--main-bright-color);
+    line-height: 1;
   }
 
   .content-text {
-  justify-content: none;
-  flex-direction: column;
-  gap: 32px;
-}
+    justify-content: none;
+    flex-direction: column;
+    gap: 32px;
+    > .career-entry {
+      --career-accordion-duration: 280ms;
+
+      > h2 {
+        cursor: pointer;
+      }
+
+      .career-arrow {
+        transition: transform var(--career-accordion-duration) ease;
+      }
+
+      .career-arrow.expanded {
+        transform: rotate(90deg);
+      }
+
+      > ul {
+        margin-top: 0;
+        max-height: 0;
+        padding-left: 50px;
+        opacity: 0;
+        overflow: hidden;
+        transition:
+          max-height var(--career-accordion-duration) ease,
+          opacity var(--career-accordion-duration) ease;
+      }
+
+      > ul.expanded {
+        margin-top: 10px;
+        max-height: 360px;
+        opacity: 1;
+      }
+    }
+  }
 }
 
 @media (max-width: 1199.98px) {
@@ -165,7 +225,7 @@ section {
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 767.98px), (max-height: 700px) {
   section {
     padding: 32px 40px 16px 40px;
     > div {

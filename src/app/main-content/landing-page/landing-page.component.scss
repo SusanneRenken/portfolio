@@ -132,7 +132,7 @@ section {
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 767.98px), (max-height: 700px) {
   section {
     align-items: start;
     > img {

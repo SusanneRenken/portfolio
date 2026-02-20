@@ -181,7 +181,7 @@ button {
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 767.98px), (max-height: 700px) {
   h1 {
     writing-mode: horizontal-tb;
     transform: none;

@@ -30,9 +30,24 @@
           <span>{{ "WHY_ME_CAREER" | translate }}</span>
           <div class="content-text">
             @for (careerEntry of careerEntries; track careerEntry.id) {
-              <div>
-                <h2>{{ careerEntry.titleKey | translate }}</h2>
-                <ul>
+              <div
+                class="career-entry"
+                [class.expanded]="activeCareerId === careerEntry.id"
+                [class.collapsed]="activeCareerId !== careerEntry.id"
+              >
+                <h2 (click)="toggleCareer(careerEntry.id)">
+                  <span
+                    class="career-arrow"
+                    [class.expanded]="activeCareerId === careerEntry.id"
+                    aria-hidden="true"
+                    >▸</span
+                  >
+                  {{ careerEntry.titleKey | translate }}
+                </h2>
+                <ul
+                  [class.expanded]="activeCareerId === careerEntry.id"
+                  (transitionend)="onCareerListTransitionEnd($event, careerEntry.id)"
+                >
                   @for (point of careerEntry.pointsKeys; track point) {
                     <li>{{ point | translate }}</li>
                   }
