@@ -211,6 +211,10 @@ button {
     font-size: clamp(32px, 10vw, 48px);
   }
 
+  > h2 {
+    font-size: 20px;
+  }
+
   .legals section {
     padding: 32px 32px 32px 16px;
   }
