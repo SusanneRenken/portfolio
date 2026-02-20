@@ -35,10 +35,25 @@
   "MY_SKILL_SET_HOVER": "Do you have an idea? Tell me which technology you have in mind.",
 
   "MY_WORK": "My Work",
-  "MY_WORK_EXPERIENCE_TITLE": "Professional Experience",
-  "MY_WORK_EXPERIENCE_TECHSTACK": "Angular | Ionic | Image Editing Tool",
-  "MY_WORK_EXPERIENCE_TEXT_1": "As part of my role at vernetzwerk, I develop frontend features for the app meinegemeinde.digital.",
-  "MY_WORK_EXPERIENCE_TEXT_2": "I am currently designing and implementing an image editing tool with rotation and precise cropping functionality. My work includes UI logic, state management, and seamless integration into the existing Angular architecture with a strong focus on performance and maintainability.",
+
+  "ONGOING_PROJECTS": {
+    "TITLE": "Ongoing Projects",
+
+    "PROFESSIONAL": {
+      "SUBTITLE": "Professional Practice",
+      "TECH_STACK_LABEL": "Tech Stack:",
+      "TECH_STACK": "Angular | Ionic | TypeScript | REST",
+      "DESCRIPTION": "Frontend development for „meinegemeinde.digital“ – currently implementing an image editing tool (cropping, rotating) with a focus on performance and mobile UX."
+    },
+
+    "PRIVATE": {
+      "SUBTITLE": "Technical Advancement",
+      "TECH_STACK_LABEL": "Tech Stack:",
+      "TECH_STACK": "Angular | n8n | DRF | PostgreSQL | Docker | Deployment",
+      "DESCRIPTION": "New Angular project with n8n feature and custom-developed backend as a full-stack application."
+    }
+  },
+
   "PROJECT": "Project",
   "MY_WORK_SHOW_MORE": "Show me more",
   "MY_WORK_SHOW_LESS": "Show me less",

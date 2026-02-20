@@ -17,12 +17,23 @@
       ></app-project-section>
 
       <div class="experience-section">
-        <div>
-          <span>{{ "MY_WORK_EXPERIENCE_TITLE" | translate }}</span>
+        <span>{{ "ONGOING_PROJECTS.TITLE" | translate }}</span>
+
+        <div class="ongoing-projects">
+          <span>{{
+            "ONGOING_PROJECTS.PROFESSIONAL.SUBTITLE" | translate
+          }}</span>
+          <p>{{ "ONGOING_PROJECTS.PROFESSIONAL.TECH_STACK" | translate }}</p>
+          <div>
+            {{ "ONGOING_PROJECTS.PROFESSIONAL.DESCRIPTION" | translate }}
+          </div>
         </div>
-        <span>{{ "MY_WORK_EXPERIENCE_TECHSTACK" | translate }}</span>
-        <p>{{ "MY_WORK_EXPERIENCE_TEXT_1" | translate }}</p>
-        <p>{{ "MY_WORK_EXPERIENCE_TEXT_2" | translate }}</p>
+
+        <div class="ongoing-projects">
+          <span>{{ "ONGOING_PROJECTS.PRIVATE.SUBTITLE" | translate }}</span>
+          <p>{{ "ONGOING_PROJECTS.PRIVATE.TECH_STACK" | translate }}</p>
+          <div>{{ "ONGOING_PROJECTS.PRIVATE.DESCRIPTION" | translate }}</div>
+        </div>
       </div>
     </div>
   </div>

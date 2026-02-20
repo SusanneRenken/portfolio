@@ -35,10 +35,24 @@
   "MY_SKILL_SET_HOVER": "Hast du eine Idee? Sag mir, welche Technologie du im Sinn hast.",
 
   "MY_WORK": "Projekte",
-  "MY_WORK_EXPERIENCE_TITLE": "Berufserfahrung",
-  "MY_WORK_EXPERIENCE_TECHSTACK": "Angular | Ionic | Image Editing Tool",
-  "MY_WORK_EXPERIENCE_TEXT_1": "Im Rahmen meiner Tätigkeit bei vernetzwerk entwickle ich Frontend-Features für die App meinegemeinde.digital.",
-  "MY_WORK_EXPERIENCE_TEXT_2": " Aktuell konzipiere und implementiere ich ein Bildbearbeitungstool mit Rotations- und präziser Crop-Funktionalität. Dabei arbeite ich an UI-Logik, Zustandsmanagement und der sauberen Integration in die bestehende Angular-Architektur mit Fokus auf Performance und Wartbarkeit.",
+  "ONGOING_PROJECTS": {
+    "TITLE": "Laufende Projekte",
+
+    "PROFESSIONAL": {
+      "SUBTITLE": "Berufliche Praxis",
+      "TECH_STACK_LABEL": "Tech Stack:",
+      "TECH_STACK": "Angular | Ionic | TypeScript | REST",
+      "DESCRIPTION": "Frontend-Entwicklung für „meinegemeinde.digital“ – aktuell Umsetzung eines Bildbearbeitungstools (Zuschneiden, Drehen) mit Fokus auf Performance und mobile UX."
+    },
+
+    "PRIVATE": {
+      "SUBTITLE": "Technische Weiterentwicklung",
+      "TECH_STACK_LABEL": "Tech Stack:",
+      "TECH_STACK": "Angular | n8n | DRF | PostgreSQL | Docker | Deployment",
+      "DESCRIPTION": "Neues Angular-Projekt mit n8n-Feature und eigenentwickeltem Backend als Full-Stack-Anwendung."
+    }
+  },
+
   "PROJECT": "Projekt",
   "MY_WORK_SHOW_MORE": "Zeig mir mehr",
   "MY_WORK_SHOW_LESS": "Zeig mir weniger",

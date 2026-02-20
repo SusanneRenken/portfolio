@@ -24,31 +24,25 @@ section {
   width: 360px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  > div {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    > div {
-      font-size: 48px;
-      line-height: 0.85;
-      font-weight: 700;
-      color: transparent;
-      -webkit-text-stroke: 1px var(--main-bright-color);
-    }
+  gap: 24px;
     > span {
       font-size: 30px;
       color: var(--main-bright-color);
     }
-  }
+}
+
+.ongoing-projects {
   > span {
-    font-size: 18px;
+    font-size: 24px;
     color: var(--main-bright-color);
   }
-
-  > a {
-    align-self: center;
+  > p {
+    font-size: 16px;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 8px;
   }
+
 }
 
 @media (max-width: 1199.98px) {
@@ -92,20 +86,6 @@ section {
     padding: 24px 16px 8px 16px;
     > div {
       gap: 16px;
-    }
-  }
-
-  .experience-section {
-    > div {
-      align-items: start;
-      > div {
-        font-size: 32px;
-        line-height: 1;
-      }
-      > span {
-        font-size: 24px;
-        line-height: 1.1;
-      }
     }
   }
 }
