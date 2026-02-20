@@ -29,15 +29,17 @@
         <div class="about-me">
           <span>{{ "WHY_ME_CAREER" | translate }}</span>
           <div class="content-text">
-          @for (careerEntry of careerEntries; track careerEntry.id) {
-            <div>
-              <h2>{{ careerEntry.titleKey | translate }}</h2>
-              <div>{{ careerEntry.descriptionKey | translate }}</div>
-            </div>
-          }
-
+            @for (careerEntry of careerEntries; track careerEntry.id) {
+              <div>
+                <h2>{{ careerEntry.titleKey | translate }}</h2>
+                <ul>
+                  @for (point of careerEntry.pointsKeys; track point) {
+                    <li>{{ point | translate }}</li>
+                  }
+                </ul>
+              </div>
+            }
           </div>
-
         </div>
       </div>
     </div>

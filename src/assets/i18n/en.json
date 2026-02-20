@@ -1,59 +1,67 @@
 {
   "WHY_ME": "About Me",
   "WHY_ME_TEXT": "I develop software with the goal of turning ideas into functional and sustainable solutions. For me, technology is not just a tool but a structured process: analyze, plan, implement, improve. I am driven by transforming complex requirements into clear and maintainable systems.",
-  
+
   "WHY_ME_ABOUTME": "I am",
   "WHY_ME_LOCATED": "My home",
   "WHY_ME_LOCATED_TEXT": "I live in Schneverdingen in the Lüneburg Heath and work flexibly in a remote or hybrid model. Regular presence in the regional environment is just as natural for me as occasional on-site assignments at more distant locations.",
-  "WHY_ME_REMOTE": "Flexibly Connected", 
-  "WHY_ME_REMOTE_TEXT": "I work in a structured way in a remote environment while also valuing direct team interaction. Open communication, transparent processes, and mutual feedback are crucial for me to collaboratively develop high-quality and sustainable software solutions – both on-site and digitally.", 
+  "WHY_ME_REMOTE": "Flexibly Connected",
+  "WHY_ME_REMOTE_TEXT": "I work in a structured way in a remote environment while also valuing direct team interaction. Open communication, transparent processes, and mutual feedback are crucial for me to collaboratively develop high-quality and sustainable software solutions – both on-site and digitally.",
   "WHY_ME_VIEW": "Clear Insight",
   "WHY_ME_VIEW_TEXT": "I analyze complex problems systematically and break them down into clearly defined steps. Attention to detail and strong technical understanding enable me to identify root causes precisely and develop stable, well-designed solutions. I developed this analytical mindset during my previous work as a civil engineer – today, I apply it directly to software development.",
   "WHY_ME_IDEA": "Structure & Vision",
   "WHY_ME_IDEA_TEXT": "I approach projects with structure and a holistic perspective from the very beginning. Clear planning, clean architecture, and transparent processes form the foundation of sustainable software development for me. This results in solutions that not only work reliably but remain maintainable and scalable in the long term.",
 
-  "WHY_ME_CAREER": "Professional Experience",  
-  "CAREER_ENTRY_1_TITLE": "Frontend Developer",
-  "CAREER_ENTRY_1_DESC": "In my role at vernetzwerk, I develop frontend features for the app meinegemeinde.digital. Currently, I am designing and implementing an image editing tool with rotation and precise crop functionality. I work on UI logic, state management, and the seamless integration into the existing Angular architecture with a focus on performance and maintainability.",
-  "CAREER_ENTRY_2_TITLE": "Independent Music Teacher",
-  "CAREER_ENTRY_2_DESC": "As an independent music teacher, I not only honed my pedagogical skills but also learned to quickly adapt to new topics and respond flexibly to the needs of my students. These experiences have further developed my ability to solve problems in a structured manner and work independently – skills that I now apply specifically in software development.",
-  "CAREER_ENTRY_3_TITLE": "Civil Engineer (MSc.)",
-  "CAREER_ENTRY_3_DESC": "As a civil engineer, I planned, coordinated, and successfully executed complex projects. I learned to work in a structured manner, approach challenges analytically, and develop solutions that are both technically and economically sound. I now apply these skills specifically in software development to create stable and well-designed applications.",
+  "WHY_ME_CAREER": "Professional Experience",
 
+  "CAREER_ENTRY_1_TITLE": "Frontend Developer",
+  "CAREER_ENTRY_1_POINT_1": "Contributing to the web application meinegemeinde.digital",
+  "CAREER_ENTRY_1_POINT_2": "Implementation of production-ready Angular & Ionic features",
+  "CAREER_ENTRY_1_POINT_3": "Independent feature integration within an existing codebase",
+
+  "CAREER_ENTRY_2_TITLE": "Self-Employed Music Teacher",
+  "CAREER_ENTRY_2_POINT_1": "Independent planning and organization of lessons",
+  "CAREER_ENTRY_2_POINT_2": "Individual mentoring and structured knowledge transfer",
+  "CAREER_ENTRY_2_POINT_3": "Self-management, organization, and client communication",
+
+  "CAREER_ENTRY_3_TITLE": "Civil Engineer (MSc.)",
+  "CAREER_ENTRY_3_POINT_1": "Planning and coordination of complex construction projects",
+  "CAREER_ENTRY_3_POINT_2": "Analytical problem-solving and structured project execution",
+  "CAREER_ENTRY_3_POINT_3": "Development of technically and economically sound solutions",
 
   "MY_SKILL_SET": "Skills",
   "MY_SKILL_SET_TEXT": "Technology excites me not because of its novelty, but because of its potential. I approach new concepts in a structured way and apply them deliberately to build stable and well-designed solutions. Learning for me is a continuous process — not out of obligation, but conviction.",
   "MY_SKILL_SET_CHALLENGE": "Challenge me",
   "MY_SKILL_SET_HOVER": "Do you have an idea? Tell me which technology you have in mind.",
-  
-  "MY_WORK": "My Work",  
+
+  "MY_WORK": "My Work",
   "MY_WORK_EXPERIENCE_TITLE": "Professional Experience",
   "MY_WORK_EXPERIENCE_TECHSTACK": "Angular | Ionic | Image Editing Tool",
   "MY_WORK_EXPERIENCE_TEXT_1": "As part of my role at vernetzwerk, I develop frontend features for the app meinegemeinde.digital.",
   "MY_WORK_EXPERIENCE_TEXT_2": "I am currently designing and implementing an image editing tool with rotation and precise cropping functionality. My work includes UI logic, state management, and seamless integration into the existing Angular architecture with a strong focus on performance and maintainability.",
   "PROJECT": "Project",
-  "MY_WORK_SHOW_MORE": "Show me more",  
+  "MY_WORK_SHOW_MORE": "Show me more",
   "MY_WORK_SHOW_LESS": "Show me less",
   "MY_WORK_ADDITIONAL_PROJECTS": "More Projects",
-  
+
   "CONTACT_ME": "Contact",
   "CONTACT_ME_TEXT_1": "Let us work toghether.",
   "CONTACT_ME_TEXT_2": "I look forward to hearing from you and collaborating on future projects.",
-  
+
   "CONTACT_ME_FORM_NAME": "Your name",
   "CONTACT_ME_FORM_NAME_REQUIRED": "Your name is required",
   "CONTACT_ME_FORM_MAIL": "Your email",
   "CONTACT_ME_FORM_MAIL_REQUIRED": "Your email is required",
   "CONTACT_ME_FORM_MESSAGE": "Your message",
   "CONTACT_ME_FORM_MESSAGE_REQUIRED": "Your message is required (min. 4 characters)",
-  
+
   "CONTACT_ME_FORM_TEXT_1": "I've read the",
-  "CONTACT_ME_FORM_TEXT_2": "privacy policy",  
+  "CONTACT_ME_FORM_TEXT_2": "privacy policy",
   "CONTACT_ME_FORM_TEXT_3": "and agree to the processing of my data as outlined.",
   "CONTACT_ME_FORM_BTN": "Send",
   "CONTACT_FEEDBACK_SUCCESS": "Your message has been sent successfully.",
   "CONTACT_FEEDBACK_ERROR": "Unfortunately, an error occurred. You can contact me directly at contact@susanne-renken.com",
-  
+
   "CONTACT_ME_LEGAL_NOTICE": "Legal Notice",
   "CONTACT_ME_PRIVACY_POLICY": "Privacy Policy"
 }
