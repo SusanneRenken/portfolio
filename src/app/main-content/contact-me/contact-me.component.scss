@@ -116,6 +116,9 @@ a {
     width: 100%;
     align-items: start;
     gap: 24px;
+      > p {
+    text-align: left;
+  }
     > div {
       width: 100%;
       align-items: start;
