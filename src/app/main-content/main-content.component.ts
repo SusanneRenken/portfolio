@@ -29,8 +29,6 @@ import { ScrollSpyService } from '../shared/services/scroll-spy.service';
 })
 export class MainContentComponent implements AfterViewInit, OnDestroy {
   private onScrollBound: any;
-  private isThrottled = false;
-  private readonly throttleDuration = 500;
 
   constructor(
     private elementRef: ElementRef,
@@ -39,21 +37,18 @@ export class MainContentComponent implements AfterViewInit, OnDestroy {
 
   @HostListener('wheel', ['$event'])
   onWheel(event: WheelEvent): void {
-    if (this.isThrottled) {
-      return;
-    }
-
     if (window.innerWidth > 767.98 && event.deltaY !== 0) {
       event.preventDefault();
 
-      const fixedStep = 1000;
-      this.elementRef.nativeElement.scrollLeft +=
-        event.deltaY > 0 ? fixedStep : -fixedStep;
-
-      this.isThrottled = true;
-      setTimeout(() => {
-        this.isThrottled = false;
-      }, this.throttleDuration);
+      const nativeElement = this.elementRef.nativeElement as HTMLElement;
+      const maxScrollLeft = nativeElement.scrollWidth - nativeElement.clientWidth;
+      const viewportFactor = Math.min(Math.max(window.innerWidth / 1366, 0.7), 1.6);
+      const delta = event.deltaY * viewportFactor * 5;
+      const nextScrollLeft = nativeElement.scrollLeft + delta;
+      nativeElement.scrollLeft = Math.min(
+        Math.max(nextScrollLeft, 0),
+        Math.max(maxScrollLeft, 0)
+      );
     }
   }
 
