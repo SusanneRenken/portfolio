@@ -29,6 +29,10 @@ import { ScrollSpyService } from '../shared/services/scroll-spy.service';
 })
 export class MainContentComponent implements AfterViewInit, OnDestroy {
   private onScrollBound: any;
+  private lastWheelTime: number | null = null;
+  private readonly baseMultiplier = 2.4;
+  private readonly speedScale = 0.35;
+  private readonly maxSpeedFactor = 3.5;
 
   constructor(
     private elementRef: ElementRef,
@@ -42,8 +46,31 @@ export class MainContentComponent implements AfterViewInit, OnDestroy {
 
       const nativeElement = this.elementRef.nativeElement as HTMLElement;
       const maxScrollLeft = nativeElement.scrollWidth - nativeElement.clientWidth;
+      let deltaY = event.deltaY;
+
+      if (event.deltaMode === 1) {
+        deltaY *= 16;
+      } else if (event.deltaMode === 2) {
+        deltaY *= window.innerHeight;
+      }
+
+      const now = performance.now();
+      const elapsedTime = this.lastWheelTime
+        ? Math.max(now - this.lastWheelTime, 8)
+        : 16;
+      this.lastWheelTime = now;
+
+      const wheelSpeed = Math.abs(deltaY) / elapsedTime;
+      const speedFactor = Math.min(
+        1 + wheelSpeed * this.speedScale,
+        this.maxSpeedFactor
+      );
       const viewportFactor = Math.min(Math.max(window.innerWidth / 1366, 0.7), 1.6);
-      const delta = event.deltaY * viewportFactor * 5;
+
+      let delta = deltaY * viewportFactor * this.baseMultiplier * speedFactor;
+      const maxStepPerEvent = nativeElement.clientWidth * 0.35;
+      delta = Math.sign(delta) * Math.min(Math.abs(delta), maxStepPerEvent);
+
       const nextScrollLeft = nativeElement.scrollLeft + delta;
       nativeElement.scrollLeft = Math.min(
         Math.max(nextScrollLeft, 0),
@@ -61,6 +88,7 @@ export class MainContentComponent implements AfterViewInit, OnDestroy {
   ngOnDestroy(): void {
     const nativeElement = this.elementRef.nativeElement as HTMLElement;
     nativeElement.removeEventListener('scroll', this.onScrollBound);
+    this.lastWheelTime = null;
   }
 
   onScroll(): void {
